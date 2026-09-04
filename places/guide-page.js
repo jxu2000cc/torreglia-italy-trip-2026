@@ -141,6 +141,7 @@
       jump.href = '#venuesSection';
       jump.textContent = '直接看具体选择 ↓';
     }
+    if (detail.scheduleTitle) document.getElementById('scheduleTitle').textContent = detail.scheduleTitle;
     if (detail.scheduleIntro) document.getElementById('scheduleIntro').textContent = detail.scheduleIntro;
   }
 
@@ -213,6 +214,24 @@
     step.append(when, text);
     schedule.appendChild(step);
   });
+
+  if (detail?.alternateDay?.length) {
+    const alternateSection = document.getElementById('alternateScheduleSection');
+    alternateSection.hidden = false;
+    document.getElementById('alternateScheduleTitle').textContent = detail.alternateTitle || '另一种完整走法';
+    document.getElementById('alternateScheduleIntro').textContent = detail.alternateIntro || '';
+    const alternateSchedule = document.getElementById('alternateSchedule');
+    detail.alternateDay.forEach(([time, activity]) => {
+      const step = document.createElement('div');
+      step.className = 'step';
+      const when = document.createElement('time');
+      when.textContent = time;
+      const text = document.createElement('p');
+      text.textContent = activity;
+      step.append(when, text);
+      alternateSchedule.appendChild(step);
+    });
+  }
 
   if (detail?.budget) {
     const budgetSection = document.getElementById('budgetSection');

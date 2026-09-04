@@ -314,38 +314,6 @@ window.placeGalleryExtras = {
       "title": "Lovely town, Menaggio."
     }
   ],
-  "Lugano": [
-    {
-      "label": "Lugano湖岸",
-      "src": "assets/place-galleries/lugano-2.jpg",
-      "source": "https://www.flickr.com/photos/63991153@N00/1638519834",
-      "credit": "Hindrik S · BY-NC-SA",
-      "title": "Lake Lugano - Morcote"
-    },
-    {
-      "label": "Monte Brè",
-      "src": "assets/place-galleries/lugano-3.jpg",
-      "source": "https://www.flickr.com/photos/65701179@N00/14099332364",
-      "credit": "Roger Smith · BY-NC-ND",
-      "title": "Monte Brè after dark"
-    }
-  ],
-  "Lucerne": [
-    {
-      "label": "Lucerne湖景",
-      "src": "assets/place-galleries/lucerne-2.jpg",
-      "source": "https://www.flickr.com/photos/22490717@N02/23215798773",
-      "credit": "archer10 (Dennis) · BY-SA",
-      "title": "Switzerland-03333 - Lake Lucerne"
-    },
-    {
-      "label": "狮子纪念碑",
-      "src": "assets/place-galleries/lucerne-3.jpg",
-      "source": "https://www.flickr.com/photos/22490717@N02/23474419879",
-      "credit": "archer10 (Dennis) · BY-SA",
-      "title": "Switzerland-03292 - Lion Monument"
-    }
-  ],
   "Florence": [
     {
       "label": "Ponte Vecchio",

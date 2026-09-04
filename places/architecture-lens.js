@@ -38,8 +38,19 @@
     });
   };
 
+  const wireToggle = details => {
+    const action = details?.querySelector('.architecture-toggle-action');
+    if (!action) return;
+    const update = () => { action.textContent = details.open ? '收起' : '展开'; };
+    update();
+    details.addEventListener('toggle',update);
+  };
+
   if (!data) {
-    alignHashTarget(document.getElementById('architecture-index'));
+    const index = document.getElementById('architecture-index');
+    if (index?.tagName === 'DETAILS' && location.hash === '#architecture-index') index.open = true;
+    wireToggle(index);
+    alignHashTarget(index);
     return;
   }
 
@@ -49,9 +60,24 @@
     if (text != null) node.textContent = text;
     return node;
   };
-  const section = el('section','architecture-lens');
+  const section = el('details','architecture-lens architecture-collapsible');
   section.id = 'architecture-design';
   section.setAttribute('aria-labelledby','architecture-title');
+
+  const summary = el('summary','architecture-toggle');
+  const summaryCopy = el('span','architecture-toggle-copy');
+  summaryCopy.append(
+    el('span','architecture-toggle-kicker',data.kicker || 'Architecture & spatial design'),
+    el('strong','architecture-toggle-title',data.collapsedTitle || `建筑与空间 · ${data.items.length} 个重点`),
+    el('span','architecture-toggle-note',data.collapsedNote || '默认收起，不影响主行程阅读；点开看图片、现场细节与取舍。')
+  );
+  const summaryMeta = el('span','architecture-toggle-meta');
+  summaryMeta.append(
+    el('span','',data.scoreLabel || '建筑权重'),
+    el('b','',data.score),
+    el('i','architecture-toggle-action','展开')
+  );
+  summary.append(summaryCopy,summaryMeta);
 
   const head = el('div','architecture-head');
   const intro = el('div','architecture-title-block');
@@ -134,8 +160,10 @@
     card.appendChild(body);
     grid.appendChild(card);
   });
-  section.append(head,grid);
-  if (data.note) section.appendChild(el('p','architecture-footnote',data.note));
+  const content = el('div','architecture-content');
+  content.append(head,grid);
+  if (data.note) content.appendChild(el('p','architecture-footnote',data.note));
+  section.append(summary,content);
 
   let anchor = data.anchor ? document.querySelector(data.anchor) : null;
   if (!anchor && params.get('place')) anchor = document.querySelector('.guide-gallery-section');
@@ -146,5 +174,7 @@
   if (!anchor) return;
   if (data.wide) section.classList.add('architecture-wide');
   anchor.insertAdjacentElement(data.position === 'before' ? 'beforebegin' : 'afterend',section);
+  if (location.hash === '#architecture-design') section.open = true;
+  wireToggle(section);
   alignHashTarget(section);
 })();

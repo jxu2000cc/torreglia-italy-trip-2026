@@ -22,7 +22,7 @@ const plannerGuides = {
       ["09:30", "Monselice 老城与 Via delle Sette Chiese 上坡"],
       ["11:30", "有预约再进 Castello di Monselice"],
       ["13:00", "回镇上吃午餐"],
-      ["15:00", "还有精神再去 Este 城堡花园；否则直接回 villa"]
+      ["15:00", "还有精神再去 Este 城堡花园；否则直接回 Torreglia"]
     ],
     links: [
       ["Monselice 城堡", "https://www.castellodimonselice.it/"],
@@ -197,8 +197,8 @@ const plannerGuides = {
     ]
   },
   "Lake Garda": {
-    verdict: "若只做日游，选 Sirmione / Peschiera；Malcesine 更漂亮但从 Torreglia 更远，最好住一晚。",
-    update: "2026 夏季船班运营到10月4日。Sirmione 码头对自行车/滑板车有运输限制；主湖线上船建议提前20分钟到。",
+    verdict: "本页按可直接拖进日历的一天设计：Sirmione、湖船与Grotte di Catullo。若真正想看北湖山景，Malcesine应另做一晚版本，不和这个日游混排。",
+    update: "2026夏季船班运营到10月4日。日游只做南湖，主湖线上船建议提前20分钟到；周末停车拥堵时从Peschiera换船进入Sirmione。",
     day: [
       ["09:30", "日游版抵达 Sirmione，先走老城与湖边"],
       ["11:30", "短程游船或 Grotte di Catullo，二选一"],
@@ -229,8 +229,8 @@ const plannerGuides = {
     ]
   },
   "Mantua": {
-    verdict: "安静、室内内容多，适合作为下雨城市备选；不需要和 Lake Garda 硬拼同一天。",
-    update: "Palazzo Te 目前周一09:00–19:00、周二13:00–19:00、其余09:00–19:00。9月26日起有新的大型展览，可能增加周末客流。",
+    verdict: "一座正式宫廷、一座私人享乐别墅与一间小剧院，内容层次完整；很适合从Torreglia当天往返，不需要和Lake Garda拼在同一天。",
+    update: "Palazzo Te 9月26日新展Inventare la natura开幕，普通票由€15调至€18；Palazzo Ducale的Camera degli Sposi必须锁固定时段。",
     day: [
       ["10:00", "Palazzo Ducale 或 Palazzo Te 只选一个主馆"],
       ["12:30", "老城午餐，试 tortelli di zucca"],
@@ -244,8 +244,8 @@ const plannerGuides = {
     ]
   },
   "Ferrara": {
-    verdict: "轻松骑车＋午餐型古城；如果已经去很多古城，可以放心跳过。",
-    update: "Castello Estense 常规开放10:00–18:00，但周二关闭；塔楼最后时段更早，若想登塔不要下午太晚到。",
+    verdict: "平坦、路线紧凑、家庭步行负担低；9月19日开幕的新展让它成为有明确日期理由的轻松城市日。",
+    update: "Palazzo dei Diamanti的Monet–Van Gogh–Kandinsky展9月19日开幕；Castello Estense周二关闭，Schifanoia周一关闭。",
     day: [
       ["10:00", "Castello Estense，想登塔就一起买"],
       ["12:00", "Quadrivio degli Angeli 与老城骑行"],
@@ -258,8 +258,8 @@ const plannerGuides = {
     ]
   },
   "Bologna": {
-    verdict: "最值得为‘吃’专程去的城市；当天不要再加别城，停车在外围或直接坐火车。",
-    update: "老城 ZTL 摄像头严格，建议从 Padova / Terme Euganee 坐火车。热门 pasta 小馆午餐最好订位。",
+    verdict: "它的回报是一顿真正好的午餐、大学城空间和拱廊生活；当天不要再加别城，停车在外围或从Padova坐火车。",
+    update: "Asinelli与Garisenda双塔目前都不能进入；把城市俯瞰改到Torre dell’Orologio。Archiginnasio 2026需网上预约。",
     day: [
       ["10:00", "Quadrilatero 市场与老城 portici"],
       ["12:30", "tagliatelle al ragù / tortellini 正式午餐"],
@@ -272,13 +272,14 @@ const plannerGuides = {
     ]
   },
   "Trieste": {
-    verdict: "气质独特，但往返接近4小时；只有很想看海边中欧城市时才排。",
-    update: "Miramare Castle 每天09:00–19:00，公园9月每日08:00–19:00；城堡公园全年免费。2026 特展持续到11月1日。",
+    verdict: "海港、中欧建筑与Karst地貌确实独特，但当天往返过劳；若选它就住一晚，让Miramare与城市夜晚都成立。",
+    update: "Opicina电车已于2026年7月20日恢复，但市区暂从Piazza Dalmazia发车且按80%额定载客；Grotta Gigante是1000级台阶，不默认全家参加。",
     day: [
-      ["09:00", "早点出发，先到 Miramare 避开团客"],
-      ["12:00", "进入市区，Piazza Unità 周边午餐"],
-      ["14:00", "老咖啡馆坐一小时，再走海边与 Canal Grande"],
-      ["17:00", "返程；不要再绕其他 Friuli 小镇"]
+      ["Day 1 · 08:00", "Torreglia出发，10:30左右先到Miramare；城堡、花园与海边一起看"],
+      ["13:00", "Barcola午餐后进入市区，入住并真正休息一小时"],
+      ["16:30", "Revoltella或历史咖啡馆二选一；傍晚走Piazza Unità与Molo Audace"],
+      ["Day 2 · 10:00", "洞穴组去Grotta Gigante，轻松组坐Opicina电车或喝咖啡"],
+      ["12:30", "会合午餐后返Torreglia；不再绕其他Friuli小镇"]
     ],
     links: [
       ["Miramare 参观信息", "https://www.coopculture.it/en/poi/museo-storico-e-parco-del-castello-di-miramare/"],
@@ -304,13 +305,14 @@ const plannerGuides = {
     ]
   },
   "Milan": {
-    verdict: "建议住两晚、占用3个日历日。Milan不是纯观光选项：对喜欢服装、设计、咖啡和aperitivo的人，它可以独立成立，也可以接Lake Como。",
-    update: "Camera Nazionale della Moda Italiana 已确认女装时装周为9月22–28日，正好覆盖旅行后半段。它既会推高住宿与餐厅压力，也会增加品牌展示、公开活动与城市氛围；正式日历仍应临近再核实。",
+    verdict: "建议做9月24–25日的一晚延伸：可公开进入的设计、Armani与Dalí展已足够完整，再把已注册成功的时装周公众活动叠加进去。",
+    update: "女装时装周为9月22–28日；Vogue World是9月22日但不保证公众现场入场，Dalí and Fashion于9月24日开幕，因此24–25日最可执行。",
     day: [
-      ["抵达日 14:00", "停车后只坐地铁；Duomo屋顶 → Brera → aperitivo"],
-      ["完整日 09:30", "若有票先看 Last Supper；没有票就做 Porta Venezia / Quadrilatero / 设计店"],
-      ["13:00", "Brera 午餐＋咖啡，下午留购物或回酒店休息"],
-      ["18:30", "Navigli 或 Isola 晚餐；时装周期间必须订位"]
+      ["9/24 · 08:00", "从Padova乘高铁；上午Triennale，午餐后走Brera / Quadrilatero"],
+      ["17:00", "Armani/Silos；周四开放到21:00，先锁定时票"],
+      ["19:30", "Dalí and Fashion周四夜场，之后晚餐并住一晚"],
+      ["9/25 · 09:30", "Duomo屋顶或Brera二选一，中午后乘高铁返回"],
+      ["原则", "只叠加已注册成功的公众活动；不把进入正式秀场当作行程前提"]
     ],
     links: [
       ["Milano Fashion Week 官方日期", "https://www.cameramoda.it/en/associazione/manifestazione/2-milano-fashion-week/"],
@@ -334,36 +336,6 @@ const plannerGuides = {
       ["Como 2026轮渡时刻", "https://www.navigazionelaghi.it/en/tickets-and-timetables-lake-como/"],
       ["Villa Monastero 2026时间", "https://www.villamonastero.eu/en/opening-hours-ticket/"],
       ["Lake Como 官方目的地", "https://www.lakecomo.is/en/"]
-    ]
-  },
-  "Lugano": {
-    verdict: "Lugano可以作为Como后的顺路跨境日，也可以住一晚；它的优势是压力低，代价是需要处理租车跨境与高速vignette。",
-    update: "把Lugano放入日历前，先确认租车公司允许进入瑞士。瑞士高速vignette没有短期版，因此它是否值得取决于是否还会继续走Lucerne或其他瑞士路段。",
-    day: [
-      ["09:30", "跨境后先停 Lugano，Parco Ciani 与湖边老城"],
-      ["12:00", "市中心午餐，尝 risotto / polenta"],
-      ["14:00", "Monte San Salvatore 与 Monte Brè 二选一；首访选 San Salvatore"],
-      ["17:00", "湖边 aperitivo 后回 Como；不要当天再加 Lucerne"]
-    ],
-    links: [
-      ["San Salvatore 2026导览", "https://www.ticino.ch/fr/commons/details/Visite-guid%C3%A9e-Monte-San-Salvatore/147988.html"],
-      ["Lugano Region", "https://www.luganoregion.com/en"],
-      ["瑞士高速 vignette", "https://www.ch.ch/en/vehicles-and-traffic/how-to-behave-in-road-traffic/motorway-vignette/"]
-    ]
-  },
-  "Lucerne": {
-    verdict: "建议至少住两晚、占用3个日历日。它比Lugano更有完整瑞士山湖感，但从Torreglia更远；加入后需要减少另一段远程住宿。",
-    update: "Lake Lucerne 从9月7日起切换秋季船班，仍每天运行但频次低于盛夏；一小时 panorama cruise 每日有12:15–17:15多个时段。",
-    day: [
-      ["第1天", "抵达后 Chapel Bridge、老城与湖边夜景"],
-      ["第2天 09:00", "天气好去 Pilatus / Rigi 二选一"],
-      ["下午", "坐1小时湖船，或以长线船替代上山"],
-      ["原则", "加入 Lucerne 就删掉一个 Veneto 日游与 Lugano往返，不做5小时车程日游"]
-    ],
-    links: [
-      ["Lake Lucerne 秋季船班", "https://www.lakelucerne.ch/en/information/timetable/"],
-      ["1小时湖船", "https://webshop.lakelucerne.ch/en/products/panorama-cruise"],
-      ["Pilatus 2026时刻", "https://www.pilatus.ch/en/inform/timetable"]
     ]
   },
   "Florence": {

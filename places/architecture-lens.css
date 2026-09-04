@@ -16,6 +16,57 @@
   border-radius:24px;
   box-shadow:0 22px 55px rgba(31,42,60,.16);
 }
+.architecture-lens.architecture-collapsible{
+  margin:30px 0;
+  padding:0;
+}
+.architecture-lens.architecture-collapsible[open]{margin:46px 0}
+.architecture-toggle{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,250px);
+  align-items:center;
+  gap:24px;
+  min-height:104px;
+  padding:22px clamp(22px,4vw,38px);
+  cursor:pointer;
+  list-style:none;
+}
+.architecture-toggle::-webkit-details-marker{display:none}
+.architecture-toggle-copy{display:flex;min-width:0;flex-direction:column;gap:4px}
+.architecture-toggle-kicker{color:var(--arch-gold);font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.architecture-toggle-title{color:#fffaf0;font-family:'Fraunces',serif;font-size:clamp(20px,2.4vw,28px);font-weight:500;line-height:1.15}
+.architecture-toggle-note{color:rgba(247,241,229,.68);font-size:11px;line-height:1.45}
+.architecture-toggle-meta{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:2px 12px;
+  align-items:center;
+  padding-left:20px;
+  border-left:1px solid rgba(255,255,255,.16);
+}
+.architecture-toggle-meta > span{color:var(--arch-gold);font-size:8px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.architecture-toggle-meta > b{grid-column:1;color:#fff;font-family:'Fraunces',serif;font-size:18px;font-weight:500}
+.architecture-toggle-action{
+  grid-column:2;
+  grid-row:1 / 3;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:72px;
+  min-height:34px;
+  padding:7px 12px;
+  border:1px solid rgba(215,170,84,.54);
+  border-radius:999px;
+  color:#fff6df;
+  font-size:10px;
+  font-style:normal;
+  font-weight:750;
+}
+.architecture-toggle-action::after{content:"＋";margin-left:5px;font-size:15px;line-height:1}
+.architecture-collapsible[open] .architecture-toggle-action::after{content:"−";font-size:15px}
+.architecture-content{position:relative;z-index:1;padding:8px clamp(28px,4.5vw,54px) clamp(28px,4.5vw,54px)}
 .architecture-lens::before{
   content:"";
   position:absolute;
@@ -104,8 +155,15 @@
 .architecture-actions a.secondary{color:#26354e;background:transparent;border:1px solid #bfb298}
 .architecture-footnote{position:relative;z-index:1;margin:20px 0 0;padding-top:17px;border-top:1px solid rgba(255,255,255,.14);color:rgba(247,241,229,.66);font-size:10.5px;line-height:1.55}
 .architecture-lens.architecture-wide{width:min(1180px,calc(100% - 40px));margin:58px auto}
+.architecture-lens.architecture-wide.architecture-collapsible{margin:30px auto}
+.architecture-lens.architecture-wide.architecture-collapsible[open]{margin:46px auto}
 @media(max-width:780px){
   .architecture-lens{margin:42px 0;padding:25px 20px;border-radius:18px}
+  .architecture-lens.architecture-collapsible{margin:26px 0;padding:0}
+  .architecture-lens.architecture-collapsible[open]{margin:34px 0}
+  .architecture-toggle{grid-template-columns:1fr;gap:13px;min-height:0;padding:20px}
+  .architecture-toggle-meta{grid-template-columns:1fr auto;padding:12px 0 0;border-top:1px solid rgba(255,255,255,.14);border-left:0}
+  .architecture-content{padding:5px 20px 25px}
   .architecture-head{grid-template-columns:1fr;gap:18px;align-items:start}
   .architecture-score{max-width:none}
   .architecture-grid{grid-template-columns:1fr}

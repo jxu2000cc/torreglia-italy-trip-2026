@@ -16,8 +16,10 @@ const guideCatalog = {
   "Trieste": {cn:"的里雅斯特", group:"山与延伸", returnHash:"beyond", photo:"../assets/place-photos/place-20-trieste-piazza-unita.webp"},
   "Milan": {cn:"米兰", group:"平行候选 · 城市与时装", returnHash:"northwest", photo:"../assets/place-photos/place-31-milan.jpg"},
   "Lake Como": {cn:"科莫湖", group:"平行候选 · 中央湖区", returnHash:"northwest", photo:"../assets/place-photos/place-32-lake-como.jpg"},
-  "Lugano": {cn:"卢加诺", group:"平行候选 · 瑞士近线", returnHash:"northwest", photo:"../assets/place-photos/place-33-lugano.jpg"},
-  "Lucerne": {cn:"卢塞恩", group:"平行候选 · 瑞士山湖", returnHash:"northwest", photo:"../assets/place-photos/place-34-lucerne.jpg"}
+  "Chianti": {cn:"基安蒂", group:"Tuscany 加项", returnHash:"tuscany", photo:"../assets/place-photos/place-23-chianti.jpg"},
+  "Siena / San Gimignano": {cn:"锡耶纳 / 圣吉米尼亚诺", group:"Tuscany 加项", returnHash:"tuscany", photo:"../assets/place-photos/place-24-siena.jpg"},
+  "Pitigliano / Saturnia": {cn:"皮蒂利亚诺 / 萨图尼亚", group:"Tuscany 加项", returnHash:"tuscany", photo:"../assets/place-photos/place-27-pitigliano.jpg"},
+  "Volterra / Cortona": {cn:"沃尔泰拉 / 科尔托纳", group:"Tuscany 加项", returnHash:"tuscany", photo:"../assets/place-photos/place-29-volterra.jpg"}
 };
 
 const guideChoices = {
@@ -58,7 +60,7 @@ const guideChoices = {
   ],
   "Milan": [
     {tag:"时装周版本", title:"9/22–24住两晚", text:"以Brera、Quadrilatero、公开品牌活动、设计店与aperitivo为主；正式秀场是否能进不是行程成立的前提。"},
-    {tag:"经典城市版本", title:"Duomo＋Brera＋一晚夜生活", text:"住两晚，不赶博物馆清单；给购物、咖啡和对象自己的时间。"},
+    {tag:"经典城市版本", title:"Duomo＋Brera＋一晚夜生活", text:"住两晚，不赶博物馆清单；给购物、咖啡和各自自由活动留时间。"},
     {tag:"组合版本", title:"Milan 2晚＋Como 3晚", text:"先用城市能量和时装周，再去中央湖区慢下来；完整组合占大约7个日历日。"}
   ],
   "Lake Como": [
