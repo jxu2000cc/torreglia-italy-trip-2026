@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="places/architecture-lens.css?v=20260904-4">
 <style>
   :root{
     --paper:#EDE4D2;
@@ -538,6 +539,7 @@
   .priority.strong{background:rgba(185,139,51,.16); color:#765715; border:1px solid rgba(185,139,51,.45);}
   .priority.optional{background:rgba(74,84,104,.08); color:var(--ink-soft); border:1px solid var(--line);}
   .priority.skip{background:transparent; color:var(--ink-soft); border:1px dashed var(--line);}
+  .priority.option{background:#EEE5D2; color:var(--ink); border:1px solid #D2C19E;}
   .vibe{
     font-family:'Fraunces', serif; font-style:italic;
     font-size:14px; color:var(--red); margin:2px 0 10px 0;
@@ -972,7 +974,7 @@
       </div>
     </div>
     <ul class="tabs">
-      <li><button class="tab is-active" data-target="overview">总览<span class="sub">选项与拖拽日历</span></button></li>
+      <li><button class="tab is-active" data-target="overview">总览<span class="sub">距离 · 建筑 · 拖拽日历</span></button></li>
       <li><button class="tab" data-target="homebase">大本营<span class="sub">Colli Euganei</span></button></li>
       <li><a class="tab nav-link" href="places/torreglia-colli-euganei.html">认识家附近<span class="sub">Torreglia · 30分钟</span></a></li>
       <li><a class="tab nav-link" href="places/torreglia-local.html">家附近<span class="sub">买菜 · 咖啡 · 吃饭</span></a></li>
@@ -984,7 +986,7 @@
       <li><button class="tab" data-target="itinerary">参考行程<span class="sub">一个版本 · 非最终答案</span></button></li>
       <li><button class="tab" data-target="notes">实用笔记<span class="sub">预订 · 路程 · 打包</span></button></li>
     </ul>
-    <div class="spine-foot">Xu Family Journey<br>2026年9月</div>
+    <div class="spine-foot">Italy Family Journey<br>2026年9月</div>
   </nav>
 
   <main class="content">
@@ -1061,8 +1063,8 @@
               <a class="orbit-node orbit-lean" href="places/tuscany.html" aria-label="Tuscany，约三到三点五小时，住五晚">
                 <circle cx="710" cy="420" r="45"/><text text-anchor="middle" x="710" y="406" class="orbit-state">OVERNIGHT</text><text text-anchor="middle" x="710" y="427" class="orbit-name serif">Tuscany</text><text text-anchor="middle" x="710" y="443" class="orbit-note">约3–3.5小时 · 5晚</text>
               </a>
-              <a class="orbit-node orbit-flex" href="places/guide.html?place=Milan" aria-label="Milan，约二点五小时，建议两晚">
-                <circle cx="205" cy="105" r="37"/><text text-anchor="middle" x="205" y="101" class="orbit-name">Milan</text><text text-anchor="middle" x="205" y="115" class="orbit-note">约2.5小时 · 建议2晚</text>
+              <a class="orbit-node orbit-flex" href="places/guide.html?place=Milan" aria-label="Milan，约二点五小时，建议一到两晚">
+                <circle cx="205" cy="105" r="37"/><text text-anchor="middle" x="205" y="101" class="orbit-name">Milan</text><text text-anchor="middle" x="205" y="115" class="orbit-note">约2.5小时 · 1–2晚</text>
               </a>
               <a class="orbit-node orbit-flex" href="places/lake-como.html" aria-label="Lake Como，约三小时，建议三晚">
                 <circle cx="145" cy="365" r="37"/><text text-anchor="middle" x="145" y="361" class="orbit-name">Como</text><text text-anchor="middle" x="145" y="375" class="orbit-note">约3小时 · 建议3晚</text>
@@ -1087,10 +1089,48 @@
           </div>
         </div>
 
+        <section class="architecture-lens architecture-index" id="architecture-index" aria-labelledby="architecture-index-title">
+          <div class="architecture-head">
+            <div class="architecture-title-block">
+              <p class="architecture-kicker">A family interest lens · 建筑与空间</p>
+              <h2 id="architecture-index-title">不是建筑打卡清单，是另一种选行程的方法。</h2>
+              <p class="architecture-intro">这里先把最可能让我们真正有感觉的空间并排放在一起。每一项都回答：建筑本身值不值得去、现场究竟看什么、要占多少时间，以及会替换日历里的哪一段。</p>
+            </div>
+            <div class="architecture-score"><span>读法</span><strong>先按兴趣打开</strong><p>“值得专程”可以改变路线；“路线加分”只在本来顺路时进入。不在这里做最终决定。</p></div>
+          </div>
+          <div class="architecture-grid">
+            <article class="architecture-card">
+              <a class="architecture-media" href="places/guide.html?place=Chianti#architecture-design"><img src="assets/detail-photos/architecture-antinori.jpg" alt="Antinori nel Chianti Classico螺旋楼梯" loading="lazy"><span class="architecture-photo-credit">Marchesi Antinori</span></a>
+              <div class="architecture-body"><span class="architecture-status">全站标杆 · 值得专程</span><h3>Antinori nel Chianti Classico</h3><p class="architecture-subtitle">Archea Associati · 酒庄几乎消失在山体里</p><p class="architecture-why">屋顶重新种葡萄、立面只剩两道水平切口，内部用陶土拱顶和一条巨大螺旋楼梯串起重力酿造。即使不懂酒，也有完整的空间回报。</p><div class="architecture-facts"><div class="architecture-fact"><b>首选</b><span>Tinaia 1.5h · €50</span></div><div class="architecture-fact"><b>怎么放</b><span>Florence→Val d’Orcia转场</span></div></div><p class="architecture-fit"><b>判断：</b> 这是“建筑＋酒”最强的选择，不是因为网红。选它后，不需要连续再排两家酒庄。</p><div class="architecture-actions"><a href="places/guide.html?place=Chianti#architecture-design">打开完整判断</a><a class="secondary" href="places/tuscany.html#architecture-design">看Tuscany怎么接</a></div></div>
+            </article>
+            <article class="architecture-card">
+              <a class="architecture-media" href="places/guide.html?place=Asolo#architecture-design"><img src="assets/detail-photos/architecture-brion.jpg" alt="Carlo Scarpa设计的Memoriale Brion" loading="lazy"><span class="architecture-photo-credit">Luca Chiaudano · FAI</span></a>
+              <div class="architecture-body"><span class="architecture-status">全站主题线 · 值得专程</span><h3>Carlo Scarpa in Veneto</h3><p class="architecture-subtitle">Brion · Canova · Querini · Olivetti · Castelvecchio</p><p class="architecture-why">Scarpa最有意思的不是一个地标，而是反复处理水、光、混凝土、旧墙和精密收口。家附近就能从墓园、博物馆到商店看出他的完整语言。</p><div class="architecture-facts"><div class="architecture-fact"><b>最完整一天</b><span>Brion＋Canova</span></div><div class="architecture-fact"><b>城市版本</b><span>Venice或Verona各半天</span></div></div><p class="architecture-fit"><b>判断：</b> 真喜欢细部和空间时优先；不是要求全家连刷五处。</p><div class="architecture-actions"><a href="places/guide.html?place=Asolo#architecture-design">打开Scarpa一日</a><a class="secondary" href="places/guide.html?place=Venice#architecture-design">Venice版本</a><a class="secondary" href="places/guide.html?place=Verona#architecture-design">Verona版本</a></div></div>
+            </article>
+            <article class="architecture-card">
+              <a class="architecture-media" href="places/guide.html?place=Vicenza#architecture-design"><img src="assets/place-galleries/vicenza-3.jpg" alt="Palladio设计的Villa La Rotonda" loading="lazy"><span class="architecture-photo-credit">Luca Violetto · BY-SA</span></a>
+              <div class="architecture-body"><span class="architecture-status">最容易看懂 · 值得专程</span><h3>Palladio in Vicenza</h3><p class="architecture-subtitle">Teatro Olimpico＋Villa La Rotonda</p><p class="architecture-why">一个用强透视把短舞台变成深街道，一个用四面柱廊重新组织四方景色。只看这两处就够，不需要数满一座城的Palladio立面。</p><div class="architecture-facts"><div class="architecture-fact"><b>半天版</b><span>Teatro €12</span></div><div class="architecture-fact"><b>完整版</b><span>周五–日再加Rotonda €15</span></div></div><p class="architecture-fit"><b>判断：</b> 对父母和非专业建筑爱好者都很友好；若看完Teatro无感，午饭后直接回家。</p><div class="architecture-actions"><a href="places/guide.html?place=Vicenza#architecture-design">看完整建筑日</a></div></div>
+            </article>
+            <article class="architecture-card">
+              <a class="architecture-media" href="places/guide.html?place=Milan#architecture-design"><img src="assets/place-galleries/milan-2.jpg" alt="Milan城市设计与Galleria空间" loading="lazy"><span class="architecture-photo-credit">Milan城市语境</span></a>
+              <div class="architecture-body"><span class="architecture-status">当代 / 生活方式二选一</span><h3>Milan：Prada 或 Villa Necchi</h3><p class="architecture-subtitle">OMA工业园区 / Portaluppi 1930年代住宅</p><p class="architecture-why">Fondazione Prada看旧酒厂、新塔和当代艺术怎样共处；Villa Necchi看Milanese住宅、家具与时装周语境。它们比追一张不确定的秀票更可执行。</p><div class="architecture-facts"><div class="architecture-fact"><b>Prada</b><span>€15 · 2–2.5h</span></div><div class="architecture-fact"><b>Necchi</b><span>€15 · 60–90min</span></div></div><p class="architecture-fit"><b>判断：</b> 两处平行选择，都会替换一个设计馆或购物段，不叠加成museum marathon。</p><div class="architecture-actions"><a href="places/guide.html?place=Milan#architecture-design">打开Milan判断</a></div></div>
+            </article>
+            <article class="architecture-card">
+              <a class="architecture-media" href="places/lake-como.html#architecture-design"><img src="assets/detail-photos/architecture-balbianello.jpg" alt="Villa del Balbianello占据Lake Como半岛" loading="lazy"><span class="architecture-photo-credit">Alessio Mesiano · FAI</span></a>
+              <div class="architecture-body"><span class="architecture-status">建筑×景观 · 值得专程</span><h3>Como的villa，不能只从船上看。</h3><p class="architecture-subtitle">Balbianello / Monastero / Carlotta</p><p class="architecture-why">真正的价值是建筑、花园和岬角如何共同占据湖面。只做船上外观巡游容易觉得“也就那样”；选一座入内，湖才从背景变成内容。</p><div class="architecture-facts"><div class="architecture-fact"><b>Balbianello</b><span>Villa＋园 €25 · 强制预约</span></div><div class="architecture-fact"><b>最低摩擦</b><span>住Varenna选Monastero</span></div></div><p class="architecture-fit"><b>判断：</b> 一天只进一座villa；这能提升Como，但不自动证明它值得三晚和两间超贵酒店。</p><div class="architecture-actions"><a href="places/lake-como.html#architecture-design">看三座villa怎么选</a></div></div>
+            </article>
+            <article class="architecture-card">
+              <a class="architecture-media" href="places/torreglia-colli-euganei.html#architecture-design"><img src="assets/local-guide/villa-vescovi-21.jpg" alt="Villa dei Vescovi与Colli Euganei葡萄园" loading="lazy"><span class="architecture-photo-credit">Villa dei Vescovi · FAI</span></a>
+              <div class="architecture-body"><span class="architecture-status">家门口 · 不需要长途</span><h3>Villa dei Vescovi 与丘陵生活</h3><p class="architecture-subtitle">建筑不是孤立景点，而是村落、葡萄园和远景的一部分</p><p class="architecture-why">因为离家近，可以等真正好的天气和光线再去。先从San Martino村口看选址，再进loggia，最后沿葡萄田回望，比只进一栋villa完整得多。</p><div class="architecture-facts"><div class="architecture-fact"><b>距离</b><span>约5–10分钟</span></div><div class="architecture-fact"><b>版本</b><span>€11自由看 / €20导览</span></div></div><p class="architecture-fit"><b>判断：</b> 这是最不需要“为了旅行而旅行”的建筑下午，也最能解释为什么家附近值得深入。</p><div class="architecture-actions"><a href="places/torreglia-colli-euganei.html#architecture-design">打开家门口空间线</a><a class="secondary" href="places/colli-euganei-wineries.html#architecture-design">建筑＋本地酒</a></div></div>
+            </article>
+          </div>
+          <p class="architecture-footnote">继续按建筑兴趣浏览：<a href="places/dolomites.html#architecture-design">Dolomites · 有条件的Kronplatz</a> · <a href="places/sicily.html#architecture-design">Sicily · Arab-Norman与Noto Baroque</a> · <a href="places/guide.html?place=Mantua#architecture-design">Mantua · 三种宫殿空间</a> · <a href="places/guide.html?place=Ferrara#architecture-design">Ferrara · 城市规划</a> · <a href="places/guide.html?place=Siena%20/%20San%20Gimignano#architecture-design">Siena · 大理石地板开放期</a></p>
+        </section>
+
         <section class="route-studio" id="route-studio" aria-labelledby="route-studio-title">
           <div class="route-studio-head">
             <div><span class="eyebrow">Trip workspace · 自动保存在这台设备</span><h3 id="route-studio-title">把候选拖进15天日历</h3></div>
-            <p>这些地点没有“主线 / 淘汰”的等级。每张卡只说明它大概会占几天；桌面直接拖到开始日期，手机先点卡片、再点日期。已安排的色块也可以继续拖动。</p>
+            <p>所有地点都是平行候选。每张卡只说明它大概会占几天；桌面直接拖到开始日期，手机先点卡片、再点日期。已安排的色块也可以继续拖动。</p>
           </div>
 
           <div class="route-stats" aria-live="polite">
@@ -1123,16 +1163,13 @@
               <div class="route-card-top"><span class="route-type">Flight · sea · volcano</span><span class="route-duration">5天 / 4晚</span></div><h4>East Sicily</h4><p>Ortigia一处住下；Noto、Etna、海边和完全不同的南方食物。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#east-route">东线攻略 →</a></div>
             </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="milan" style="--route-color:#7C5678">
-              <div class="route-card-top"><span class="route-type">Fashion · design · city</span><span class="route-duration">3天 / 2晚</span></div><h4>Milan</h4><p>9/22–28正值女装时装周；对喜欢服装、设计和城市氛围的人反而是亮点。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Milan">完整攻略 →</a></div>
+              <div class="route-card-top"><span class="route-type">Fashion · design · city</span><span class="route-duration">2天 / 1晚</span></div><h4>Milan</h4><p>9/24–25可同时看设计、Armani与新开的Dalí时装展；不把拿到秀票当成立前提。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Milan">完整攻略 →</a></div>
             </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="como" style="--route-color:#4F7E89">
               <div class="route-card-top"><span class="route-type">Lake · ferry · slow</span><span class="route-duration">4天 / 3晚</span></div><h4>Lake Como</h4><p>Varenna无车版或Menaggio开车版二选一；用船连中央湖区，保留清晨和晚餐。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/lake-como.html">完整攻略与酒店 →</a></div>
             </article>
-            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="switzerland" style="--route-color:#657B69">
-              <div class="route-card-top"><span class="route-type">Cross-border · lake</span><span class="route-duration">3天 / 2晚</span></div><h4>Lugano / Lucerne</h4><p>Lugano最顺路；Lucerne瑞士感更强，但需要更多车程与至少两晚。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Lucerne">完整攻略 →</a></div>
-            </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="garda" style="--route-color:#4C8C82">
-              <div class="route-card-top"><span class="route-type">Lake · short stay</span><span class="route-duration">2天 / 1晚</span></div><h4>Lake Garda</h4><p>Malcesine或Sirmione只选一处；是最容易插入的湖区短版本。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Lake%20Garda">完整攻略 →</a></div>
+              <div class="route-card-top"><span class="route-type">Lake · day trip</span><span class="route-duration">1天</span></div><h4>Lake Garda</h4><p>Sirmione＋湖船＋罗马遗址；一天只做南湖，不把北湖过夜版混进来。</p><div class="route-card-foot"><span>拖到任意留白日</span><a href="places/guide.html?place=Lake%20Garda">完整攻略 →</a></div>
             </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="venice" style="--route-color:#4B6C91">
               <div class="route-card-top"><span class="route-type">Day trip · evening</span><span class="route-duration">1天</span></div><h4>Venice</h4><p>午后进城、cicchetti与夜景；适合放在天气最好、全家体力最好的留白日。</p><div class="route-card-foot"><span>拖到任意留白日</span><a href="places/guide.html?place=Venice">完整攻略 →</a></div>
@@ -1144,7 +1181,7 @@
 
           <div class="calendar-toolbar">
             <div><h4>2026年9月 · 15天</h4><p>9/15抵达与9/29中午离开已锁定；其余空白默认在Torreglia，可继续工作、休息或做临时日游。</p></div>
-            <div class="calendar-events"><b>日期线索</b><br>9/20 Vo’葡萄节 · 9/22–28 Milano Fashion Week</div>
+            <div class="calendar-events"><b>日期线索</b><br>9/18 Colli e-bike · 9/20 Vo’葡萄节 / Villa市集 · 9/22–28 Milano Fashion Week · 9/26 开放酒庄</div>
           </div>
           <div class="calendar-scroll"><div class="trip-calendar" id="tripCalendar" role="grid" aria-label="2026年9月15日至29日旅行日历"></div></div>
           <div class="route-planner-message" id="routePlannerMessage" aria-live="polite">选择一张卡，或直接把它拖进日历。</div>
@@ -1154,13 +1191,18 @@
 
       <div class="pane-inner overview-intro">
         <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Family trip brief <span class="en">先让四个人对这趟旅行有同一张图</span></h2>
-        <p class="section-lede">这是一趟熟悉意大利的一家人共同出游，不需要证明“来过多少地方”。Torreglia是固定大本营，其余都是可以拖进同一张15天日历的平行选择：山、城市、湖区、Tuscany、Sicily或瑞士，各自用天数和体验差异说话。</p>
+        <p class="section-lede">这是一趟熟悉意大利的一家人共同出游，不需要证明“来过多少地方”。Torreglia是固定大本营，其余都是可以拖进同一张15天日历的平行选择：山、城市、湖区、Tuscany或Sicily，各自用天数和体验差异说话。瑞士已从本次候选中移除。</p>
 
         <div class="family-brief" aria-label="家庭旅行简报">
           <div class="brief-card"><span>Travel party</span><b>四位成人 · 两间房</b><p>所有外宿按两间同级房、相同取消政策预订，并备注希望相邻或同楼层。</p></div>
           <div class="brief-card"><span>Travel identity</span><b>意大利熟客，不做打卡</b><p>全家经常来意大利；历史景点只选真正值得的一项，其余时间留给生活感。</p></div>
           <div class="brief-card"><span>Daily rhythm</span><b>一个共同重点</b><p>每天只设一个全家共同的anchor，下午允许分开，避免四个人互相等。</p></div>
           <div class="brief-card"><span>Reunion</span><b>晚餐重新会合</b><p>即使白天分组，也尽量保留一顿共同晚餐，成为每天最稳定的家庭时间。</p></div>
+        </div>
+
+        <div class="callout green">
+          <h4>每个候选都用同一套标准</h4>
+          <p>点进完整攻略后，依次看：<b>值不值得占一天 → 具体去哪几处 → 当前价格与预约 → 门到门交通 → 逐时安排 → 四人预算与替代方案</b>。酒区会额外讲清酒的风格、酒庄差别和零饮酒司机安排；不会只丢一个官网让大家自己研究。</p>
         </div>
 
         <div class="group-note"><b>四人同行的核心设计</b><p>不要求四个人全天做同一件事。山里可分“轻松观景组 / 多走一点组”，Florence可分“艺术 / 逛店与咖啡”，resort日更可自由休息；只要共同转场、一个主活动和晚餐清楚，行程反而更顺。</p></div>
@@ -1200,8 +1242,8 @@
           </div>
           <div class="card">
             <span class="time">城市＋湖区选项 · 5–7天</span>
-            <h3>Milan / Como / Switzerland</h3>
-            <p>Milan两晚可接住9/22–28时装周的城市氛围，再给Como中央湖区三晚；若继续到瑞士，至少再留两晚并减少另一段远行。</p>
+            <h3>Milan / Lake Como</h3>
+            <p>Milan最短一晚、从容版两晚，再给Como中央湖区三晚；到此为止，不再跨境增加转场。</p>
           </div>
           <div class="card is-strong">
             <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palazzo-square.jpg" alt="Palazzo Adriano 天堂电影院广场"><span class="photo-label">Palazzo Adriano · 电影西线</span></a><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-cefalu-port.jpg" alt="Cefalù老港"><span class="photo-label">Cefalù · 老港</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/place-photos/place-35-sicily-ortigia.jpg" alt="Syracuse Ortigia 海港与老城"><span class="photo-label">Ortigia · 东线</span></a></div>
@@ -1368,7 +1410,7 @@
       <div class="pane-inner">
         <div class="kicker">延伸半径</div>
         <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Dolomites + 1.5–3小时延伸 <span class="en">山、湖与城市的不同时间成本</span></h2>
-        <p class="section-lede">Dolomites 应该专门住4–5晚；其余地点只在天气和精神状态都合适时再加，不需要为了“离得不远”逐个完成。</p>
+        <p class="section-lede">这里比较的是不同时间成本：Dolomites需要4–5晚才成立，城市与湖区则可用一天或一晚插入。每个地点都是平行候选，点进去再按天气、兴趣与体力判断。</p>
 
         <div class="grid">
           <div class="card">
@@ -1416,7 +1458,7 @@
             <span class="time">3小时</span>
             <h3>Dolomites</h3>
             <div class="place-cn">多洛米蒂</div>
-            <p>这应该是整趟的主角，不是自由日备选。住Alta Badia 4–5晚，不换酒店；利用仍开放的缆车做轻徒步，下午回酒店享受spa或自由时间。</p>
+            <p>Dolomites需要5个日历日才成立；如果全家把自然、山屋午餐和spa放在中心，住Alta Badia 4晚、不换酒店，就是一条完整组合。</p>
             <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">小红书搜攻略</a>
           </div>
         </div>
@@ -1428,22 +1470,22 @@
       </div>
     </section>
 
-    <!-- ============ MILAN / COMO / SWITZERLAND ============ -->
+    <!-- ============ MILAN / COMO ============ -->
     <section id="northwest" class="pane">
       <div class="pane-inner">
-        <div class="kicker">西北组合 · 城市 / 时装 / 湖区 / 瑞士</div>
-        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Milan · Lake Como · Switzerland</h2>
-        <p class="section-lede">这条线和Dolomites、Tuscany、Sicily平行比较。最紧凑的版本是Milan两晚；最完整的版本是Milan两晚＋Como中央湖区三晚；继续到Lugano或Lucerne，则需要再为跨境和湖山体验留出时间。</p>
+        <div class="kicker">西北组合 · 城市 / 时装 / 湖区</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Milan · Lake Como</h2>
+        <p class="section-lede">这条线和Dolomites、Tuscany、Sicily平行比较。Milan最短做2天1晚，从容版住2晚；若再接Como中央湖区3晚，整组需要6–7个日历日。本次不继续跨境北上。</p>
 
         <div class="callout gold">
           <h4>9月22–28日 Milano Fashion Week：不是只代表贵和挤</h4>
-          <p>如果你对象对服装、设计、买手店与城市气氛感兴趣，这段重合反而让Milan更有理由进入日历。<a href="https://www.cameramoda.it/en/associazione/manifestazione/2-milano-fashion-week/" target="_blank" rel="noopener">Camera Nazionale della Moda Italiana</a>确认女装时装周为9月22–28日；正式秀场多为行业邀请，但品牌展示、店铺活动、公开展览和整座城市的氛围仍有旅行价值。代价是两间房与晚餐要更早订。</p>
+          <p>如果家里有人对服装、设计、买手店与城市气氛感兴趣，这段重合反而让Milan更有理由进入日历。<a href="https://www.cameramoda.it/en/associazione/manifestazione/2-milano-fashion-week/" target="_blank" rel="noopener">Camera Nazionale della Moda Italiana</a>确认女装时装周为9月22–28日；正式秀场多为行业邀请，但品牌展示、店铺活动、公开展览和整座城市的氛围仍有旅行价值。代价是两间房与晚餐要更早订。</p>
         </div>
 
         <div class="grid">
           <div class="card">
             <svg class="card-icon"><use href="#icon-dome"/></svg>
-            <span class="time">约2.5小时 · 建议住2晚</span>
+            <span class="time">约2.5小时 · 建议住1–2晚</span>
             <h3>Milan</h3>
             <div class="place-cn">米兰</div>
             <p>重点不是把所有博物馆走完，而是Duomo屋顶、Brera街区、设计店、好咖啡和一晚漂亮的aperitivo；9/22–28还叠加女装时装周氛围。</p>
@@ -1457,31 +1499,11 @@
             <p>住Varenna、Bellagio或Menaggio一带，用船代替开车。三晚能留出两个完整湖区日，也不会把抵离时间误算成体验日。</p>
             <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Lake Como">小红书搜 Lake Como</a>
           </div>
-          <div class="card">
-            <svg class="card-icon"><use href="#icon-lake"/></svg>
-            <span class="time">从Como湖区约1小时 · 住0–1晚</span>
-            <h3>Lugano</h3>
-            <div class="place-cn">卢加诺 · 瑞士</div>
-            <p>湖边散步、Parco Ciani和Monte Brè / San Salvatore，气质仍偏意大利语区，是最顺路、压力最低的瑞士体验。</p>
-            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="卢加诺 攻略">小红书搜攻略</a>
-          </div>
-          <div class="card">
-            <svg class="card-icon"><use href="#icon-bridge"/></svg>
-            <span class="time">从Lugano约2小时 · 至少住2晚</span>
-            <h3>Lucerne</h3>
-            <div class="place-cn">卢塞恩 · 瑞士</div>
-            <p>木桥、老城、湖船与Pilatus / Rigi，瑞士感明显强于Lugano，但来回车程更多，只在我们愿意减少意大利停留时加入。</p>
-            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="卢塞恩 攻略">小红书搜攻略</a>
-          </div>
         </div>
 
         <div class="callout gold">
           <h4>Lake Como：不要围着湖开车打卡</h4>
           <p><a href="https://www.navigazionelaghi.it/en/" target="_blank" rel="noopener">2026夏季官方船班</a>覆盖7月1日至10月4日，正好包含我们的日期。住中央湖区后，用Bellagio–Varenna–Menaggio短线轮渡串联最省力；具体班次出发前再按当天日期确认。<a class="detail-page-link" href="places/lake-como.html">看Varenna / Menaggio基地、酒店与四天安排 →</a></p>
-        </div>
-        <div class="callout">
-          <h4>开车进入瑞士前</h4>
-          <p>先确认意大利租车合同允许跨境。使用瑞士高速公路需要<a href="https://www.ch.ch/en/vehicles-and-traffic/how-to-behave-in-road-traffic/motorway-vignette/" target="_blank" rel="noopener">2026年vignette</a>，价格CHF 40，没有短期版；可以购买电子版或在边境购买贴纸版。若只去Lugano，也可以比较火车是否比自驾更轻松。</p>
         </div>
       </div>
     </section>
@@ -1491,10 +1513,10 @@
       <div class="pane-inner">
         <div class="kicker">飞行候选 · 两条独立路线</div>
         <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Sicily <span class="en">电影西线5晚 / 东线4晚</span></h2>
-        <p class="section-lede">Sicily不再只有一个笼统答案。你喜欢《天堂电影院》，所以新增Palazzo Adriano＋Cefalù的电影西线；原来的Ortigia＋Noto＋Etna东线完整保留。两条路线分别从VCE飞Palermo或Catania，不能在四五晚里硬拼。</p>
+        <p class="section-lede">Sicily不再只有一个笼统答案。《天堂电影院》是电影西线的情感入口，因此加入Palazzo Adriano＋Cefalù；原来的Ortigia＋Noto＋Etna东线完整保留。两条路线分别从VCE飞Palermo或Catania，不能在四五晚里硬拼。</p>
 
         <div class="callout green">
-          <h4>现在最贴你的版本：电影西线，但保留平行选择</h4>
+          <h4>电影情感更强的版本：西线，同时保留东线平行选择</h4>
           <p><b>电影西线：</b>Palermo 3晚＋Cefalù 2晚，Palazzo Adriano包车日去日回；是情感、城市与海边小城的组合。<br><b>东线：</b>Ortigia 4晚不换酒店，Noto半日、Etna一天；是火山、海与放松的组合。</p>
           <p style="margin-top:12px"><a class="detail-page-link" href="places/sicily.html">进入Sicily完整攻略 · 真实取景地、多图与两条每天安排</a></p>
         </div>
@@ -1623,13 +1645,13 @@
 
         <div class="callout gold">
           <h4>其他组合请回首页拖拽，不靠文字想象</h4>
-          <p>东线Sicily占5个日历日，电影西线占6天；Milan＋Como约占7天，Lucerne至少占3天。首页日历会直接显示还剩多少留白日；下面Day 8–13只展开Tuscany版本的生活节奏。</p>
+          <p>东线Sicily占5个日历日，电影西线占6天；Milan＋Como按住宿选择占6–7天。首页日历会直接显示还剩多少留白日；下面Day 8–13只展开Tuscany版本的生活节奏。</p>
         </div>
 
         <div class="choice-board">
           <div class="choice-option"><span class="choice-label">陆路组合</span><h4>Tuscany 5晚</h4><p>熟悉、顺路、酒店风险低；Florence两晚＋乡间三晚，只换一次酒店。</p></div>
           <div class="choice-option"><span class="choice-label">飞行组合</span><h4>Sicily 4–5晚</h4><p>电影西线看Palazzo Adriano与Cefalù；东线看Ortigia、Noto与Etna。两张卡独立试排。</p></div>
-          <div class="choice-option"><span class="choice-label">时装＋湖区组合</span><h4>Milan 2晚＋Como 3晚</h4><p>时装周正好落在旅行后半段；城市能量更强，再用中央湖区把节奏慢下来。</p></div>
+          <div class="choice-option"><span class="choice-label">时装＋湖区组合</span><h4>Milan 1–2晚＋Como 3晚</h4><p>时装周正好落在旅行后半段；城市能量更强，再用中央湖区把节奏慢下来。</p></div>
         </div>
 
         <div class="timeline">
@@ -1832,8 +1854,6 @@
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">Dolomites</a>（Cortina）<span class="place-cn-sm">多洛米蒂</span></td><td>约3小时</td><td><span class="chip free">延伸</span></td></tr>
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="米兰 攻略">Milan</a><span class="place-cn-sm">米兰</span></td><td>约2.5小时</td><td><span class="chip north">候选2晚</span></td></tr>
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="Lake Como">Lake Como</a><span class="place-cn-sm">科莫湖</span></td><td>约3小时</td><td><span class="chip north">候选3晚</span></td></tr>
-          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="卢加诺 攻略">Lugano</a><span class="place-cn-sm">卢加诺</span></td><td>约3.5小时</td><td><span class="chip north">候选0–1晚</span></td></tr>
-          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="卢塞恩 攻略">Lucerne</a><span class="place-cn-sm">卢塞恩</span></td><td>约5小时+</td><td><span class="chip north">候选2晚+</span></td></tr>
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="奥尔恰谷 攻略">Val d'Orcia</a><span class="place-cn-sm">奥尔恰谷</span></td><td>约3.5小时</td><td><span class="chip tuscany">候选3晚</span></td></tr>
           <tr><td><a href="places/sicily.html">Sicily · 两条路线</a><span class="place-cn-sm">电影西线 / 东线</span></td><td>VCE–PMO或CTA · 门到门大半天</td><td><span class="chip free">候选4–5晚</span></td></tr>
         </table>
@@ -1880,8 +1900,8 @@
   </main>
 </div>
 
-<script src="planner-guides.js"></script>
-<script src="place-gallery-data.js"></script>
+<script src="planner-guides.js?v=20260904-2"></script>
+<script src="place-gallery-data.js?v=20260904-2"></script>
 <script>
   const detailPages = {
     'Arquà Petrarca':'places/arqua-petrarca.html',
@@ -1892,11 +1912,11 @@
     'Sicily':'places/sicily.html',
     'Lake Como':'places/lake-como.html',
     'Florence':'places/tuscany.html',
-    'Chianti':'places/tuscany.html',
-    'Siena / San Gimignano':'places/tuscany.html',
     "Val d'Orcia":'places/tuscany.html',
-    'Pitigliano / Saturnia':'places/tuscany.html',
-    'Volterra / Cortona':'places/tuscany.html'
+    'Chianti':'places/guide.html?place=Chianti',
+    'Siena / San Gimignano':'places/guide.html?place=' + encodeURIComponent('Siena / San Gimignano'),
+    'Pitigliano / Saturnia':'places/guide.html?place=' + encodeURIComponent('Pitigliano / Saturnia'),
+    'Volterra / Cortona':'places/guide.html?place=' + encodeURIComponent('Volterra / Cortona')
   };
   Object.keys(plannerGuides).forEach(name => {
     if (!detailPages[name]) detailPages[name] = 'places/guide.html?place=' + encodeURIComponent(name);
@@ -1905,33 +1925,31 @@
   const placeDetails = {
     'Arquà Petrarca': {level:'strong', label:'值得去 · 轻松半天', vibe:'安静石头村、橄榄与葡萄园，适合慢慢吃午饭。', activities:['老村随走，不用按景点打卡','找一家带景观的trattoria吃长午餐','顺路买当地橄榄油或brodo di giuggiole']},
     'Monselice / Este': {level:'optional', label:'看状态', vibe:'古堡与花园型小镇；漂亮，但偏历史建筑。', activities:['Monselice走七圣堂上坡线','Este城堡花园散步','二选一即可，不必同日完成']},
-    'Abano / Montegrotto Terme': {level:'must', label:'全家友好 · 放松', vibe:'真正的温泉度假下午，不是赶景点。', activities:['订带day-spa access的温泉酒店','泡池＋按摩或泥疗','结束后回Torreglia吃晚饭']},
-    'Colli Euganei Wineries': {level:'must', label:'全家友好 · Local', vibe:'葡萄收获季、农庄与本地餐桌，比网红酒庄更生活化。', activities:['预约一家小酒庄品Serprino/Fior d’Arancio','在agriturismo吃当季长午餐','丘陵日落前开一段景观路']},
+    'Abano / Montegrotto Terme': {level:'must', label:'放松 · 半日至一天', vibe:'真正的温泉度假下午，不是赶景点。', activities:['比较纯入场、按摩和带房套餐','泡池＋按摩或泥疗','结束后回Torreglia吃晚饭']},
+    'Colli Euganei Wineries': {level:'must', label:'Local · 酒＋午餐', vibe:'葡萄收获季、农庄与本地餐桌，比网红酒庄更生活化。', activities:['按酒的风格选一家酒庄','在agriturismo吃当季长午餐','指定零饮酒司机或安排接送']},
     'Padua': {level:'optional', label:'半天足够', vibe:'大学城＋市场＋aperitivo，比纯看教堂更符合这次节奏。', activities:['早上逛Piazza delle Erbe市场','Caffè Pedrocchi或街边espresso','只在很想看乔托时订Scrovegni Chapel']},
-    'Vicenza': {level:'skip', label:'可跳过', vibe:'帕拉迪奥建筑浓度很高；不是我们的核心兴趣。', activities:['若去只看Teatro Olimpico','市中心午餐＋散步即可','不专门为Villa La Rotonda排满一天']},
+    'Vicenza': {level:'optional', label:'候选 · 建筑', vibe:'帕拉迪奥建筑浓度很高；可以是半天轻量版，也可以加La Rotonda做完整主题日。', activities:['先用Teatro Olimpico判断兴趣','市中心午餐＋平坦散步','建筑兴趣强再加Villa La Rotonda']},
     'Treviso': {level:'optional', label:'看状态 · Easy', vibe:'运河、咖啡与spritz，像低压力版Venice。', activities:['运河边散步','吃tiramisu/喝espresso','傍晚aperitivo后回家']},
     'Bassano del Grappa': {level:'strong', label:'值得去 · Local', vibe:'河景廊桥、grappa与山脚小城，画面和吃喝都有。', activities:['走Ponte Vecchio看Brenta河','Nardini或Poli试一小杯grappa','搭配Asolo做舒服的一日']},
     'Asolo': {level:'strong', label:'值得去 · 慢走', vibe:'安静山城、石板路与景观露台，适合全家轻松散步。', activities:['老城随走＋喝咖啡','到Rocca或观景点看平原','与Bassano组合，不单独赶一天']},
-    'Prosecco Hills': {level:'strong', label:'值得去 · 酒＋风景', vibe:'层叠葡萄园与起泡酒公路，视觉比酒本身更重要。', activities:['走Conegliano–Valdobbiadene景观路','预约一家精品酒庄','在Osteria senz’Oste简单吃喝看景']},
-    'Venice': {level:'must', label:'必去 · 一整天', vibe:'避开打卡式白天，把重点留给小巷、cicchetti和夜色。', activities:['午后入城，先走Cannaregio/Dorsoduro','bacaro hop吃cicchetti配spritz','日落后看人潮散去再返回']},
-    'Verona': {level:'must', label:'全家友好 · 城市＋酒', vibe:'漂亮但不压迫的老城，最好与Valpolicella Amarone连起来。', activities:['上午Arena与河边散步','午后去Valpolicella酒庄','在Verona吃晚饭或直接住一晚']},
+    'Prosecco Hills': {level:'strong', label:'候选 · 酒＋丘陵', vibe:'用一次横向品鉴喝懂DOC/DOCG、Brut/Extra Dry、Rive/Cartizze，再把时间留给午餐与坡地。', activities:['Bisol六款或Bortolomiol艺术园二选一','Alla Cima或Salìs提前订午餐','只走一个安全的Cartizze景观段','指定一人全程零饮酒或提前订NCC']},
+    'Venice': {level:'must', label:'水城 · 一整天', vibe:'避开打卡式白天，把重点留给小巷、cicchetti和夜色。', activities:['午后入城，先走Cannaregio/Dorsoduro','bacaro hop吃cicchetti配spritz','日落后看人潮散去再返回']},
+    'Verona': {level:'must', label:'城市＋酒 · 一整天', vibe:'漂亮但不压迫的老城，最好与Valpolicella Amarone连起来。', activities:['上午Arena与河边散步','午后只选一家Valpolicella酒庄','指定零饮酒司机或安排接送']},
     'Chioggia': {level:'optional', label:'看状态 · 海鲜', vibe:'真实渔港版Venice，重点是市场和海鲜，不是建筑。', activities:['早上鱼市','运河边散步','吃一顿海鲜午餐后回家']},
-    'Lake Garda': {level:'optional', label:'可选 · 不必硬塞', vibe:'湖边度假漂亮，但这趟与Dolomites相比边际价值较低。', activities:['只选Malcesine或Sirmione一处','坐船＋湖边午餐','若去至少住一晚，不做匆忙往返']},
-    'Mantua': {level:'skip', label:'可跳过', vibe:'安静文艺复兴城市，历史感强于吃喝与自然。', activities:['若下雨可作城市备选','Palazzo Te二选一参观','湖边散步']},
-    'Ferrara': {level:'skip', label:'可跳过', vibe:'平坦骑行古城，舒服但不会成为这趟记忆点。', activities:['租自行车绕城墙','市场或小馆午餐','适合作为顺路停靠']},
+    'Lake Garda': {level:'optional', label:'湖区 · 日游或一晚', vibe:'南湖古镇与北湖山景是两种玩法；先决定想要考古水城还是山湖度假。', activities:['Sirmione日游或Malcesine一晚二选一','坐船＋湖边午餐','不做一天环湖']},
+    'Mantua': {level:'optional', label:'候选 · 文艺复兴', vibe:'安静的贡扎加城市，宫殿、室内艺术与湖边散步组合完整，尤其适合天气不稳时。', activities:['Palazzo Te与Palazzo Ducale按展览二选一','吃南瓜tortelli与sbrisolona','湖边散步或短船按天气决定']},
+    'Ferrara': {level:'optional', label:'候选 · 骑行古城', vibe:'平坦、骑车舒服，城堡、城墙与犹太历史比“顺路停一停”更有内容。', activities:['租自行车绕城墙','Castello Estense或Palazzo Diamanti选一处','市场或小馆午餐']},
     'Bologna': {level:'strong', label:'值得去 · 吃', vibe:'不是景点日，是从早餐一路吃到晚餐的城市。', activities:['Quadrilatero市场与salumeria','吃tagliatelle al ragù / tortellini','有精力再爬San Luca或双塔附近散步']},
     'Trieste': {level:'optional', label:'看状态 · 咖啡', vibe:'海边中欧气质和老派咖啡馆，风格独特但方向相反。', activities:['Piazza Unità看海','老咖啡馆坐一小时','Miramare Castle只看外景与海岸']},
     'Dolomites': {level:'strong', label:'候选 · 建议四晚', vibe:'山景、rifugio、轻徒步与spa；如果全家想把自然放在中心，它的回报很高。', activities:['Alta Badia住4晚不换酒店','缆车上山后走2–3小时轻路线','每天安排一顿rifugio午餐','15:00左右回酒店自由安排']},
-    'Milan': {level:'strong', label:'候选 · 时装周加分', vibe:'设计、咖啡、aperitivo与9/22–28时装周城市能量；对喜欢服装的人有独特价值。', activities:['建议住2晚而不是当天往返','Duomo＋Brera＋设计店','等待公开活动日历并提前订两间房']},
+    'Milan': {level:'strong', label:'候选 · 时装周加分', vibe:'设计、咖啡、aperitivo与9/22–28时装周城市能量；对喜欢服装的人有独特价值。', activities:['最短住1晚，从容版2晚','Duomo＋Brera＋设计店','等待公开活动日历并提前订两间房']},
     'Lake Como': {level:'strong', label:'候选 · 建议三晚', vibe:'湖船、临水晚餐和清晨很漂亮；价值来自住在中央湖区，而不是长途日游。', activities:['Varenna / Menaggio一处住3晚','Bellagio与另一镇分两天坐船','与Milan组合最顺']},
-    'Lugano': {level:'optional', label:'候选 · 顺路跨境', vibe:'意大利语区湖城，最适合接在Como后面；跨境成本低于继续去Lucerne。', activities:['可做Como出发一日或住1晚','湖边＋San Salvatore','先确认租车跨境与vignette']},
-    'Lucerne': {level:'optional', label:'候选 · 至少两晚', vibe:'湖船、木桥与瑞士山景层次更完整；代价是从Torreglia更远。', activities:['至少住2晚','Pilatus / Rigi二选一','加入后减少另一段远程住宿']},
     'Florence': {level:'strong', label:'候选 · 建议两晚', vibe:'重访与初访可以并存；不重复酒店式体验，也不赶博物馆KPI。', activities:['建议住两晚','Accademia和Uffizi只选一个','Oltrarno＋咖啡＋长午餐＋傍晚散步']},
     'Chianti': {level:'optional', label:'看状态 · 酒', vibe:'农庄慢生活很舒服，但已有Colli Euganei和Valpolicella，不必重复太多品酒。', activities:['选一家agriturismo住1–2晚','只订一家真正想去的酒庄','烹饪课比连续tasting更适合全家']},
     'Siena / San Gimignano': {level:'optional', label:'二选一', vibe:'中世纪城市画面强，但两座连跑会变成古城KPI。', activities:['Siena看Campo广场＋午餐','或San Gimignano看塔楼＋gelato','按路线只选一座']},
-    "Val d'Orcia": {level:'must', label:'若去Tuscany就选这里', vibe:'柏树、rolling hills、长午餐和Brunello，是这次家庭旅行最合适的一段。', activities:['Pienza＋San Quirico景观路','Montalcino只约一家Brunello酒庄','住乡间酒店，日落前不赶路']},
+    "Val d'Orcia": {level:'must', label:'乡间＋Brunello · 3晚', vibe:'柏树、rolling hills、长午餐和Brunello，是Tuscany里最完整的乡间版本。', activities:['Pienza＋San Quirico景观路','Montalcino只约一家Brunello酒庄','住乡间酒店，日落前不赶路']},
     'Pitigliano / Saturnia': {level:'optional', label:'看状态 · 路远', vibe:'悬崖城＋天然温泉很有反差，但会把Tuscany线路拉得很南。', activities:['有4晚以上Tuscany才考虑','Saturnia清晨避开人群','不与Val d’Orcia同日硬塞']},
-    'Volterra / Cortona': {level:'skip', label:'顺路才停', vibe:'漂亮小城，但不值得专程绕路。', activities:['回程顺路选一座','咖啡＋午餐＋一小时散步','不要额外换酒店']}
+    'Volterra / Cortona': {level:'optional', label:'候选 · 小城加项', vibe:'两座都可用半天补入Tuscany，但风格与行车方向不同，按最终住宿位置择一。', activities:['从住宿点顺路选一座','咖啡＋午餐＋一小时散步','不为半天加项额外换酒店']}
   };
 
   const placePhotos = {
@@ -2000,12 +2018,6 @@
     'Lake Como':[
       {label:'Lake Como · Bellagio', src:'assets/place-photos/place-32-lake-como.jpg', source:'https://commons.wikimedia.org/wiki/File:Lac_de_C%C3%B4me_-_Bellagio.jpg'}
     ],
-    'Lugano':[
-      {label:'Lugano · Lake & Monte Brè', src:'assets/place-photos/place-33-lugano.jpg', source:'https://commons.wikimedia.org/wiki/File:CH.TI.Lugano_Lake-Lugano_Monte-Br%C3%A8_2021-04-17_16x9-R_16384x9216.jpg'}
-    ],
-    'Lucerne':[
-      {label:'Lucerne · Chapel Bridge', src:'assets/place-photos/place-34-lucerne.jpg', source:'https://commons.wikimedia.org/wiki/File:Luzern_Kapellbruecke.jpg'}
-    ],
     'Florence':[
       {label:'Florence', src:'assets/place-photos/place-22-florence.webp', source:'https://www.expedia.com/Arcetri.dx6142058'}
     ],
@@ -2037,9 +2049,9 @@
     const detail = placeDetails[title.textContent.trim()];
     if (!detail) return;
     const card = title.closest('.card');
-    card.classList.add('is-' + detail.level);
+    card.classList.add('is-option');
     const badge = document.createElement('span');
-    badge.className = 'priority ' + detail.level;
+    badge.className = 'priority option';
     badge.textContent = detail.label;
     card.prepend(badge);
     const vibe = document.createElement('div');
@@ -2056,18 +2068,6 @@
     });
     const xhs = card.querySelector('.xhs-btn');
     if (xhs) card.insertBefore(list, xhs); else card.appendChild(list);
-  });
-
-  const priorityOrder = {must:0, strong:1, optional:2, skip:3};
-  document.querySelectorAll('.grid').forEach(grid => {
-    const cards = Array.from(grid.children).filter(el => el.classList.contains('card'));
-    const ranked = cards.map((card, index) => {
-      const title = card.querySelector('h3');
-      const detail = title && placeDetails[title.textContent.trim()];
-      return {card, index, rank:detail ? priorityOrder[detail.level] : 99};
-    });
-    if (!ranked.some(item => item.rank < 99)) return;
-    ranked.sort((a,b) => a.rank - b.rank || a.index - b.index).forEach(item => grid.appendChild(item.card));
   });
 
   document.querySelectorAll('.card h3').forEach(title => {
@@ -2204,8 +2204,6 @@
     '多洛米蒂 攻略':'Dolomiti',
     '米兰 攻略':'Milano',
     '科莫湖 攻略':'Lake Como',
-    '卢加诺 攻略':'Lugano',
-    '卢塞恩 攻略':'Luzern',
     '佛罗伦萨 攻略':'Firenze',
     '基安蒂 攻略':'Chianti',
     '锡耶纳 圣吉米尼亚诺 攻略':['Siena','San Gimignano'],
@@ -2246,10 +2244,9 @@
       tuscany:{name:'Tuscany',days:6,nights:5,color:'#A63A2E'},
       'sicily-film':{name:'Cinema Paradiso Sicily',days:6,nights:5,color:'#8F4B36'},
       'sicily-east':{name:'East Sicily',days:5,nights:4,color:'#C45C3C'},
-      milan:{name:'Milan',days:3,nights:2,color:'#7C5678'},
+      milan:{name:'Milan',days:2,nights:1,color:'#7C5678'},
       como:{name:'Lake Como',days:4,nights:3,color:'#4F7E89'},
-      switzerland:{name:'Switzerland',days:3,nights:2,color:'#657B69'},
-      garda:{name:'Lake Garda',days:2,nights:1,color:'#4C8C82'},
+      garda:{name:'Lake Garda',days:1,nights:0,color:'#4C8C82'},
       venice:{name:'Venice',days:1,nights:0,color:'#4B6C91'},
       local:{name:'Torreglia / Veneto',days:1,nights:0,color:'#3F5B3D',repeat:true}
     };
@@ -2495,6 +2492,8 @@
   const requestedTab = location.hash.slice(1);
   if (requestedTab) activateTab(requestedTab, false);
 </script>
+
+<script src="places/architecture-lens.js?v=20260904-8"></script>
 
 </body>
 </html>
