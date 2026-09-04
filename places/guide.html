@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="place-detail.css">
+  <link rel="stylesheet" href="place-detail.css?v=20260904-3">
+  <link rel="stylesheet" href="architecture-lens.css?v=20260904-4">
 </head>
 <body>
   <nav class="topbar">
@@ -64,7 +65,7 @@
 
     <section class="section detail-only" id="venuesSection" hidden>
       <div class="section-head">
-        <h2 id="venuesTitle">我替你们筛过的具体选择</h2>
+        <h2 id="venuesTitle">顾问筛选的具体选择</h2>
         <p class="section-intro" id="venuesIntro">不是罗列所有可能，而是把最适合这次四位成人家庭旅行的选择摆出来，并说明取舍。</p>
       </div>
       <div class="venue-list" id="venueList"></div>
@@ -80,10 +81,18 @@
 
     <section class="section">
       <div class="section-head">
-        <h2>完整版本时间表</h2>
+        <h2 id="scheduleTitle">完整版本时间表</h2>
         <p class="section-intro" id="scheduleIntro">这是方向，不是必须准点完成的清单。午餐、咖啡和临时停留都可以把后半段往后推。</p>
       </div>
       <div class="timeline guide-timeline" id="schedule"></div>
+    </section>
+
+    <section class="section detail-only" id="alternateScheduleSection" hidden>
+      <div class="section-head">
+        <h2 id="alternateScheduleTitle">另一种完整走法</h2>
+        <p class="section-intro" id="alternateScheduleIntro"></p>
+      </div>
+      <div class="timeline guide-timeline" id="alternateSchedule"></div>
     </section>
 
     <section class="section detail-only" id="budgetSection" hidden>
@@ -120,10 +129,12 @@
     </nav>
   </main>
 
-  <script src="../planner-guides.js"></script>
-  <script src="../place-gallery-data.js"></script>
-  <script src="guide-data.js"></script>
-  <script src="guide-detail-data.js"></script>
-  <script src="guide-page.js"></script>
+  <script src="../planner-guides.js?v=20260904-3"></script>
+  <script src="../place-gallery-data.js?v=20260904-3"></script>
+  <script src="guide-data.js?v=20260904-3"></script>
+  <script src="guide-detail-data.js?v=20260904-3"></script>
+  <script src="architecture-data.js?v=20260904-9"></script>
+  <script src="guide-page.js?v=20260904-3"></script>
+  <script src="architecture-lens.js?v=20260904-8"></script>
 </body>
 </html>
