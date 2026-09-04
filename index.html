@@ -1,0 +1,2500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Torreglia 家庭旅行工作台 · 2026年9月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDE4D2;
+    --card:#F7F1E4;
+    --ink:#1F2A3C;
+    --ink-soft:#4A5468;
+    --line:#D9CBA8;
+    --green:#3F5B3D;
+    --red:#A63A2E;
+    --gold:#B98B33;
+    --navy:#1F2A3C;
+    --cream-on-navy:#F2ECDD;
+    --gold-on-navy:#D8AE5B;
+    --red-on-navy:#E0776A;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--ink);
+    margin:0 0 .4em 0;
+  }
+  p{margin:0 0 1em 0; max-width:66ch;}
+  ul{margin:0 0 1em 0; padding-left:1.1em;}
+  a{color:var(--green);}
+
+  /* ===== App shell ===== */
+  .app{display:flex; min-height:100vh;}
+
+  /* ===== Spine (nav) ===== */
+  .spine{
+    background:var(--navy);
+    width:236px;
+    flex:0 0 236px;
+    padding:28px 0 28px 0;
+    display:flex;
+    flex-direction:column;
+    position:sticky;
+    top:0;
+    height:100vh;
+  }
+  .seal{
+    margin:0 auto 30px auto;
+    width:118px; height:118px;
+    border-radius:50%;
+    border:1px solid rgba(216,174,91,.55);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .seal::before{
+    content:"";
+    position:absolute; inset:7px;
+    border:1px solid rgba(216,174,91,.3);
+    border-radius:50%;
+  }
+  .seal-text{
+    text-align:center;
+    color:var(--gold-on-navy);
+    font-family:'Fraunces', serif;
+  }
+  .seal-text .place{
+    display:block;
+    font-size:13px;
+    letter-spacing:.14em;
+    font-weight:500;
+  }
+  .seal-text .coords{
+    display:block;
+    margin-top:5px;
+    font-size:10px;
+    color:rgba(242,236,221,.6);
+    font-family:'Work Sans', sans-serif;
+    letter-spacing:.04em;
+  }
+
+  .tabs{list-style:none; margin:0; padding:0; flex:1;}
+  .tab{
+    display:block;
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    border-left:3px solid transparent;
+    color:rgba(242,236,221,.62);
+    font-family:'Work Sans', sans-serif;
+    font-size:14.5px;
+    font-weight:500;
+    letter-spacing:.01em;
+    padding:13px 26px 13px 23px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .tab .sub{
+    display:block;
+    font-size:11px;
+    color:rgba(242,236,221,.35);
+    margin-top:2px;
+    font-weight:400;
+  }
+  .tab:hover{background:rgba(255,255,255,.04); color:rgba(242,236,221,.85);}
+  .tab.is-active{
+    background:rgba(255,255,255,.06);
+    border-left-color:var(--gold-on-navy);
+    color:var(--cream-on-navy);
+  }
+
+  .spine-foot{
+    padding:16px 26px 0 26px;
+    font-size:11px;
+    color:rgba(242,236,221,.32);
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:10px;
+  }
+
+  /* ===== Content ===== */
+  .content{
+    flex:1;
+    min-width:0;
+    height:100vh;
+    overflow-y:auto;
+    padding:56px 64px 100px 64px;
+  }
+  .pane{display:none;}
+  .pane.is-active{display:block;}
+  .pane-inner{max-width:840px;}
+
+  .kicker{
+    color:var(--ink-soft);
+    font-size:14px;
+    margin-bottom:6px;
+  }
+
+  /* ===== Hero (Overview only) ===== */
+  .hero{
+    background:var(--navy);
+    color:var(--cream-on-navy);
+    margin:-56px -64px 40px -64px;
+    padding:64px 64px 48px 64px;
+  }
+  .hero h1{
+    color:var(--cream-on-navy);
+    font-size:42px;
+    line-height:1.2;
+    max-width:14ch;
+    font-weight:400;
+  }
+  .hero .tagline{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:19px;
+    color:var(--gold-on-navy);
+    max-width:40ch;
+    margin-top:6px;
+  }
+  .hero .meta-row{
+    display:flex;
+    gap:32px;
+    margin-top:26px;
+    flex-wrap:wrap;
+  }
+  .hero .meta-item{font-size:13.5px; color:rgba(242,236,221,.75);}
+  .hero .meta-item b{
+    display:block;
+    color:var(--cream-on-navy);
+    font-size:16px;
+    font-family:'Fraunces', serif;
+    font-weight:500;
+  }
+  .decision-orbit{
+    margin-top:34px;
+    border:1px solid rgba(242,236,221,.16);
+    background:
+      radial-gradient(circle at 49% 48%, rgba(216,174,91,.10), transparent 31%),
+      linear-gradient(145deg,rgba(242,236,221,.055),rgba(31,42,60,.2));
+  }
+  .orbit-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    padding:18px 20px 0;
+  }
+  .orbit-head h3{
+    margin:0;
+    color:var(--cream-on-navy);
+    font-size:21px;
+    font-weight:500;
+  }
+  .orbit-head p{
+    max-width:46ch;
+    margin:0;
+    color:rgba(242,236,221,.62);
+    font-size:10.8px;
+    line-height:1.45;
+    text-align:right;
+  }
+  .orbit-scroll{overflow-x:auto; overscroll-behavior-inline:contain;}
+  .orbit-map{
+    display:block;
+    width:100%;
+    min-width:780px;
+    height:auto;
+    margin:2px auto 0;
+  }
+  .orbit-map text{font-family:'Work Sans',sans-serif; pointer-events:none;}
+  .orbit-map .serif{font-family:'Fraunces',serif;}
+  .orbit-line,.orbit-route,.orbit-branch{fill:none; vector-effect:non-scaling-stroke;}
+  .orbit-line{stroke:rgba(242,236,221,.12); stroke-width:1;}
+  .orbit-line.is-flex{stroke:#83B8AE; stroke-width:1.25; stroke-dasharray:3 7; opacity:.72;}
+  .orbit-route{stroke:var(--gold-on-navy); stroke-width:3; stroke-linecap:round; opacity:.9;}
+  .orbit-branch{stroke:#83B8AE; stroke-width:1.4; stroke-dasharray:4 5; opacity:.78;}
+  .orbit-node circle,.orbit-node rect{vector-effect:non-scaling-stroke; transition:transform .2s ease,filter .2s ease; transform-box:fill-box; transform-origin:center;}
+  a.orbit-node:hover circle,a.orbit-node:hover rect{transform:scale(1.045); filter:brightness(1.12);}
+  .orbit-fixed circle{fill:#F2ECDD; stroke:var(--gold-on-navy); stroke-width:3;}
+  .orbit-lean circle{fill:#D8AE5B; stroke:#F2ECDD; stroke-width:1.2;}
+  .orbit-flex circle{fill:#243247; stroke:#83B8AE; stroke-width:1.5;}
+  .orbit-event circle{fill:#243247; stroke:var(--gold-on-navy); stroke-width:2.5;}
+  .orbit-open circle{fill:#243247; stroke:#83B8AE; stroke-width:1.4; stroke-dasharray:3 3;}
+  .orbit-future circle{fill:rgba(242,236,221,.025); stroke:rgba(242,236,221,.25); stroke-width:1;}
+  .orbit-state{font-size:9px; font-weight:750; letter-spacing:.11em;}
+  .orbit-name{font-size:14px; font-weight:700;}
+  .orbit-note{font-size:9.5px;}
+  .orbit-fixed .orbit-state{fill:#7F5C22;}
+  .orbit-fixed .orbit-name{fill:#1F2A3C; font-size:16px;}
+  .orbit-fixed .orbit-note{fill:#59606A;}
+  .orbit-lean .orbit-state,.orbit-lean .orbit-note{fill:#4A3B24;}
+  .orbit-lean .orbit-name{fill:#1F2A3C; font-size:15px;}
+  .orbit-flex .orbit-state,.orbit-event .orbit-state,.orbit-open .orbit-state{fill:#9DD0C7;}
+  .orbit-flex .orbit-name,.orbit-event .orbit-name,.orbit-open .orbit-name{fill:#F2ECDD; font-size:11.5px;}
+  .orbit-flex .orbit-note,.orbit-event .orbit-note,.orbit-open .orbit-note{fill:rgba(242,236,221,.62); font-size:8.5px;}
+  .orbit-future text{fill:rgba(242,236,221,.45);}
+  .orbit-caption{fill:rgba(242,236,221,.42); font-size:8.5px; font-weight:700; letter-spacing:.1em;}
+  .orbit-decision-label{fill:#9DD0C7; font-size:9px; font-weight:650;}
+  .distance-ring{fill:none; vector-effect:non-scaling-stroke;}
+  .distance-ring.local{stroke:rgba(131,184,174,.65); stroke-width:1.2; stroke-dasharray:4 6;}
+  .distance-ring.day{stroke:rgba(242,236,221,.18); stroke-width:1.15;}
+  .distance-ring.overnight{stroke:rgba(216,174,91,.45); stroke-width:1.35;}
+  .distance-ring.flight{stroke:rgba(166,58,46,.7); stroke-width:1.5; stroke-dasharray:8 6;}
+  .distance-label{fill:rgba(242,236,221,.57); font-size:9px; font-weight:750; letter-spacing:.08em;}
+  .distance-leader{fill:none; stroke:rgba(242,236,221,.22); stroke-width:1; stroke-dasharray:2 4; vector-effect:non-scaling-stroke;}
+  .orbit-sicily circle{fill:#A63A2E; stroke:#F2ECDD; stroke-width:1.8;}
+  .orbit-sicily .orbit-state{fill:#F3CCAA;}
+  .orbit-sicily .orbit-name{fill:#FFF7EA; font-size:15px;}
+  .orbit-sicily .orbit-note{fill:rgba(255,247,234,.75); font-size:8.5px;}
+  .orbit-legend{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    padding:12px 20px 15px;
+    border-top:1px solid rgba(242,236,221,.11);
+    color:rgba(242,236,221,.64);
+    font-size:9.5px;
+  }
+  .orbit-legend b{margin-right:auto; color:var(--cream-on-navy); font-size:10px;}
+  .legend-key{display:inline-flex; align-items:center; gap:6px; white-space:nowrap;}
+  .legend-dot{width:9px; height:9px; border-radius:50%; background:#F2ECDD; border:2px solid var(--gold-on-navy);}
+  .legend-dot.lean{background:var(--gold-on-navy); border-color:#F2ECDD;}
+  .legend-dot.flex{background:#243247; border-color:#83B8AE;}
+  .legend-dot.event{background:#243247; border-color:var(--gold-on-navy);}
+  .legend-dot.future{background:transparent; border:1px solid rgba(242,236,221,.3);}
+  .planning-board{
+    display:grid;
+    grid-template-columns:.8fr 1fr 1.2fr;
+    gap:14px;
+    margin-top:16px;
+  }
+  .plan-lane{
+    padding:16px;
+    border:1px solid rgba(242,236,221,.18);
+    background:rgba(242,236,221,.055);
+  }
+  .plan-lane.is-current{border-color:rgba(216,174,91,.62); background:rgba(216,174,91,.08);}
+  .lane-head{display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:12px;}
+  .lane-head b{font-family:'Fraunces',serif; font-size:19px; font-weight:500; color:var(--cream-on-navy);}
+  .lane-head span{padding:4px 7px; border:1px solid rgba(242,236,221,.24); color:rgba(242,236,221,.65); font-size:9px; font-weight:750; letter-spacing:.08em; text-transform:uppercase;}
+  .plan-ticket{
+    display:block;
+    margin-top:8px;
+    padding:12px 13px;
+    color:inherit;
+    text-decoration:none;
+    border-left:3px solid rgba(242,236,221,.26);
+    background:rgba(31,42,60,.65);
+  }
+  a.plan-ticket:hover{border-left-color:var(--gold-on-navy); transform:translateX(2px);}
+  .plan-ticket.is-leaning{border-left-color:var(--gold-on-navy);}
+  .plan-ticket.is-open{border-left-color:#83B8AE;}
+  .plan-ticket strong{display:flex; justify-content:space-between; gap:10px; color:var(--cream-on-navy); font-size:13px;}
+  .plan-ticket strong em{font-family:'Work Sans',sans-serif; color:var(--gold-on-navy); font-size:9px; font-style:normal; font-weight:750; letter-spacing:.05em; text-transform:uppercase;}
+  .plan-ticket p{margin:4px 0 0; color:rgba(242,236,221,.65); font-size:10.8px; line-height:1.45;}
+  .planning-foot{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    align-items:center;
+    margin-top:14px;
+    padding:13px 15px;
+    color:rgba(242,236,221,.68);
+    background:rgba(31,42,60,.56);
+    border:1px solid rgba(242,236,221,.12);
+    font-size:11px;
+  }
+  .planning-foot b{color:var(--cream-on-navy);}
+  .planning-foot a{color:var(--gold-on-navy); font-weight:700; text-decoration:none; white-space:nowrap;}
+
+  /* ===== Interactive route studio ===== */
+  .route-studio{
+    margin-top:18px;
+    padding:24px;
+    color:var(--ink);
+    background:var(--paper);
+    border:1px solid rgba(242,236,221,.25);
+  }
+  .route-studio-head{
+    display:flex;
+    justify-content:space-between;
+    gap:28px;
+    align-items:flex-end;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .route-studio-head .eyebrow{
+    display:block;
+    margin-bottom:5px;
+    color:var(--red);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+  }
+  .route-studio-head h3{margin:0; color:var(--ink); font-size:28px;}
+  .route-studio-head p{max-width:52ch; margin:0; color:var(--ink-soft); font-size:12.5px; line-height:1.55;}
+  .route-stats{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:8px;
+    margin:16px 0;
+  }
+  .route-stat{padding:11px 12px; background:var(--card); border:1px solid var(--line);}
+  .route-stat span{display:block; color:var(--ink-soft); font-size:9px; font-weight:750; letter-spacing:.08em; text-transform:uppercase;}
+  .route-stat b{display:block; margin-top:2px; color:var(--ink); font-family:'Fraunces',serif; font-size:20px; font-weight:500;}
+  .route-template-row{display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:17px;}
+  .route-template-row > span{margin-right:3px; color:var(--ink-soft); font-size:11px; font-weight:700;}
+  .route-template-btn{
+    padding:6px 10px;
+    color:var(--green);
+    background:transparent;
+    border:1px solid rgba(63,91,61,.38);
+    border-radius:999px;
+    font:600 11px 'Work Sans',sans-serif;
+    cursor:pointer;
+  }
+  .route-template-btn:hover,.route-template-btn:focus-visible{color:var(--card); background:var(--green); outline:none;}
+  .route-template-btn.is-clear{margin-left:auto; color:var(--red); border-color:rgba(166,58,46,.4);}
+  .route-template-btn.is-clear:hover,.route-template-btn.is-clear:focus-visible{background:var(--red); color:#fff;}
+  .route-options{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px;}
+  .route-card{
+    position:relative;
+    min-height:154px;
+    padding:14px 14px 12px 17px;
+    background:var(--card);
+    border:1px solid var(--line);
+    cursor:grab;
+    overflow:hidden;
+  }
+  .route-card::before{content:""; position:absolute; inset:0 auto 0 0; width:4px; background:var(--route-color);}
+  .route-card:hover{border-color:var(--route-color); transform:translateY(-1px);}
+  .route-card:focus-visible{outline:2px solid var(--route-color); outline-offset:2px;}
+  .route-card.is-selected{box-shadow:0 0 0 2px var(--route-color); border-color:var(--route-color);}
+  .route-card-top{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
+  .route-card .route-type{color:var(--ink-soft); font-size:9px; font-weight:750; letter-spacing:.07em; text-transform:uppercase;}
+  .route-card .route-duration{color:var(--route-color); font-size:10.5px; font-weight:800; white-space:nowrap;}
+  .route-card h4{margin:7px 0 4px; color:var(--ink); font-family:'Fraunces',serif; font-size:18px; font-weight:500; line-height:1.2;}
+  .route-card p{margin:0 0 10px; color:var(--ink-soft); font-size:11.3px; line-height:1.45;}
+  .route-card-foot{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:auto;}
+  .route-card-foot span{color:var(--ink-soft); font-size:9.5px; font-weight:650;}
+  .route-card-foot a{color:var(--green); font-size:10.5px; font-weight:750; text-decoration:none;}
+  .route-card-foot a:hover{text-decoration:underline;}
+  .calendar-toolbar{display:flex; justify-content:space-between; gap:18px; align-items:flex-end; margin:24px 0 10px;}
+  .calendar-toolbar h4{margin:0 0 3px; font-family:'Fraunces',serif; font-size:21px; font-weight:500;}
+  .calendar-toolbar p{margin:0; color:var(--ink-soft); font-size:11px;}
+  .calendar-events{color:var(--ink-soft); font-size:10px; text-align:right;}
+  .calendar-events b{color:var(--red);}
+  .calendar-scroll{overflow-x:auto; padding-bottom:5px; overscroll-behavior-inline:contain;}
+  .trip-calendar{display:grid; grid-template-columns:repeat(7,minmax(118px,1fr)); min-width:826px; border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .calendar-day{
+    position:relative;
+    min-height:116px;
+    padding:9px;
+    background:rgba(255,255,255,.36);
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    outline:none;
+  }
+  .calendar-day:focus-visible,.calendar-day.is-drop-target{box-shadow:inset 0 0 0 2px var(--gold);}
+  .calendar-day.is-locked{background:rgba(31,42,60,.06);}
+  .calendar-date{display:flex; justify-content:space-between; gap:8px; color:var(--ink-soft); font-size:9.5px;}
+  .calendar-date b{color:var(--ink); font-family:'Fraunces',serif; font-size:15px; font-weight:500;}
+  .calendar-empty{display:block; margin-top:18px; color:rgba(74,84,104,.58); font-size:10px; line-height:1.35;}
+  .calendar-booking{
+    position:absolute;
+    inset:34px 7px 8px;
+    padding:8px 20px 7px 9px;
+    color:#fff;
+    background:var(--booking-color);
+    border-radius:2px;
+    cursor:grab;
+    box-shadow:0 3px 8px rgba(31,42,60,.13);
+  }
+  .calendar-booking b{display:block; font-family:'Fraunces',serif; font-size:13px; font-weight:500; line-height:1.15;}
+  .calendar-booking span{display:block; margin-top:3px; font-size:8.5px; opacity:.82;}
+  .booking-remove{position:absolute; top:3px; right:4px; width:18px; height:18px; padding:0; color:#fff; background:transparent; border:0; font-size:15px; line-height:18px; cursor:pointer; opacity:.72;}
+  .booking-remove:hover{opacity:1;}
+  .calendar-event{position:absolute; right:6px; bottom:5px; z-index:2; padding:2px 5px; color:#7B5414; background:#F2D99C; border-radius:999px; font-size:7.5px; font-weight:800; letter-spacing:.03em;}
+  .calendar-day.has-booking .calendar-event{top:28px; bottom:auto;}
+  .route-planner-message{min-height:20px; margin-top:8px; color:var(--green); font-size:11px; font-weight:650;}
+  .route-planner-message.is-error{color:var(--red);}
+  .calendar-legend{display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; color:var(--ink-soft); font-size:9.5px;}
+  .calendar-legend span{display:inline-flex; align-items:center; gap:5px;}
+  .calendar-legend i{width:8px; height:8px; border-radius:50%; background:var(--legend-color);}
+
+  .overview-intro{margin-top:8px;}
+  .family-brief{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    margin:18px 0 24px;
+  }
+  .brief-card{
+    min-height:128px;
+    padding:16px 16px 14px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.38);
+  }
+  .brief-card span{
+    display:block;
+    margin-bottom:9px;
+    color:var(--red);
+    font-size:9.5px;
+    font-weight:750;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .brief-card b{display:block; color:var(--navy); font-family:'Fraunces',serif; font-size:18px; font-weight:550; line-height:1.25;}
+  .brief-card p{margin:7px 0 0; color:var(--ink-soft); font-size:11.5px; line-height:1.5;}
+  .group-note{
+    display:grid;
+    grid-template-columns:145px 1fr;
+    gap:18px;
+    align-items:start;
+    margin:0 0 24px;
+    padding:15px 17px;
+    border-left:4px solid var(--green);
+    background:rgba(55,91,60,.07);
+  }
+  .group-note b{color:var(--green); font-size:12px; letter-spacing:.05em; text-transform:uppercase;}
+  .group-note p{margin:0; color:var(--ink-soft); font-size:13px; line-height:1.55;}
+  .family-rhythm{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin-top:11px;}
+  .rhythm-item{display:block; padding:8px 9px; border:1px solid var(--line); background:rgba(255,255,255,.34); color:var(--ink-soft); font-size:10.5px; line-height:1.4;}
+  .rhythm-item b{display:block; margin-bottom:3px; color:var(--green); font-size:9px; letter-spacing:.06em; text-transform:uppercase;}
+
+  /* ===== Grids / cards ===== */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(230px,1fr));
+    gap:16px;
+    margin:20px 0 34px 0;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:18px 20px;
+    position:relative;
+  }
+  .card.is-must{border-color:var(--green); box-shadow:inset 0 3px 0 var(--green);}
+  .card.is-strong{box-shadow:inset 0 3px 0 var(--gold);}
+  .card.is-skip{opacity:.72;}
+  .place-photo-grid{
+    display:grid; grid-template-columns:1fr;
+    height:152px; margin:-18px -20px 16px -20px;
+    overflow:hidden; border-bottom:1px solid var(--line);
+    background:#DCD5C7;
+  }
+  .place-photo-grid.count-2{grid-template-columns:1fr 1fr; gap:2px; background:var(--line);}
+  .place-photo-grid.count-3{grid-template-columns:1.16fr .92fr .92fr; gap:2px; background:var(--line);}
+  .photo-tile{position:relative; display:block; min-width:0; overflow:hidden; color:inherit;}
+  .photo-tile img{
+    display:block; width:100%; height:100%; object-fit:cover;
+    opacity:0; transform:scale(1.025); transition:opacity .28s ease, transform .45s ease;
+  }
+  .photo-tile.is-loaded img{opacity:1; transform:scale(1);}
+  .photo-tile:hover img{transform:scale(1.035);}
+  .photo-skeleton{
+    position:absolute; inset:0;
+    background:linear-gradient(110deg,#d8d0c1 8%,#ece4d5 18%,#d8d0c1 33%);
+    background-size:200% 100%; animation:photoShimmer 1.4s linear infinite;
+  }
+  .photo-tile.is-loaded .photo-skeleton{display:none;}
+  .photo-tile.is-error .photo-skeleton{animation:none; background:linear-gradient(145deg,#d9cfbd,#b9ad96);}
+  .photo-label{
+    position:absolute; left:8px; bottom:7px; z-index:2;
+    max-width:calc(100% - 16px); padding:3px 7px;
+    border-radius:2px; background:rgba(31,42,60,.74); color:#fff;
+    font-size:9.5px; line-height:1.25; letter-spacing:.02em;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  @keyframes photoShimmer{to{background-position-x:-200%;}}
+  .priority{
+    display:inline-flex; align-items:center;
+    font-size:10.5px; font-weight:700; letter-spacing:.06em;
+    text-transform:uppercase; border-radius:999px;
+    padding:3px 9px; margin:0 0 10px 0;
+  }
+  .priority.must{background:var(--green); color:var(--card);}
+  .priority.strong{background:rgba(185,139,51,.16); color:#765715; border:1px solid rgba(185,139,51,.45);}
+  .priority.optional{background:rgba(74,84,104,.08); color:var(--ink-soft); border:1px solid var(--line);}
+  .priority.skip{background:transparent; color:var(--ink-soft); border:1px dashed var(--line);}
+  .vibe{
+    font-family:'Fraunces', serif; font-style:italic;
+    font-size:14px; color:var(--red); margin:2px 0 10px 0;
+  }
+  .activity-list{
+    margin:10px 0 14px 0; padding:10px 0 0 18px;
+    border-top:1px solid var(--line); color:var(--ink-soft);
+    font-size:13.5px; line-height:1.5;
+  }
+  .activity-list li{margin:3px 0;}
+  .planner-guide{
+    margin:12px 0 14px 0;
+    border:1px solid var(--line);
+    border-radius:3px;
+    background:rgba(255,255,255,.24);
+    overflow:hidden;
+  }
+  .planner-guide summary{
+    list-style:none;
+    cursor:pointer;
+    padding:10px 12px;
+    color:var(--green);
+    font-size:12.5px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .planner-guide summary::-webkit-details-marker{display:none;}
+  .planner-guide summary::after{content:'＋'; font-size:16px; font-weight:400; line-height:1;}
+  .planner-guide[open] summary::after{content:'−';}
+  .planner-guide[open] summary{border-bottom:1px solid var(--line);}
+  .planner-body{padding:12px;}
+  .planner-verdict{font-size:13px; color:var(--ink); margin:0 0 10px 0;}
+  .planner-update{
+    margin:0 0 12px 0; padding:9px 10px;
+    background:rgba(185,139,51,.11);
+    border-left:2px solid var(--gold);
+    color:var(--ink-soft); font-size:12.5px; line-height:1.45;
+  }
+  .planner-update b{color:#765715;}
+  .planner-label{
+    margin:12px 0 5px 0;
+    font-size:10.5px; font-weight:800; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .planner-schedule{list-style:none; padding:0; margin:0;}
+  .planner-schedule li{
+    display:grid; grid-template-columns:64px 1fr; gap:8px;
+    padding:5px 0; border-bottom:1px dotted var(--line);
+    font-size:12.5px; line-height:1.4; color:var(--ink-soft);
+  }
+  .planner-schedule li:last-child{border-bottom:none;}
+  .planner-schedule time{font-weight:700; color:var(--green);}
+  .official-links{display:flex; flex-wrap:wrap; gap:6px; margin-top:7px;}
+  .official-link{
+    display:inline-flex; align-items:center; gap:4px;
+    text-decoration:none; font-size:11.5px; font-weight:650;
+    padding:4px 8px; border-radius:999px;
+    color:var(--green); border:1px solid rgba(63,91,61,.35);
+    background:var(--card);
+  }
+  .official-link::after{content:'↗'; font-size:10px;}
+  .official-link:hover{background:var(--green); color:var(--card);}
+  .detail-page-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    width:100%;
+    margin:0 0 12px 0;
+    padding:11px 13px;
+    border-radius:3px;
+    color:var(--card);
+    background:var(--green);
+    border:1px solid var(--green);
+    text-decoration:none;
+    font-size:12.5px;
+    font-weight:750;
+    letter-spacing:.01em;
+  }
+  .detail-page-link::after{content:'→'; font-family:'Fraunces',serif; font-size:18px; line-height:1;}
+  .detail-page-link:hover{background:var(--navy); border-color:var(--navy);}
+  .xhs-row{display:flex; flex-wrap:wrap; gap:7px;}
+  .card-icon{
+    width:28px; height:28px;
+    color:var(--green);
+    margin-bottom:10px;
+    display:block;
+  }
+  .card h3{font-size:17.5px; margin-bottom:2px;}
+  .card .place-cn{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-bottom:9px;
+  }
+  .card .time{
+    font-size:12px;
+    color:var(--green);
+    font-weight:600;
+    letter-spacing:.02em;
+    margin-bottom:8px;
+    display:inline-block;
+  }
+  .card p{font-size:14.5px; color:var(--ink-soft); margin-bottom:10px;}
+
+  .xhs-btn{
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:12px; font-weight:600;
+    color:var(--red);
+    border:1px solid var(--red);
+    padding:4px 11px;
+    border-radius:999px;
+    text-decoration:none;
+    background:none;
+  }
+  .xhs-btn:hover{background:var(--red); color:var(--card);}
+  .xhs-link{color:inherit; text-decoration:underline dotted; text-underline-offset:3px;}
+  .xhs-link:hover{color:var(--red); text-decoration-style:solid;}
+
+  .section-title{
+    font-size:28px;
+    margin-top:44px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .section-title:first-child{margin-top:0; padding-top:0; border-top:none;}
+  .section-title .en{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:.62em;
+    font-weight:400;
+  }
+  .section-lede{color:var(--ink-soft); font-size:15.5px;}
+
+  .interest-strip{
+    display:grid; grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px; margin:20px 0 30px 0;
+  }
+  .interest-item{
+    background:var(--navy); color:var(--cream-on-navy);
+    border-radius:3px; padding:16px 17px;
+  }
+  .interest-item b{display:block; color:var(--gold-on-navy); font-family:'Fraunces',serif; font-size:16px; margin-bottom:4px;}
+  .interest-item span{font-size:12.5px; line-height:1.45; color:rgba(242,236,221,.72);}
+
+  /* ===== Callouts ===== */
+  .callout{
+    border-left:3px solid var(--red);
+    background:var(--card);
+    padding:16px 20px;
+    margin:18px 0 28px 0;
+    border-radius:0 3px 3px 0;
+  }
+  .callout.gold{border-left-color:var(--gold);}
+  .callout.green{border-left-color:var(--green);}
+  .callout h4{
+    font-family:'Fraunces', serif;
+    font-size:16.5px;
+    font-weight:500;
+    margin:0 0 4px 0;
+  }
+  .callout p{font-size:14.5px; color:var(--ink-soft); margin-bottom:0;}
+
+  /* ===== Chips ===== */
+  .chip{
+    display:inline-block;
+    font-size:11.5px;
+    font-weight:600;
+    padding:3px 11px;
+    border-radius:999px;
+    color:var(--card);
+    letter-spacing:.02em;
+  }
+  .chip.home{background:var(--green);}
+  .chip.day{background:var(--gold);}
+  .chip.move{background:var(--ink-soft);}
+  .chip.tuscany{background:var(--red);}
+  .chip.north{background:#4F7E89;}
+  .chip.free{background:transparent; color:var(--ink-soft); border:1px solid var(--line);}
+
+  /* ===== Table ===== */
+  table{width:100%; border-collapse:collapse; margin:18px 0 30px 0; font-size:14.5px;}
+  th{
+    text-align:left;
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:14px;
+    color:var(--ink-soft);
+    padding:8px 14px;
+    border-bottom:1px solid var(--ink);
+  }
+  td{padding:10px 14px; border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+  td .place-cn-sm{display:block; font-size:12px; color:var(--ink-soft); font-style:italic;}
+
+  /* ===== Timeline (itinerary) ===== */
+  .timeline{position:relative; margin-top:24px;}
+  .timeline::before{
+    content:"";
+    position:absolute; left:19px; top:6px; bottom:6px;
+    width:1px; background:var(--line);
+  }
+  .day-row{
+    position:relative;
+    display:flex;
+    gap:22px;
+    padding-bottom:26px;
+  }
+  .day-num{
+    flex:0 0 40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--card);
+    border:1px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:15px;
+    z-index:1;
+  }
+  .day-body{padding-top:3px;}
+  .day-body .date{font-size:13px; color:var(--ink-soft); margin-bottom:2px;}
+  .day-body h4{
+    font-family:'Fraunces', serif;
+    font-size:18px;
+    font-weight:500;
+    margin:0 0 5px 0;
+  }
+  .day-body p{font-size:14.5px; color:var(--ink-soft); margin-bottom:6px;}
+
+  .choice-board{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    margin:18px 0 28px;
+  }
+  .choice-option{
+    padding:16px;
+    border:1px solid var(--line);
+    background:rgba(247,241,228,.66);
+  }
+  .choice-option.is-pick{border:2px solid var(--green); background:var(--card);}
+  .choice-option .choice-label{
+    display:inline-block;
+    margin-bottom:8px;
+    padding:3px 8px;
+    border-radius:999px;
+    color:var(--green);
+    background:rgba(63,91,61,.10);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+  }
+  .choice-option.is-pick .choice-label{color:var(--card); background:var(--green);}
+  .choice-option h4{font-family:'Fraunces',serif; font-size:17px; margin:0 0 5px;}
+  .choice-option p{font-size:12.5px; line-height:1.5; color:var(--ink-soft); margin:0;}
+  .day-options{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 0;}
+  .day-option{font-size:11.5px; padding:4px 8px; color:var(--green); border:1px solid rgba(63,91,61,.35); border-radius:999px; background:var(--card);}
+  .event-mini-timeline{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); border:1px solid var(--line); margin:14px 0; background:var(--card);}
+  .event-mini-timeline div{padding:12px; border-right:1px solid var(--line); font-size:11.5px; color:var(--ink-soft);}
+  .event-mini-timeline div:last-child{border-right:none;}
+  .event-mini-timeline b{display:block; color:var(--red); font-family:'Fraunces',serif; font-size:15px; margin-bottom:3px;}
+
+  /* ===== Booking checklist ===== */
+  .checklist{list-style:none; padding:0; margin:18px 0 30px 0;}
+  .checklist li{
+    display:flex; gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+  }
+  .checklist li::before{
+    content:"";
+    flex:0 0 8px; height:8px;
+    background:var(--gold);
+    margin-top:6px;
+  }
+  .checklist b{display:block; margin-bottom:2px;}
+  .checklist span{color:var(--ink-soft);}
+
+  footer.pane-foot{
+    margin-top:50px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    .app{flex-direction:column;}
+    .spine{
+      position:sticky; top:0; z-index:5;
+      width:100%; flex:0 0 auto; height:auto;
+      flex-direction:row; align-items:center;
+      padding:14px 10px; overflow-x:auto;
+    }
+    .seal{display:none;}
+    .tabs{display:flex; flex:none;}
+    .tab{padding:8px 16px; white-space:nowrap; border-left:none; border-bottom:3px solid transparent;}
+    .tab.is-active{border-left:none; border-bottom-color:var(--gold-on-navy);}
+    .tab .sub{display:none;}
+    .spine-foot{display:none;}
+    .content{height:auto; padding:34px 22px 70px 22px;}
+    .hero{margin:-34px -22px 32px -22px; padding:38px 22px 34px 22px;}
+    .hero h1{font-size:32px; max-width:none;}
+    .planning-board{grid-template-columns:1fr;}
+    .planning-foot{align-items:flex-start; flex-direction:column;}
+    .family-brief{grid-template-columns:1fr 1fr;}
+    .family-rhythm{grid-template-columns:1fr;}
+    .group-note{grid-template-columns:1fr; gap:6px;}
+    .orbit-head{align-items:flex-start; flex-direction:column; gap:6px;}
+    .orbit-head p{text-align:left;}
+    .orbit-scroll{padding-bottom:4px;}
+    .orbit-map{min-width:720px;}
+    .orbit-legend b{width:100%; margin-right:0;}
+    .interest-strip{grid-template-columns:1fr;}
+    .place-photo-grid{height:172px;}
+    .choice-board{grid-template-columns:1fr;}
+    .event-mini-timeline{grid-template-columns:1fr 1fr;}
+    .event-mini-timeline div{border-bottom:1px solid var(--line);}
+    .route-studio{padding:18px;}
+    .route-studio-head{align-items:flex-start; flex-direction:column; gap:7px;}
+    .route-options{grid-template-columns:1fr 1fr;}
+    .route-template-btn.is-clear{margin-left:0;}
+  }
+  @media (max-width:560px){
+    .place-photo-grid.count-3{grid-template-columns:1.28fr .72fr;grid-template-rows:1fr 1fr;height:210px;}
+    .place-photo-grid.count-3 .photo-tile:first-child{grid-row:1 / 3;}
+    .family-brief{grid-template-columns:1fr;}
+    .route-stats{grid-template-columns:1fr 1fr;}
+    .route-options{grid-template-columns:1fr;}
+    .calendar-toolbar{align-items:flex-start; flex-direction:column; gap:5px;}
+    .calendar-events{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Icon sprite sheet (hidden) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-hill" viewBox="0 0 24 24">
+      <path d="M1 18 Q5 9 9 18 Q13 6 17 18 Q19 13 23 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="13" y1="6" x2="13" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-castle" viewBox="0 0 24 24">
+      <path d="M4 21V11H7V8H5V6H9V9H11V6H13V9H15V6H19V8H17V11H20V21H4Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <rect x="10.5" y="15" width="3" height="6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    </symbol>
+    <symbol id="icon-spa" viewBox="0 0 24 24">
+      <path d="M2 8Q5 5 8 8T14 8T20 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M2 14Q5 11 8 14T14 14T20 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M2 20Q5 17 8 20T14 20T20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-grape" viewBox="0 0 24 24">
+      <path d="M12 3C12 3 10 4 10 6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <circle cx="9" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="14" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="6.5" cy="13.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="11.5" cy="13.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="16.5" cy="13.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="9" cy="18" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="14" cy="18" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    </symbol>
+    <symbol id="icon-dome" viewBox="0 0 24 24">
+      <path d="M3 21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M4 21V13H20V21" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M5 13Q12 2 19 13" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="12" y1="2" x2="12" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="10.3" y1="3.2" x2="13.7" y2="3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-bridge" viewBox="0 0 24 24">
+      <path d="M2 17Q12 6 22 17" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="2" y1="17" x2="2" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="22" y1="17" x2="22" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="2" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-boat" viewBox="0 0 24 24">
+      <path d="M3 16Q12 20 21 16L18 19H6Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M5 16Q6 9 11 4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="14" y1="7" x2="14" y2="16" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+    <symbol id="icon-mountain" viewBox="0 0 24 24">
+      <path d="M2 19L8 8L12 14L15 10L22 19Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M6.5 10.5L8 8L9.5 10.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+      <path d="M13.7 12L15 10L16.3 12" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-column" viewBox="0 0 24 24">
+      <line x1="3" y1="4" x2="21" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="3" y1="21" x2="21" y2="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="6" y1="6" x2="6" y2="19" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="11" y1="6" x2="11" y2="19" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="16" y1="6" x2="16" y2="19" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="icon-tower" viewBox="0 0 24 24">
+      <rect x="3" y="10" width="4" height="11" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <rect x="10" y="4" width="4" height="17" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <rect x="17" y="13" width="4" height="8" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    </symbol>
+    <symbol id="icon-lake" viewBox="0 0 24 24">
+      <circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M2 15Q6 12 10 15T18 15T22 15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M2 19Q6 16 10 19T18 19T22 19" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-coffee" viewBox="0 0 24 24">
+      <path d="M4 9H17V15Q17 20 10.5 20T4 15Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M17 10H19Q21 10 21 12.5T19 15H17" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M8 6Q9 4 8 2" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M12 6Q13 4 12 2" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-art" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="8" cy="9" r="1.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M4 16L9 11L13 14L16 10L20 16" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+      <line x1="3" y1="21" x2="21" y2="21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="app">
+
+  <nav class="spine">
+    <div class="seal">
+      <div class="seal-text">
+        <span class="place">TORREGLIA</span>
+        <span class="coords">45.3°N · 11.7°E<br>Colli Euganei</span>
+      </div>
+    </div>
+    <ul class="tabs">
+      <li><button class="tab is-active" data-target="overview">总览<span class="sub">选项与拖拽日历</span></button></li>
+      <li><button class="tab" data-target="homebase">大本营<span class="sub">Colli Euganei</span></button></li>
+      <li><a class="tab nav-link" href="places/torreglia-colli-euganei.html">认识家附近<span class="sub">Torreglia · 30分钟</span></a></li>
+      <li><a class="tab nav-link" href="places/torreglia-local.html">家附近<span class="sub">买菜 · 咖啡 · 吃饭</span></a></li>
+      <li><button class="tab" data-target="veneto">威尼托日游<span class="sub">40分钟–1.5小时</span></button></li>
+      <li><button class="tab" data-target="beyond">山与延伸<span class="sub">山地与湖区候选</span></button></li>
+      <li><button class="tab" data-target="northwest">米兰与科莫<span class="sub">时装周 · 城市 · 湖区</span></button></li>
+      <li><button class="tab" data-target="sicily">西西里<span class="sub">电影西线 / 东线</span></button></li>
+      <li><button class="tab" data-target="tuscany">托斯卡纳<span class="sub">陆路候选 · 建议5晚</span></button></li>
+      <li><button class="tab" data-target="itinerary">参考行程<span class="sub">一个版本 · 非最终答案</span></button></li>
+      <li><button class="tab" data-target="notes">实用笔记<span class="sub">预订 · 路程 · 打包</span></button></li>
+    </ul>
+    <div class="spine-foot">Xu Family Journey<br>2026年9月</div>
+  </nav>
+
+  <main class="content">
+
+    <!-- ============ OVERVIEW ============ -->
+    <section id="overview" class="pane is-active">
+      <div class="hero">
+        <h1>从Torreglia出发：一家四人的意大利旅行工作台</h1>
+        <div class="tagline">先把所有想法放在同一张图里，再用真实天数决定怎么组合</div>
+        <div class="meta-row">
+          <div class="meta-item"><b>9月15日 – 9月29日中午</b>15天 · 14晚</div>
+          <div class="meta-item"><b>Torreglia, Colli Euganei</b>大本营</div>
+          <div class="meta-item"><b>4位成人 · 2间房</b>家庭出游</div>
+          <div class="meta-item"><b>1辆满尺寸车</b>按四人行李容量选车</div>
+          <div class="meta-item"><b>所有目的地平行比较</b>拖进日历才知道是否放得下</div>
+        </div>
+
+        <div class="decision-orbit">
+          <div class="orbit-head">
+            <h3>从 Torreglia 出发的旅行半径</h3>
+            <p>现在按距离读，不再表示“决定成熟度”。圈层是正常交通时间的量级；山路、机场流程与周末拥堵要另外留余量。</p>
+          </div>
+          <div class="orbit-scroll" aria-label="以 Torreglia 为中心的旅行距离圈，可横向滚动查看">
+            <svg class="orbit-map" viewBox="0 0 920 520" role="img" aria-labelledby="orbit-title orbit-desc">
+              <title id="orbit-title">Torreglia 旅行距离圈</title>
+              <desc id="orbit-desc">中心是 Torreglia。第一圈是十到三十分钟的家门口活动，第二圈是一到两小时的日游，第三圈是两点五到四小时的过夜自驾，最外圈是需要从威尼斯飞往卡塔尼亚的西西里。</desc>
+
+              <ellipse class="distance-ring local" cx="460" cy="260" rx="130" ry="78"/>
+              <ellipse class="distance-ring day" cx="460" cy="260" rx="245" ry="150"/>
+              <ellipse class="distance-ring overnight" cx="460" cy="260" rx="350" ry="215"/>
+              <ellipse class="distance-ring flight" cx="460" cy="260" rx="425" ry="250"/>
+              <text class="distance-label" x="322" y="204">10–30 MIN · 家门口</text>
+              <text class="distance-label" x="245" y="180">1–2 H · 当天往返</text>
+              <text class="distance-label" x="468" y="34">2.5–4 H · 自驾过夜</text>
+              <text class="distance-label" x="42" y="32">FLIGHT · 需要飞行</text>
+
+              <g class="orbit-node orbit-fixed" aria-label="Torreglia 家庭大本营">
+                <circle cx="460" cy="260" r="53"/>
+                <text text-anchor="middle" x="460" y="242" class="orbit-state">HOME BASE</text>
+                <text text-anchor="middle" x="460" y="264" class="orbit-name serif">Torreglia</text>
+                <text text-anchor="middle" x="460" y="281" class="orbit-note">家庭大本营 · 4位成人</text>
+                <text text-anchor="middle" x="460" y="294" class="orbit-note">大件行李留这里</text>
+              </g>
+
+              <a class="orbit-node orbit-flex" href="places/abano-montegrotto-terme.html" aria-label="Abano 温泉，约十分钟">
+                <circle cx="460" cy="182" r="30"/><text text-anchor="middle" x="460" y="178" class="orbit-name">Abano</text><text text-anchor="middle" x="460" y="191" class="orbit-note">10分钟</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/colli-euganei-wineries.html" aria-label="Colli Euganei 酒庄，约十到二十分钟">
+                <circle cx="590" cy="260" r="31"/><text text-anchor="middle" x="590" y="256" class="orbit-name">酒庄</text><text text-anchor="middle" x="590" y="269" class="orbit-note">10–20分钟</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/arqua-petrarca.html" aria-label="Arquà Petrarca，约十五分钟">
+                <circle cx="460" cy="338" r="30"/><text text-anchor="middle" x="460" y="334" class="orbit-name">Arquà</text><text text-anchor="middle" x="460" y="347" class="orbit-note">15分钟</text>
+              </a>
+              <a class="orbit-node orbit-event" href="places/vo-festa-uva.html" aria-label="Vo 葡萄节，约二十分钟">
+                <circle cx="330" cy="260" r="31"/><text text-anchor="middle" x="330" y="256" class="orbit-name">Vo’</text><text text-anchor="middle" x="330" y="269" class="orbit-note">20分钟 · 9/20</text>
+              </a>
+
+              <a class="orbit-node orbit-flex" href="#veneto" data-tab-jump="veneto" aria-label="Venice，约一小时">
+                <circle cx="460" cy="110" r="33"/><text text-anchor="middle" x="460" y="106" class="orbit-name">Venice</text><text text-anchor="middle" x="460" y="119" class="orbit-note">约1小时</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/guide.html?place=Verona" aria-label="Verona，约一小时">
+                <circle cx="672" cy="185" r="33"/><text text-anchor="middle" x="672" y="181" class="orbit-name">Verona</text><text text-anchor="middle" x="672" y="194" class="orbit-note">约1小时</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/guide.html?place=Bologna" aria-label="Bologna，约一点五小时">
+                <circle cx="678" cy="335" r="33"/><text text-anchor="middle" x="678" y="331" class="orbit-name">Bologna</text><text text-anchor="middle" x="678" y="344" class="orbit-note">约1.5小时</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/guide.html?place=Lake%20Garda" aria-label="Lake Garda，约一点五小时">
+                <circle cx="460" cy="410" r="33"/><text text-anchor="middle" x="460" y="406" class="orbit-name">Garda</text><text text-anchor="middle" x="460" y="419" class="orbit-note">约1.5小时</text>
+              </a>
+
+              <a class="orbit-node orbit-lean" href="places/dolomites.html" aria-label="Dolomites，约三小时，住四晚">
+                <circle cx="625" cy="70" r="45"/><text text-anchor="middle" x="625" y="56" class="orbit-state">OVERNIGHT</text><text text-anchor="middle" x="625" y="77" class="orbit-name serif">Dolomites</text><text text-anchor="middle" x="625" y="93" class="orbit-note">约3小时 · 4晚</text>
+              </a>
+              <a class="orbit-node orbit-lean" href="places/tuscany.html" aria-label="Tuscany，约三到三点五小时，住五晚">
+                <circle cx="710" cy="420" r="45"/><text text-anchor="middle" x="710" y="406" class="orbit-state">OVERNIGHT</text><text text-anchor="middle" x="710" y="427" class="orbit-name serif">Tuscany</text><text text-anchor="middle" x="710" y="443" class="orbit-note">约3–3.5小时 · 5晚</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/guide.html?place=Milan" aria-label="Milan，约二点五小时，建议两晚">
+                <circle cx="205" cy="105" r="37"/><text text-anchor="middle" x="205" y="101" class="orbit-name">Milan</text><text text-anchor="middle" x="205" y="115" class="orbit-note">约2.5小时 · 建议2晚</text>
+              </a>
+              <a class="orbit-node orbit-flex" href="places/lake-como.html" aria-label="Lake Como，约三小时，建议三晚">
+                <circle cx="145" cy="365" r="37"/><text text-anchor="middle" x="145" y="361" class="orbit-name">Como</text><text text-anchor="middle" x="145" y="375" class="orbit-note">约3小时 · 建议3晚</text>
+              </a>
+
+              <path class="distance-leader" d="M790 408 Q825 420 844 438"/>
+              <a class="orbit-node orbit-sicily" href="places/sicily.html" aria-label="Sicily，需要从 Venice 飞往 Palermo 或 Catania，电影西线五晚或东线四晚">
+                <circle cx="840" cy="450" r="51"/>
+                <text text-anchor="middle" x="840" y="434" class="orbit-state">NEW OPTION · 飞行</text>
+                <text text-anchor="middle" x="840" y="456" class="orbit-name serif">Sicily</text>
+                <text text-anchor="middle" x="840" y="472" class="orbit-note">电影西线5晚 / 东线4晚</text>
+                <text text-anchor="middle" x="840" y="485" class="orbit-note">VCE → PMO / CTA →</text>
+              </a>
+            </svg>
+          </div>
+          <div class="orbit-legend">
+            <b>读法：越外圈，意味着更多交通成本</b>
+            <span class="legend-key"><i class="legend-dot flex"></i>10–30分钟</span>
+            <span class="legend-key"><i class="legend-dot"></i>1–2小时日游</span>
+            <span class="legend-key"><i class="legend-dot lean"></i>2.5–4小时过夜</span>
+            <span class="legend-key"><i class="legend-dot event"></i>需要飞行</span>
+          </div>
+        </div>
+
+        <section class="route-studio" id="route-studio" aria-labelledby="route-studio-title">
+          <div class="route-studio-head">
+            <div><span class="eyebrow">Trip workspace · 自动保存在这台设备</span><h3 id="route-studio-title">把候选拖进15天日历</h3></div>
+            <p>这些地点没有“主线 / 淘汰”的等级。每张卡只说明它大概会占几天；桌面直接拖到开始日期，手机先点卡片、再点日期。已安排的色块也可以继续拖动。</p>
+          </div>
+
+          <div class="route-stats" aria-live="polite">
+            <div class="route-stat"><span>旅行总长</span><b>15天 · 14晚</b></div>
+            <div class="route-stat"><span>可自由安排</span><b>13天</b></div>
+            <div class="route-stat"><span>已放入日历</span><b id="routeDaysPlanned">0天</b></div>
+            <div class="route-stat"><span>仍然留白</span><b id="routeDaysOpen">13天</b></div>
+          </div>
+
+          <div class="route-template-row" aria-label="快速载入组合">
+            <span>先试一个组合：</span>
+            <button class="route-template-btn" type="button" data-route-template="mountains-tuscany">山＋Tuscany</button>
+            <button class="route-template-btn" type="button" data-route-template="mountains-sicily">山＋电影西线</button>
+            <button class="route-template-btn" type="button" data-route-template="mountains-east-sicily">山＋东线Sicily</button>
+            <button class="route-template-btn" type="button" data-route-template="fashion-lake">Milan时装周＋Como</button>
+            <button class="route-template-btn is-clear" type="button" data-route-template="clear">全部清空</button>
+          </div>
+
+          <div class="route-options" id="routeOptions" aria-label="可拖动的旅行候选">
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="dolomites" style="--route-color:#B98B33">
+              <div class="route-card-top"><span class="route-type">Mountain · spa</span><span class="route-duration">5天 / 4晚</span></div><h4>Dolomites</h4><p>Alta Badia住一处；山景、rifugio、不同体力分组和酒店spa。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/dolomites.html">完整攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="tuscany" style="--route-color:#A63A2E">
+              <div class="route-card-top"><span class="route-type">City · countryside</span><span class="route-duration">6天 / 5晚</span></div><h4>Florence＋Val d’Orcia</h4><p>两晚城市、三晚乡间；熟悉、陆路顺、艺术与resort都保留。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/tuscany.html">完整攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="sicily-film" style="--route-color:#8F4B36">
+              <div class="route-card-top"><span class="route-type">Film · town · sea</span><span class="route-duration">6天 / 5晚</span></div><h4>Cinema Paradiso Sicily</h4><p>Palermo 3晚＋Cefalù 2晚；专程去Palazzo Adriano，走进真正的Giancaldo广场。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#film-route">电影西线攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="sicily-east" style="--route-color:#C45C3C">
+              <div class="route-card-top"><span class="route-type">Flight · sea · volcano</span><span class="route-duration">5天 / 4晚</span></div><h4>East Sicily</h4><p>Ortigia一处住下；Noto、Etna、海边和完全不同的南方食物。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#east-route">东线攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="milan" style="--route-color:#7C5678">
+              <div class="route-card-top"><span class="route-type">Fashion · design · city</span><span class="route-duration">3天 / 2晚</span></div><h4>Milan</h4><p>9/22–28正值女装时装周；对喜欢服装、设计和城市氛围的人反而是亮点。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Milan">完整攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="como" style="--route-color:#4F7E89">
+              <div class="route-card-top"><span class="route-type">Lake · ferry · slow</span><span class="route-duration">4天 / 3晚</span></div><h4>Lake Como</h4><p>Varenna无车版或Menaggio开车版二选一；用船连中央湖区，保留清晨和晚餐。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/lake-como.html">完整攻略与酒店 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="switzerland" style="--route-color:#657B69">
+              <div class="route-card-top"><span class="route-type">Cross-border · lake</span><span class="route-duration">3天 / 2晚</span></div><h4>Lugano / Lucerne</h4><p>Lugano最顺路；Lucerne瑞士感更强，但需要更多车程与至少两晚。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Lucerne">完整攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="garda" style="--route-color:#4C8C82">
+              <div class="route-card-top"><span class="route-type">Lake · short stay</span><span class="route-duration">2天 / 1晚</span></div><h4>Lake Garda</h4><p>Malcesine或Sirmione只选一处；是最容易插入的湖区短版本。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Lake%20Garda">完整攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="venice" style="--route-color:#4B6C91">
+              <div class="route-card-top"><span class="route-type">Day trip · evening</span><span class="route-duration">1天</span></div><h4>Venice</h4><p>午后进城、cicchetti与夜景；适合放在天气最好、全家体力最好的留白日。</p><div class="route-card-foot"><span>拖到任意留白日</span><a href="places/guide.html?place=Venice">完整攻略 →</a></div>
+            </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="local" style="--route-color:#3F5B3D">
+              <div class="route-card-top"><span class="route-type">Home base · flexible</span><span class="route-duration">1天</span></div><h4>Torreglia / Veneto</h4><p>温泉、酒庄、Padua、Verona或彻底休息；可以重复放入多个留白日。</p><div class="route-card-foot"><span>拖到任意留白日</span><a href="#homebase" data-tab-jump="homebase">看附近选择 →</a></div>
+            </article>
+          </div>
+
+          <div class="calendar-toolbar">
+            <div><h4>2026年9月 · 15天</h4><p>9/15抵达与9/29中午离开已锁定；其余空白默认在Torreglia，可继续工作、休息或做临时日游。</p></div>
+            <div class="calendar-events"><b>日期线索</b><br>9/20 Vo’葡萄节 · 9/22–28 Milano Fashion Week</div>
+          </div>
+          <div class="calendar-scroll"><div class="trip-calendar" id="tripCalendar" role="grid" aria-label="2026年9月15日至29日旅行日历"></div></div>
+          <div class="route-planner-message" id="routePlannerMessage" aria-live="polite">选择一张卡，或直接把它拖进日历。</div>
+          <div class="calendar-legend"><span><i style="--legend-color:#D7C8AA"></i>空白＝Torreglia / 自由日</span><span><i style="--legend-color:#F2D99C"></i>活动日期提示</span><span><i style="--legend-color:#4A5468"></i>点击色块 × 可移除</span></div>
+        </section>
+      </div>
+
+      <div class="pane-inner overview-intro">
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Family trip brief <span class="en">先让四个人对这趟旅行有同一张图</span></h2>
+        <p class="section-lede">这是一趟熟悉意大利的一家人共同出游，不需要证明“来过多少地方”。Torreglia是固定大本营，其余都是可以拖进同一张15天日历的平行选择：山、城市、湖区、Tuscany、Sicily或瑞士，各自用天数和体验差异说话。</p>
+
+        <div class="family-brief" aria-label="家庭旅行简报">
+          <div class="brief-card"><span>Travel party</span><b>四位成人 · 两间房</b><p>所有外宿按两间同级房、相同取消政策预订，并备注希望相邻或同楼层。</p></div>
+          <div class="brief-card"><span>Travel identity</span><b>意大利熟客，不做打卡</b><p>全家经常来意大利；历史景点只选真正值得的一项，其余时间留给生活感。</p></div>
+          <div class="brief-card"><span>Daily rhythm</span><b>一个共同重点</b><p>每天只设一个全家共同的anchor，下午允许分开，避免四个人互相等。</p></div>
+          <div class="brief-card"><span>Reunion</span><b>晚餐重新会合</b><p>即使白天分组，也尽量保留一顿共同晚餐，成为每天最稳定的家庭时间。</p></div>
+        </div>
+
+        <div class="group-note"><b>四人同行的核心设计</b><p>不要求四个人全天做同一件事。山里可分“轻松观景组 / 多走一点组”，Florence可分“艺术 / 逛店与咖啡”，resort日更可自由休息；只要共同转场、一个主活动和晚餐清楚，行程反而更顺。</p></div>
+
+        <div class="interest-strip">
+          <div class="interest-item"><b>山地选项 · Dolomites</b><span>四晚只住Alta Badia，减少搬家；同一天提供不同体力版本，晚上回同一家酒店吃饭。</span></div>
+          <div class="interest-item"><b>家庭底色 · Torreglia</b><span>Villa 当家，温泉、agriturismo、Vo’葡萄节、酒庄与附近小镇按状态组合，不需要天天集体出动。</span></div>
+          <div class="interest-item"><b>陆路选项 · Florence＋Val d’Orcia</b><span>五晚陆路最顺，熟悉、舒服；城市两晚＋完整resort三晚。</span></div>
+          <div class="interest-item"><b>飞行选项 · 两种Sicily</b><span>喜欢《天堂电影院》就比较Palazzo Adriano＋Cefalù西线；想要火山与少搬家就选Ortigia东线。</span></div>
+        </div>
+
+        <div class="callout green">
+          <h4>每天只设一个共同重点</h4>
+          <p>上午或午餐设为全家anchor，下午保留约两小时自由安排：工作、休息、gym / spa、逛店或咖啡都可以。晚餐再会合，不让集体行动变成互相等待。</p>
+        </div>
+
+        <div class="callout gold">
+          <h4>9月1日最新核查 · 每个选项各有一个现实条件</h4>
+          <p><b>Dolomites：</b>核心缆车大多运营到10月4日；<b>Vo’：</b>9月20日花车游行为15:30与20:30；<b>Milan：</b>女装时装周为9月22–28日，对喜欢服装和设计的人是加分项，但酒店与餐厅会更紧张；<b>Tuscany：</b>小型Brunello酒庄需要提前预约；<b>Sicily：</b>Palazzo Adriano电影节已在8月结束，但电影博物馆当前公布为每日开放；Venice航线网络同时包含Palermo与Catania。</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <span class="time">山地选项 · 约5天</span>
+            <h3>Dolomites 4晚</h3>
+            <p>Alta Badia一处住到底，四人两间房不再中途搬家；按体力可分组活动，晚上回酒店会合。2026核心缆车覆盖旅行日期。</p>
+          </div>
+          <div class="card">
+            <span class="time">中间恢复段</span>
+            <h3>Torreglia + Veneto</h3>
+            <p>行李留在villa，Venice、Verona/Valpolicella、温泉和Vo’葡萄节按天气与当天状态灵活安排。</p>
+          </div>
+          <div class="card">
+            <span class="time">陆路候选 · 约6天</span>
+            <h3>Florence 2＋Val d'Orcia 3</h3>
+            <p>9/22–24住Florence，9/24–27住乡间；小众酒店降级为餐饮体验，以库存更多的成熟酒店为先。</p>
+          </div>
+          <div class="card">
+            <span class="time">城市＋湖区选项 · 5–7天</span>
+            <h3>Milan / Como / Switzerland</h3>
+            <p>Milan两晚可接住9/22–28时装周的城市氛围，再给Como中央湖区三晚；若继续到瑞士，至少再留两晚并减少另一段远行。</p>
+          </div>
+          <div class="card is-strong">
+            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palazzo-square.jpg" alt="Palazzo Adriano 天堂电影院广场"><span class="photo-label">Palazzo Adriano · 电影西线</span></a><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-cefalu-port.jpg" alt="Cefalù老港"><span class="photo-label">Cefalù · 老港</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/place-photos/place-35-sicily-ortigia.jpg" alt="Syracuse Ortigia 海港与老城"><span class="photo-label">Ortigia · 东线</span></a></div>
+            <span class="time">飞行候选 · 两张独立卡片</span>
+            <h3>Sicily：电影西线 / 东线</h3>
+            <p>西线用Palermo 3晚＋Cefalù 2晚接住《天堂电影院》的私人意义；东线用Ortigia 4晚换海、Noto与Etna。日历里可分别试排。</p>
+            <p><a class="detail-page-link" href="places/sicily.html">看两条Sicily完整比较 →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOME BASE ============ -->
+    <section id="homebase" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">大本营</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Colli Euganei <span class="en">家门口的10-20分钟</span></h2>
+        <p class="section-lede">Torreglia本身就坐落在Colli Euganei（欧加内丘陵）里，这一圈完全不需要提前规划，随时可以临时起意开车过去。</p>
+
+        <div class="callout" style="margin-top:22px">
+          <h4>先认识家附近，再决定今天怎么用</h4>
+          <p>一份指南讲清 Torreglia 与 Colli Euganei 的地貌、历史、村镇、步道和 30 分钟路线；另一份专门处理超市、好食材、熟食、咖啡与家庭晚餐。两页都不会公开具体住宅门牌。</p>
+          <p style="margin-top:12px"><a class="detail-page-link" href="places/torreglia-colli-euganei.html">读 Torreglia 与 Colli Euganei 深度指南 →</a></p>
+          <p style="margin-top:8px"><a class="detail-page-link" href="places/torreglia-local.html">打开买菜、咖啡与餐厅指南 →</a></p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-hill"/></svg>
+            <span class="time">15分钟</span>
+            <h3>Arquà Petrarca</h3>
+            <div class="place-cn">阿尔夸·彼特拉卡</div>
+            <p>意大利"最美村庄"之一，彼特拉克故居所在地，石头小巷配丘陵葡萄园，9月的光线尤其好看。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="阿尔夸·彼特拉卡 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-castle"/></svg>
+            <span class="time">20分钟</span>
+            <h3>Monselice / Este</h3>
+            <div class="place-cn">蒙塞利切 / 埃斯特</div>
+            <p>两座中世纪古堡小镇，Monselice有一条爬坡的"七圣堂之路"，Este则以陶瓷和城堡花园见长。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="蒙塞利切 埃斯特 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-spa"/></svg>
+            <span class="time">10分钟</span>
+            <h3>Abano / Montegrotto Terme</h3>
+            <div class="place-cn">阿巴诺 / 蒙泰格罗托温泉</div>
+            <p>欧洲最大的温泉度假区之一，就在隔壁。适合安排某个懒散的下午，也适合全家按各自节奏分开做疗程。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="阿巴诺温泉 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-grape"/></svg>
+            <span class="time">随时</span>
+            <h3>Colli Euganei Wineries</h3>
+            <div class="place-cn">欧加内丘陵酒庄</div>
+            <p>DOC产区，9月正值采收季。很多酒庄可以直接预约参观+品鉴，建议提前一两天联系。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="欧加内丘陵 酒庄 攻略">小红书搜攻略</a>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h4>Vo’ Festa dell’Uva · 9月20日到底怎么过</h4>
+          <p>这不是坐着品酒，而是整个镇子的收获节：葡萄主题花车、当地人巡游、19家酒庄集中摆摊、6个食物摊和从下午持续到夜里的音乐。全家不用从早待到晚，推荐只做下面这一段。</p>
+          <div class="event-mini-timeline">
+            <div><b>14:45</b>从villa出发</div>
+            <div><b>15:30</b>看白天花车</div>
+            <div><b>16:45</b>买€15品酒kit</div>
+            <div><b>18:00</b>摊位解决晚饭</div>
+            <div><b>19:30</b>看状态回家</div>
+          </div>
+          <p><b>太累版：</b>18:30再去，只逛Villaggio DiVino并看20:30夜场。<b>天气差：</b>直接跳过，不需要为“来都来了”硬撑。</p>
+          <p style="margin-top:12px"><a class="detail-page-link" href="places/vo-festa-uva.html">进入Vo’完整攻略 · 停车、吃喝与时间表</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VENETO DAY TRIPS ============ -->
+    <section id="veneto" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">威尼托日游</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Veneto <span class="en">40分钟到1.5小时，当天往返</span></h2>
+        <p class="section-lede">这一圈城市和小镇风格各异，建议按"一天一个主题"分开安排，而不是硬塞进同一天。</p>
+
+        <div class="grid">
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-dome"/></svg>
+            <span class="time">25分钟</span>
+            <h3>Padua</h3>
+            <div class="place-cn">帕多瓦</div>
+            <p>斯克罗维尼礼拜堂（乔托壁画，务必提前订票）、圣安东尼奥大教堂、Prato della Valle广场。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="帕多瓦 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-column"/></svg>
+            <span class="time">45分钟</span>
+            <h3>Vicenza</h3>
+            <div class="place-cn">维琴察</div>
+            <p>帕拉迪奥建筑之城，奥林匹克剧院与圆厅别墅，建筑爱好者会很喜欢。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="维琴察 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-bridge"/></svg>
+            <span class="time">40分钟</span>
+            <h3>Treviso</h3>
+            <div class="place-cn">特雷维索</div>
+            <p>"小威尼斯"，运河穿城而过，游客比威尼斯少很多。这里也是Spritz鸡尾酒的发源地之一。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="特雷维索 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-bridge"/></svg>
+            <span class="time">1小时</span>
+            <h3>Bassano del Grappa</h3>
+            <div class="place-cn">巴萨诺·德尔·格拉帕</div>
+            <p>帕拉迪奥设计的木制廊桥横跨Brenta河，桥边就是格拉帕烈酒的老牌酒厂。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="巴萨诺 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-castle"/></svg>
+            <span class="time">50分钟</span>
+            <h3>Asolo</h3>
+            <div class="place-cn">阿索洛</div>
+            <p>山顶古镇，"百景之城"，城墙与石板路保存完好，游客不多，适合安静散步。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="阿索洛 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-grape"/></svg>
+            <span class="time">1–1.5小时</span>
+            <h3>Prosecco Hills</h3>
+            <div class="place-cn">普罗塞克丘陵 · Valdobbiadene / Conegliano</div>
+            <p>UNESCO世界遗产的起泡酒产区，层叠的葡萄园丘陵不输托斯卡纳。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="普罗塞克丘陵 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-boat"/></svg>
+            <span class="time">1小时</span>
+            <h3>Venice</h3>
+            <div class="place-cn">威尼斯</div>
+            <p>建议不开车进城，停在Mestre或Padua周边P+R停车场再坐火车/公交进去。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="威尼斯 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-column"/></svg>
+            <span class="time">1小时</span>
+            <h3>Verona</h3>
+            <div class="place-cn">维罗纳</div>
+            <p>古罗马竞技场、河边老城与Valpolicella很适合组合；2026露天歌剧季已在9月12日结束。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="维罗纳 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-boat"/></svg>
+            <span class="time">1小时</span>
+            <h3>Chioggia</h3>
+            <div class="place-cn">基奥贾</div>
+            <p>威尼斯泻湖南端的小渔村，有威尼斯的水城气质，却几乎没什么游客。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="基奥贾 攻略">小红书搜攻略</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEYOND ============ -->
+    <section id="beyond" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">延伸半径</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Dolomites + 1.5–3小时延伸 <span class="en">山、湖与城市的不同时间成本</span></h2>
+        <p class="section-lede">Dolomites 应该专门住4–5晚；其余地点只在天气和精神状态都合适时再加，不需要为了“离得不远”逐个完成。</p>
+
+        <div class="grid">
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-lake"/></svg>
+            <span class="time">1.5小时</span>
+            <h3>Lake Garda</h3>
+            <div class="place-cn">加尔达湖</div>
+            <p>Sirmione、Bardolino等湖边小镇，意大利人自己的度假湖区。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="加尔达湖 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-castle"/></svg>
+            <span class="time">1.5小时</span>
+            <h3>Mantua</h3>
+            <div class="place-cn">曼图亚</div>
+            <p>贡扎加家族的文艺复兴古城，被三个人工湖环绕，游客比Padua、Vicenza少很多。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="曼图亚 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-castle"/></svg>
+            <span class="time">1小时</span>
+            <h3>Ferrara</h3>
+            <div class="place-cn">费拉拉</div>
+            <p>UNESCO文艺复兴古城，老城平坦好走，是意大利少数特别适合骑车逛的古城。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="费拉拉 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-column"/></svg>
+            <span class="time">1.5小时</span>
+            <h3>Bologna</h3>
+            <div class="place-cn">博洛尼亚</div>
+            <p>意大利的美食之都，如果我们对火腿、帕玛森、肉酱面的兴趣不亚于红酒，这里值得专门一天。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="博洛尼亚 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-coffee"/></svg>
+            <span class="time">2小时</span>
+            <h3>Trieste</h3>
+            <div class="place-cn">的里雅斯特</div>
+            <p>哈布斯堡遗风的海滨城市，气质偏中欧，咖啡文化浓厚，还能顺路看Miramare城堡。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="的里雅斯特 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-mountain"/></svg>
+            <span class="time">3小时</span>
+            <h3>Dolomites</h3>
+            <div class="place-cn">多洛米蒂</div>
+            <p>这应该是整趟的主角，不是自由日备选。住Alta Badia 4–5晚，不换酒店；利用仍开放的缆车做轻徒步，下午回酒店享受spa或自由时间。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">小红书搜攻略</a>
+          </div>
+        </div>
+
+        <div class="callout gold">
+          <h4>若选择 Dolomites，至少给它四晚</h4>
+          <p>Alta Badia官方2026夏季信息显示，多条主要缆车持续运营到10月4日。这段时间仍然能做“缆车上山 → 2–3小时轻徒步 → rifugio午餐 → 回酒店spa”的舒服玩法。个别缆车和山屋会更早结束，订酒店后只需围绕仍营业的lift排每天路线。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MILAN / COMO / SWITZERLAND ============ -->
+    <section id="northwest" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">西北组合 · 城市 / 时装 / 湖区 / 瑞士</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Milan · Lake Como · Switzerland</h2>
+        <p class="section-lede">这条线和Dolomites、Tuscany、Sicily平行比较。最紧凑的版本是Milan两晚；最完整的版本是Milan两晚＋Como中央湖区三晚；继续到Lugano或Lucerne，则需要再为跨境和湖山体验留出时间。</p>
+
+        <div class="callout gold">
+          <h4>9月22–28日 Milano Fashion Week：不是只代表贵和挤</h4>
+          <p>如果你对象对服装、设计、买手店与城市气氛感兴趣，这段重合反而让Milan更有理由进入日历。<a href="https://www.cameramoda.it/en/associazione/manifestazione/2-milano-fashion-week/" target="_blank" rel="noopener">Camera Nazionale della Moda Italiana</a>确认女装时装周为9月22–28日；正式秀场多为行业邀请，但品牌展示、店铺活动、公开展览和整座城市的氛围仍有旅行价值。代价是两间房与晚餐要更早订。</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-dome"/></svg>
+            <span class="time">约2.5小时 · 建议住2晚</span>
+            <h3>Milan</h3>
+            <div class="place-cn">米兰</div>
+            <p>重点不是把所有博物馆走完，而是Duomo屋顶、Brera街区、设计店、好咖啡和一晚漂亮的aperitivo；9/22–28还叠加女装时装周氛围。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="米兰 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-lake"/></svg>
+            <span class="time">Milan出发约1–1.5小时 · 建议住3晚</span>
+            <h3>Lake Como</h3>
+            <div class="place-cn">科莫湖</div>
+            <p>住Varenna、Bellagio或Menaggio一带，用船代替开车。三晚能留出两个完整湖区日，也不会把抵离时间误算成体验日。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Lake Como">小红书搜 Lake Como</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-lake"/></svg>
+            <span class="time">从Como湖区约1小时 · 住0–1晚</span>
+            <h3>Lugano</h3>
+            <div class="place-cn">卢加诺 · 瑞士</div>
+            <p>湖边散步、Parco Ciani和Monte Brè / San Salvatore，气质仍偏意大利语区，是最顺路、压力最低的瑞士体验。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="卢加诺 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-bridge"/></svg>
+            <span class="time">从Lugano约2小时 · 至少住2晚</span>
+            <h3>Lucerne</h3>
+            <div class="place-cn">卢塞恩 · 瑞士</div>
+            <p>木桥、老城、湖船与Pilatus / Rigi，瑞士感明显强于Lugano，但来回车程更多，只在我们愿意减少意大利停留时加入。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="卢塞恩 攻略">小红书搜攻略</a>
+          </div>
+        </div>
+
+        <div class="callout gold">
+          <h4>Lake Como：不要围着湖开车打卡</h4>
+          <p><a href="https://www.navigazionelaghi.it/en/" target="_blank" rel="noopener">2026夏季官方船班</a>覆盖7月1日至10月4日，正好包含我们的日期。住中央湖区后，用Bellagio–Varenna–Menaggio短线轮渡串联最省力；具体班次出发前再按当天日期确认。<a class="detail-page-link" href="places/lake-como.html">看Varenna / Menaggio基地、酒店与四天安排 →</a></p>
+        </div>
+        <div class="callout">
+          <h4>开车进入瑞士前</h4>
+          <p>先确认意大利租车合同允许跨境。使用瑞士高速公路需要<a href="https://www.ch.ch/en/vehicles-and-traffic/how-to-behave-in-road-traffic/motorway-vignette/" target="_blank" rel="noopener">2026年vignette</a>，价格CHF 40，没有短期版；可以购买电子版或在边境购买贴纸版。若只去Lugano，也可以比较火车是否比自驾更轻松。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SICILY ============ -->
+    <section id="sicily" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">飞行候选 · 两条独立路线</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Sicily <span class="en">电影西线5晚 / 东线4晚</span></h2>
+        <p class="section-lede">Sicily不再只有一个笼统答案。你喜欢《天堂电影院》，所以新增Palazzo Adriano＋Cefalù的电影西线；原来的Ortigia＋Noto＋Etna东线完整保留。两条路线分别从VCE飞Palermo或Catania，不能在四五晚里硬拼。</p>
+
+        <div class="callout green">
+          <h4>现在最贴你的版本：电影西线，但保留平行选择</h4>
+          <p><b>电影西线：</b>Palermo 3晚＋Cefalù 2晚，Palazzo Adriano包车日去日回；是情感、城市与海边小城的组合。<br><b>东线：</b>Ortigia 4晚不换酒店，Noto半日、Etna一天；是火山、海与放松的组合。</p>
+          <p style="margin-top:12px"><a class="detail-page-link" href="places/sicily.html">进入Sicily完整攻略 · 真实取景地、多图与两条每天安排</a></p>
+        </div>
+
+        <div class="grid">
+          <div class="card is-strong">
+            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palazzo-square.jpg" alt="Palazzo Adriano Piazza Umberto I"><span class="photo-label">Palazzo Adriano · Giancaldo广场</span></a><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-cefalu-port.jpg" alt="Cefalù老港"><span class="photo-label">Cefalù · 海边放映画面</span></a><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palermo-market.jpg" alt="Palermo市集"><span class="photo-label">Palermo · 市集</span></a></div>
+            <span class="time">VCE → PMO · 6天 / 5晚</span>
+            <h3>电影西线</h3>
+            <div class="place-cn">Palermo 3晚＋Cefalù 2晚</div>
+            <div class="vibe">Vibe · 进入《天堂电影院》的山城广场、老港与Tornatore的Sicily。</div>
+            <ul class="activity-list"><li>Palazzo Adriano广场＋电影博物馆</li><li>Cefalù Porta Pescara＋老港日落</li><li>Palermo市场；Bagheria按兴趣加入</li></ul>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Palazzo Adriano">小红书 · Palazzo Adriano</a>
+          </div>
+          <div class="card is-strong">
+            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/place-photos/place-35-sicily-ortigia.jpg" alt="Ortigia海港与老城"><span class="photo-label">Ortigia · 基地</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-noto.jpg" alt="Noto金色巴洛克街区"><span class="photo-label">Noto · 半日</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-etna.jpg" alt="Etna火山地貌"><span class="photo-label">Etna · 天气日</span></a></div>
+            <span class="time">VCE → CTA · 5天 / 4晚</span>
+            <h3>东线火山与海</h3>
+            <div class="place-cn">Ortigia四晚 · 不换基地</div>
+            <div class="vibe">Vibe · 海边石城、市场、金色巴洛克与火山地貌。</div>
+            <ul class="activity-list"><li>Ortigia市场与晚饭后散步</li><li>Noto半日＋乡间长午餐</li><li>Etna火山或Etna DOC酒庄一日</li></ul>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="奥提伽">小红书 · 奥提伽</a>
+          </div>
+          <div class="card">
+            <span class="time">电影事实 · 避免错误期待</span>
+            <h3>影院是搭景，不是遗址</h3>
+            <p>Piazza Umberto I是电影最核心的广场，但Cinema Paradiso外立面拍完后已拆除。现在值得专程看的是仍在生活的广场、双教堂与收藏剧照和道具的新电影博物馆。</p>
+          </div>
+        </div>
+
+        <div class="choice-board">
+          <div class="choice-option is-pick"><span class="choice-label">情感优先</span><h4>电影西线 · 5晚</h4><p>Palermo 3＋Cefalù 2；Palazzo Adriano完整一天，Bagheria是可删的作者背景。</p></div>
+          <div class="choice-option"><span class="choice-label">少搬家优先</span><h4>东线 · 4晚</h4><p>Ortigia同一家住到底；Noto与Etna按天气交换，海边留出恢复时间。</p></div>
+          <div class="choice-option"><span class="choice-label">只有4晚又想看电影</span><h4>西线压缩版 · 2＋2</h4><p>Palermo 2＋Cefalù 2；保留Palazzo Adriano，删Bagheria和Palermo第二个城市重点。</p></div>
+        </div>
+
+        <div class="callout gold">
+          <h4>两条路线都先看航班，不先看酒店</h4>
+          <p>Venice机场2026航线网络包含Palermo与Catania。电影西线先查VCE–PMO，东线先查VCE–CTA；门到门都按大半天计算。Palazzo Adriano博物馆当前公布每日09:00–13:00、15:00–19:00，临行前一周电话确认。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TUSCANY ============ -->
+    <section id="tuscany" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">陆路候选 · 建议5晚</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Tuscany <span class="en">Florence两晚＋Val d’Orcia三晚</span></h2>
+        <p class="section-lede">Florence不是“顺便打卡”，而是让全家各自重访喜欢的街区、陪第一次认真来的人看一个重点。两晚城市之后，再用三晚乡间完成Pienza、Montalcino、Brunello与spa。</p>
+
+        <div class="callout green">
+          <h4>如果全家选择 Tuscany，采用这一版</h4>
+          <p><b>9月22–24日 Florence 两晚 → 24–27日 Val d’Orcia 三晚 → 27日回Torreglia。</b> Florence只选一个大型艺术重点；乡间只做Pienza与Montalcino两个主题日，不再加Siena。</p>
+          <p style="margin-top:12px"><a class="detail-page-link" href="places/tuscany.html">进入Tuscany五晚完整攻略 · 大酒店、resort与每天安排</a></p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-dome"/></svg>
+            <span class="time">艺术</span>
+            <h3>Florence</h3>
+            <div class="place-cn">佛罗伦萨</div>
+            <p>学院美术馆的大卫像、乌菲兹美术馆、主教座堂穹顶，傍晚去Piazzale Michelangelo看日落全城。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="佛罗伦萨 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-grape"/></svg>
+            <span class="time">红酒</span>
+            <h3>Chianti</h3>
+            <div class="place-cn">基安蒂</div>
+            <p>Greve in Chianti、Radda等小镇，酒庄品鉴也可以配一堂适合全家一起参加的手工意面课。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="基安蒂 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-tower"/></svg>
+            <span class="time">古城</span>
+            <h3>Siena / San Gimignano</h3>
+            <div class="place-cn">锡耶纳 / 圣吉米尼亚诺</div>
+            <p>田野广场的开阔，配上San Gimignano"中世纪曼哈顿"般的塔楼剪影。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="锡耶纳 圣吉米尼亚诺 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-hill"/></svg>
+            <span class="time">风光</span>
+            <h3>Val d'Orcia</h3>
+            <div class="place-cn">奥尔恰谷</div>
+            <p>Pienza、Montepulciano、Montalcino，以及San Quirico附近那几处经典的柏树观景点——托斯卡纳最"明信片"的画面。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="奥尔恰谷 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-spa"/></svg>
+            <span class="time">奇景 + 放松</span>
+            <h3>Pitigliano / Saturnia</h3>
+            <div class="place-cn">皮蒂利亚诺 / 萨图尔尼亚</div>
+            <p>建在凝灰岩悬崖上的"小耶路撒冷"，再加天然露天温泉瀑布，一天之内一个看奇观、一个纯放松。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="皮蒂利亚诺 萨图尔尼亚温泉 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon"><use href="#icon-hill"/></svg>
+            <span class="time">顺路</span>
+            <h3>Volterra / Cortona</h3>
+            <div class="place-cn">沃尔泰拉 / 科尔托纳</div>
+            <p>伊特鲁里亚古城配雪花石膏工坊，或者电影《托斯卡纳艳阳下》的取景地，回程路上顺道一座即可。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="沃尔泰拉 科尔托纳 攻略">小红书搜攻略</a>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h4>Florence的ZTL限行区</h4>
+          <p>不要自己跟着导航闯老城。预订后提前把车牌发给酒店或合作车库，并索取指定进入路线；Grand Hotel Minerva可安排valet，25hours本身有garage。进入后把车停到9月24日离开。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ITINERARY ============ -->
+    <section id="itinerary" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">可调整的行程草案</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">9月15日 – 9月29日中午</h2>
+        <p class="section-lede">这份日程不是要求四个人全天同步。每个重点日都标出“全家共同 / 可分开 / 晚餐会合”，用来同时照顾不同体力、兴趣与休息需求；只有抵离日期与Vo’葡萄节固定，其余可随天气调整。</p>
+
+        <div class="callout green">
+          <h4>下面只是一个“山＋Tuscany”参考版</h4>
+          <p><b>9月16–20日 Dolomites 4晚</b> → 20日下午回Torreglia参加Vo’葡萄节 → 21日恢复 → <b>22–24日Florence 2晚</b> → <b>24–27日Val d’Orcia 3晚</b> → 27日晚回Torreglia → 28日Venice / 缓冲二选一 → 29日中午离开。它用于展示一天会怎么过，不代表其他地区已被排除。</p>
+        </div>
+
+        <div class="callout gold">
+          <h4>其他组合请回首页拖拽，不靠文字想象</h4>
+          <p>东线Sicily占5个日历日，电影西线占6天；Milan＋Como约占7天，Lucerne至少占3天。首页日历会直接显示还剩多少留白日；下面Day 8–13只展开Tuscany版本的生活节奏。</p>
+        </div>
+
+        <div class="choice-board">
+          <div class="choice-option"><span class="choice-label">陆路组合</span><h4>Tuscany 5晚</h4><p>熟悉、顺路、酒店风险低；Florence两晚＋乡间三晚，只换一次酒店。</p></div>
+          <div class="choice-option"><span class="choice-label">飞行组合</span><h4>Sicily 4–5晚</h4><p>电影西线看Palazzo Adriano与Cefalù；东线看Ortigia、Noto与Etna。两张卡独立试排。</p></div>
+          <div class="choice-option"><span class="choice-label">时装＋湖区组合</span><h4>Milan 2晚＋Como 3晚</h4><p>时装周正好落在旅行后半段；城市能量更强，再用中央湖区把节奏慢下来。</p></div>
+        </div>
+
+        <div class="timeline">
+
+          <div class="day-row">
+            <div class="day-num">1</div>
+            <div class="day-body">
+              <div class="date">9月15日 · 周二</div>
+              <h4>抵达 · 安顿 <span class="chip home">大本营</span></h4>
+              <p>抵达Torreglia，简单采购食材，附近小馆吃第一顿晚餐，倒时差不安排硬性行程。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>抵达、入住与简单采购</span><span class="rhythm-item"><b>可分开</b>休息或附近散步</span><span class="rhythm-item"><b>晚餐会合</b>家附近轻松第一顿</span></div>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">2</div>
+            <div class="day-body">
+              <div class="date">9月16日 · 周三</div>
+              <h4>前往 Dolomites <span class="chip move">在途</span></h4>
+              <p><b>09:30</b>从Torreglia出发，途中只停一次午餐；<b>14:00前后</b>抵达Alta Badia并入住。下午去Corvara或San Cassiano走平路、确认第二天缆车状态；晚餐尽量订酒店或步行可达餐厅。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>转场与途中午餐</span><span class="rhythm-item"><b>可分开</b>入住后休息或镇上平走</span><span class="rhythm-item"><b>晚餐会合</b>酒店内或步行可达</span></div>
+              <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">小红书搜攻略</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">3</div>
+            <div class="day-body">
+              <div class="date">9月17日 · 周四</div>
+              <h4>Alta Badia · 第一天 <span class="chip north">住山里</span></h4>
+              <p><b>09:00</b>Piz Sorega上山，走向Pralongiá高原的宽路；<b>12:00</b>在rifugio午餐；<b>14:30–15:00</b>开始下山，回酒店spa。第一天不挑战陡线，用来判断体力与天气。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>缆车上山＋山屋午餐</span><span class="rhythm-item"><b>可分开</b>高原长走 / 短走喝咖啡</span><span class="rhythm-item"><b>晚餐会合</b>酒店spa后一起吃饭</span></div>
+              <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">小红书搜攻略</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">4</div>
+            <div class="day-body">
+              <div class="date">9月18日 · 周五</div>
+              <h4>Alta Badia · 第二天 <span class="chip north">住山里</span></h4>
+              <p>把天气最稳的一天给<b>Lagazuoi</b>：<b>09:00</b>开车到Passo Falzarego，缆车上山后走短线观景，<b>12:00</b>山屋午餐，下午提早下山。若预报大风或雷雨，改成La Crusc或酒店恢复日，不为景点冒险。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>Lagazuoi缆车与观景</span><span class="rhythm-item"><b>可分开</b>短线平台 / 多走一段</span><span class="rhythm-item"><b>晚餐会合</b>回酒店后再决定</span></div>
+              <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">小红书搜攻略</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">5</div>
+            <div class="day-body">
+              <div class="date">9月19日 · 周六</div>
+              <h4>Alta Badia · 第三天 <span class="chip north">住山里</span></h4>
+              <p>晴天选<b>La Crusc</b>或<b>Piz La Ila</b>做最后一条轻路线；阴雨就把这天变成酒店spa、咖啡与正式晚餐。当天晚上收好行李，因为20日要早走赶Vo’葡萄节。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>早餐后选晴天或雨天版</span><span class="rhythm-item"><b>可分开</b>轻路线 / spa与镇上咖啡</span><span class="rhythm-item"><b>晚餐会合</b>正式晚餐＋一起收行李</span></div>
+              <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">小红书搜攻略</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">6</div>
+            <div class="day-body">
+              <div class="date">9月20日 · 周日</div>
+              <h4>返回Torreglia · Festa dell'Uva <span class="chip home">本地节日</span></h4>
+              <p><b>08:30</b>离开Alta Badia，12:30–13:30回villa后先洗澡、休息。<b>14:45</b>再出发去Vo’，<b>15:30</b>看白天花车，<b>16:45</b>进Villaggio DiVino品酒吃东西；19:30左右看状态回家。若回程太累，18:30再去，只逛wine village并看20:30夜场。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>回Torreglia＋白天花车</span><span class="rhythm-item"><b>可分开</b>早回villa / 留看夜场</span><span class="rhythm-item"><b>晚餐会合</b>节日摊位或回家简单吃</span></div>
+              <div class="day-options"><span class="day-option">推荐：15:00–20:00</span><span class="day-option">太累：18:30–21:30</span><span class="day-option">天气差：直接跳过</span></div>
+              <a class="xhs-btn" href="places/vo-festa-uva.html">Vo’一天完整攻略</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">7</div>
+            <div class="day-body">
+              <div class="date">9月21日 · 周一</div>
+              <h4>Torreglia恢复日 <span class="chip home">不转场</span></h4>
+              <p>从Dolomites和Vo’葡萄节回来后不立刻进城。睡到自然醒、洗衣并处理自己的事情；下午最多选Abano半日spa、附近咖啡或villa散步，不约正式酒庄。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>只保留一顿长午餐</span><span class="rhythm-item"><b>可分开</b>villa / 温泉 / 咖啡</span><span class="rhythm-item"><b>晚餐会合</b>看体力，家里或附近</span></div>
+              <div class="day-options"><span class="day-option">最累：villa不出门</span><span class="day-option">想放松：Abano spa</span><span class="day-option">天气好：附近长午餐</span></div>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">8</div>
+            <div class="day-body">
+              <div class="date">9月22日 · 周二</div>
+              <h4>前往 Florence <span class="chip move">住城市</span></h4>
+              <p><b>10:00</b>左右离开Torreglia，13:00前后到酒店。按酒店给的路线进入ZTL并把车交给valet / garage，此后不再动车。下午Oltrarno散步、咖啡与aperitivo，晚上订一顿Florentine dinner。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>转场、入住与Oltrarno散步</span><span class="rhythm-item"><b>可分开</b>休息 / 咖啡 / 逛店</span><span class="rhythm-item"><b>晚餐会合</b>提前订Florentine dinner</span></div>
+              <div class="day-options"><span class="day-option">首查：Grand Hotel Minerva</span><span class="day-option">最好订：25hours</span><span class="day-option">升级：Four Seasons</span></div>
+              <a class="xhs-btn" href="places/tuscany.html">Florence＋Tuscany完整攻略</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">9</div>
+            <div class="day-body">
+              <div class="date">9月23日 · 周三</div>
+              <h4>完整 Florence 日 <span class="chip day">住城市</span></h4>
+              <p>上午只选<b>Uffizi或Accademia</b>一个艺术重点；12:30长午餐。下午不强求四人同步：可以逛店、喝咖啡、沿Arno散步或回酒店，傍晚再决定Piazzale Michelangelo或rooftop。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>一个艺术重点＋长午餐</span><span class="rhythm-item"><b>可分开</b>艺术续摊 / 逛店 / 回酒店</span><span class="rhythm-item"><b>晚餐会合</b>rooftop aperitivo后再吃</span></div>
+              <div class="day-options"><span class="day-option">艺术：Uffizi</span><span class="day-option">更轻：David＋街区</span><span class="day-option">最舒服：午后回酒店</span></div>
+              <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="佛罗伦萨">小红书搜佛罗伦萨</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">10</div>
+            <div class="day-body">
+              <div class="date">9月24日 · 周四</div>
+              <h4>Florence → Val d’Orcia <span class="chip tuscany">住乡间</span></h4>
+              <p>早餐后取车，<b>11:00前</b>离开Florence。途中只吃简单午餐，<b>15:00左右</b>入住resort；下午不追景点，只泡温泉、散步和酒店晚餐。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>取车、转场与途中午餐</span><span class="rhythm-item"><b>可分开</b>spa / 散步 / 房间休息</span><span class="rhythm-item"><b>晚餐会合</b>酒店内最省力</span></div>
+              <div class="day-options"><span class="day-option">首查：ADLER Thermae</span><span class="day-option">备选：Precise Tale</span><span class="day-option">升级：Castello di Velona</span></div>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">11</div>
+            <div class="day-body">
+              <div class="date">9月25日 · 周五</div>
+              <h4>Pienza＋San Quirico <span class="chip tuscany">住乡间</span></h4>
+              <p><b>10:00</b>Pienza慢走、喝咖啡并买pecorino；<b>12:30</b>长午餐。下午走Pienza→San Quirico的景观路，只停两三个真正喜欢的地方，<b>15:30</b>左右回酒店。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>Pienza＋长午餐</span><span class="rhythm-item"><b>可分开</b>San Quirico / 提前回spa</span><span class="rhythm-item"><b>晚餐会合</b>Il Rigo或酒店餐厅</span></div>
+              <div class="day-options"><span class="day-option">标准：两镇＋景观路</span><span class="day-option">轻松：只做Pienza</span><span class="day-option">晚餐：预约Il Rigo</span></div>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">12</div>
+            <div class="day-body">
+              <div class="date">9月26日 · 周六</div>
+              <h4>Montalcino＋一家Brunello酒庄 <span class="chip tuscany">住乡间</span></h4>
+              <p><b>10:30</b>到Montalcino喝咖啡、看Fortezza；<b>12:30</b>长午餐；<b>15:30</b>做约90分钟品鉴。指定一位驾驶者少喝或只闻尝，不再安排第二家；不想品酒的人可在镇上或酒店自由活动。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>Montalcino＋长午餐</span><span class="rhythm-item"><b>可分开</b>酒庄品鉴 / 镇上与spa</span><span class="rhythm-item"><b>晚餐会合</b>回resort轻松吃</span></div>
+              <div class="day-options"><span class="day-option">首选：San Polino</span><span class="day-option">完整：Ridolfi lunch</span><span class="day-option">最舒服：酒店spa</span></div>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">13</div>
+            <div class="day-body">
+              <div class="date">9月27日 · 周日</div>
+              <h4>返回Torreglia <span class="chip move">在途</span></h4>
+              <p><b>10:00</b>退房，不安排赶早景点；路上选一家简单午餐，预计<b>16:00前后</b>回到villa。晚上只做洗衣、散步和家附近的收尾饭。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>转场与途中午餐</span><span class="rhythm-item"><b>可分开</b>回villa后各自整理</span><span class="rhythm-item"><b>晚餐会合</b>家附近收尾饭</span></div>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">14</div>
+            <div class="day-body">
+              <div class="date">9月28日 · 周一</div>
+              <h4>Venice / 缓冲二选一 <span class="chip day">看天气</span></h4>
+              <p>若天气和体力都好，下午进Venice：Cannaregio＋Dorsoduro、cicchetti与夜景，晚饭后坐火车返回。若Tuscany回来已经累，就完整留在villa整理、加油和吃收尾饭，不为“必须去”硬撑。</p>
+              <div class="family-rhythm"><span class="rhythm-item"><b>全家共同</b>早餐后确认天气与人数</span><span class="rhythm-item"><b>可分开</b>Venice组 / villa缓冲组</span><span class="rhythm-item"><b>晚餐会合</b>可各吃，也可回villa会合</span></div>
+              <div class="day-options"><span class="day-option">天气好：Venice下午＋夜景</span><span class="day-option">轻松：只做Cannaregio</span><span class="day-option">想留白：villa＋收行李</span></div>
+              <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="威尼斯">小红书搜威尼斯</a>
+            </div>
+          </div>
+
+          <div class="day-row">
+            <div class="day-num">15</div>
+            <div class="day-body">
+              <div class="date">9月29日 · 周二</div>
+              <h4>离开 <span class="chip move">中午出发</span></h4>
+              <p>只安排早餐、整理和退房，不再加景点。若是VCE或VRN中午航班，通常需要预留开车、还车与安检时间；若从MXP离境，应考虑前一晚住米兰机场附近，而不是当天从Torreglia赶过去。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOTES ============ -->
+    <section id="notes" class="pane">
+      <div class="pane-inner">
+        <div class="kicker">实用笔记</div>
+        <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">路程 · 预订 · 打包</h2>
+
+        <h3 style="margin-top:8px;">从Torreglia出发的车程速查</h3>
+        <table>
+          <tr><th>目的地</th><th>车程</th><th>归类</th></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="阿巴诺温泉 攻略">Abano / Montegrotto Terme</a><span class="place-cn-sm">阿巴诺 / 蒙泰格罗托温泉</span></td><td>约10分钟</td><td><span class="chip home">大本营</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="阿尔夸·彼特拉卡 攻略">Arquà Petrarca</a><span class="place-cn-sm">阿尔夸·彼特拉卡</span></td><td>约15分钟</td><td><span class="chip home">大本营</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="蒙塞利切 埃斯特 攻略">Monselice / Este</a><span class="place-cn-sm">蒙塞利切 / 埃斯特</span></td><td>约20分钟</td><td><span class="chip home">大本营</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="帕多瓦 攻略">Padua</a><span class="place-cn-sm">帕多瓦</span></td><td>约25分钟</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="特雷维索 攻略">Treviso</a><span class="place-cn-sm">特雷维索</span></td><td>约40分钟</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="维琴察 攻略">Vicenza</a><span class="place-cn-sm">维琴察</span></td><td>约45分钟</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="阿索洛 攻略">Asolo</a><span class="place-cn-sm">阿索洛</span></td><td>约50分钟</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="巴萨诺 攻略">Bassano del Grappa</a><span class="place-cn-sm">巴萨诺·德尔·格拉帕</span></td><td>约1小时</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="威尼斯 攻略">Venice</a>（含停车+火车）<span class="place-cn-sm">威尼斯</span></td><td>约1小时</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="维罗纳 攻略">Verona</a><span class="place-cn-sm">维罗纳</span></td><td>约1小时</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="基奥贾 攻略">Chioggia</a><span class="place-cn-sm">基奥贾</span></td><td>约1小时</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="费拉拉 攻略">Ferrara</a><span class="place-cn-sm">费拉拉</span></td><td>约1小时</td><td><span class="chip free">延伸</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="普罗塞克丘陵 攻略">Prosecco Hills</a><span class="place-cn-sm">普罗塞克丘陵</span></td><td>约1–1.5小时</td><td><span class="chip day">日游</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="曼图亚 攻略">Mantua</a><span class="place-cn-sm">曼图亚</span></td><td>约1.5小时</td><td><span class="chip free">延伸</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="加尔达湖 攻略">Lake Garda</a><span class="place-cn-sm">加尔达湖</span></td><td>约1.5小时</td><td><span class="chip free">延伸</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="博洛尼亚 攻略">Bologna</a><span class="place-cn-sm">博洛尼亚</span></td><td>约1.5小时</td><td><span class="chip free">延伸</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="的里雅斯特 攻略">Trieste</a><span class="place-cn-sm">的里雅斯特</span></td><td>约2小时</td><td><span class="chip free">延伸</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="多洛米蒂 攻略">Dolomites</a>（Cortina）<span class="place-cn-sm">多洛米蒂</span></td><td>约3小时</td><td><span class="chip free">延伸</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="米兰 攻略">Milan</a><span class="place-cn-sm">米兰</span></td><td>约2.5小时</td><td><span class="chip north">候选2晚</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="Lake Como">Lake Como</a><span class="place-cn-sm">科莫湖</span></td><td>约3小时</td><td><span class="chip north">候选3晚</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="卢加诺 攻略">Lugano</a><span class="place-cn-sm">卢加诺</span></td><td>约3.5小时</td><td><span class="chip north">候选0–1晚</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="卢塞恩 攻略">Lucerne</a><span class="place-cn-sm">卢塞恩</span></td><td>约5小时+</td><td><span class="chip north">候选2晚+</span></td></tr>
+          <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="奥尔恰谷 攻略">Val d'Orcia</a><span class="place-cn-sm">奥尔恰谷</span></td><td>约3.5小时</td><td><span class="chip tuscany">候选3晚</span></td></tr>
+          <tr><td><a href="places/sicily.html">Sicily · 两条路线</a><span class="place-cn-sm">电影西线 / 东线</span></td><td>VCE–PMO或CTA · 门到门大半天</td><td><span class="chip free">候选4–5晚</span></td></tr>
+        </table>
+
+        <div class="callout gold">
+          <h4>Tuscany开车重点</h4>
+          <p>Florence预订后，提前把车牌发给酒店或合作车库并索取指定进入路线；不要自己跟着导航闯ZTL。9月22日停好后直到24日离开都不动车。Val d’Orcia最后一段乡间路尽量在天黑前完成。</p>
+        </div>
+
+        <div class="callout green">
+          <h4>四位成人的用车与房间标准</h4>
+          <p><b>车辆：</b>以四件大行李加随身包能全部放进后备箱为标准，优先满尺寸旅行车、全尺寸SUV或七座MPV；普通紧凑SUV往往坐得下却放不下行李。确认一位主驾驶、一位备份驾驶，品酒日提前指定不饮酒驾驶者。<br><b>房间：</b>每家酒店一次订两间同级房，使用相同取消政策；备注相邻或同楼层，但不要把connecting room当作可保证条件。</p>
+        </div>
+
+        <h3>提前预订清单</h3>
+        <ul class="checklist">
+          <li><div><b>所有组合共用 · 四人车辆</b><span>预订时按“4位成人＋4件大行李”核对车型与后备箱，不接受到店后按同级小车替换；两位驾驶者都加入合同。</span></div></li>
+          <li><div><b>日历保留 Dolomites 后 · 4晚</b><span>锁定Alta Badia同一家酒店两间房、连续四晚，优先含早餐、spa与晚餐；备注相邻或同楼层。</span></div></li>
+          <li><div><b>日历保留 Tuscany 后 · Florence 2晚</b><span>以两间房的总价、取消条款与停车方案比较Grand Hotel Minerva和25hours；Four Seasons只在全家愿意留半天享受酒店时选。</span></div></li>
+          <li><div><b>日历保留 Tuscany 后 · Val d’Orcia 3晚</b><span>比较ADLER Thermae、Precise Tale与Castello di Velona；Il Rigo可以是晚餐，也可以是设施更少但更乡村的住宿版本。</span></div></li>
+          <li><div><b>日历保留电影西线后 · 5晚</b><span>先查VCE–PMO直飞与Palazzo Adriano包车；住宿按Palermo 3晚＋Cefalù 2晚找两间同级房。</span></div></li>
+          <li><div><b>日历保留东线Sicily后 · 4晚</b><span>先用VCE–CTA往返直飞确定日期，再比较Ortea Palace、Des Étrangers与Minareto的两间房。</span></div></li>
+          <li><div><b>日历保留 Milan 后 · 时装周2晚</b><span>9月22–28日需求更高，先比较两间可退房率；等官方公开活动日历更完整后，再决定以秀场周边、品牌活动还是购物为重点。</span></div></li>
+          <li><div><b>日历保留 Como 后 · 中央湖区3晚</b><span>先比较Varenna与Menaggio的两间房和步行便利性；住宿定下来后再以轮渡班次排列Bellagio等日游。</span></div></li>
+          <li><div><b>Montalcino · San Polino</b><span>小型家族酒庄不保证临时有人接待，提前邮件预约9月26日下午的约90分钟品鉴。</span></div></li>
+          <li><div><b>Venice · 暂放9月28日</b><span>无需入城费；这天保留天气开关，若Tuscany回来已经累就直接做villa缓冲日。</span></div></li>
+          <li><div><b>斯克罗维尼礼拜堂 (Padua)</b><span>强制预约并严格按时入场；只有真的想看乔托时才把半天围绕票安排。</span></div></li>
+          <li><div><b>酒庄品鉴</b><span>9月正值采收，Quota 101 / Maeli、Valpolicella与Prosecco酒庄都不建议walk-in；至少提前24–48小时确认。</span></div></li>
+          <li><div><b>Abano / Montegrotto day-spa</b><span>热门酒店限制日客人数，按摩或含房间的套餐建议提前48小时；带泳帽或现场购买。</span></div></li>
+        </ul>
+
+        <h3>穿衣与打包</h3>
+        <ul>
+          <li>Dolomites早晚明显更凉，带轻薄羽绒或抓绒、防水外层与可以走碎石路的鞋。</li>
+          <li>Abano与Tuscany酒店spa都需要泳衣，单独准备一个防水袋和泳帽。</li>
+          <li>古城石板路和丘陵徒步都不适合硬底鞋，建议以舒适的步行鞋为主。</li>
+          <li>Badia Hill / La Perla与Tuscany正式晚餐可以准备一身相对正式但舒服的衣服。</li>
+        </ul>
+
+        <footer class="pane-foot">信息更新于2026年9月1日，逐日方案按9月15日抵达、9月29日中午离开排列。缆车、轮渡、酒庄与活动仍可能因天气或运营临时调整，出发前一天请点击卡片内的官方链接做最后确认。</footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="planner-guides.js"></script>
+<script src="place-gallery-data.js"></script>
+<script>
+  const detailPages = {
+    'Arquà Petrarca':'places/arqua-petrarca.html',
+    'Monselice / Este':'places/monselice-este.html',
+    'Abano / Montegrotto Terme':'places/abano-montegrotto-terme.html',
+    'Colli Euganei Wineries':'places/colli-euganei-wineries.html',
+    'Dolomites':'places/dolomites.html',
+    'Sicily':'places/sicily.html',
+    'Lake Como':'places/lake-como.html',
+    'Florence':'places/tuscany.html',
+    'Chianti':'places/tuscany.html',
+    'Siena / San Gimignano':'places/tuscany.html',
+    "Val d'Orcia":'places/tuscany.html',
+    'Pitigliano / Saturnia':'places/tuscany.html',
+    'Volterra / Cortona':'places/tuscany.html'
+  };
+  Object.keys(plannerGuides).forEach(name => {
+    if (!detailPages[name]) detailPages[name] = 'places/guide.html?place=' + encodeURIComponent(name);
+  });
+
+  const placeDetails = {
+    'Arquà Petrarca': {level:'strong', label:'值得去 · 轻松半天', vibe:'安静石头村、橄榄与葡萄园，适合慢慢吃午饭。', activities:['老村随走，不用按景点打卡','找一家带景观的trattoria吃长午餐','顺路买当地橄榄油或brodo di giuggiole']},
+    'Monselice / Este': {level:'optional', label:'看状态', vibe:'古堡与花园型小镇；漂亮，但偏历史建筑。', activities:['Monselice走七圣堂上坡线','Este城堡花园散步','二选一即可，不必同日完成']},
+    'Abano / Montegrotto Terme': {level:'must', label:'全家友好 · 放松', vibe:'真正的温泉度假下午，不是赶景点。', activities:['订带day-spa access的温泉酒店','泡池＋按摩或泥疗','结束后回Torreglia吃晚饭']},
+    'Colli Euganei Wineries': {level:'must', label:'全家友好 · Local', vibe:'葡萄收获季、农庄与本地餐桌，比网红酒庄更生活化。', activities:['预约一家小酒庄品Serprino/Fior d’Arancio','在agriturismo吃当季长午餐','丘陵日落前开一段景观路']},
+    'Padua': {level:'optional', label:'半天足够', vibe:'大学城＋市场＋aperitivo，比纯看教堂更符合这次节奏。', activities:['早上逛Piazza delle Erbe市场','Caffè Pedrocchi或街边espresso','只在很想看乔托时订Scrovegni Chapel']},
+    'Vicenza': {level:'skip', label:'可跳过', vibe:'帕拉迪奥建筑浓度很高；不是我们的核心兴趣。', activities:['若去只看Teatro Olimpico','市中心午餐＋散步即可','不专门为Villa La Rotonda排满一天']},
+    'Treviso': {level:'optional', label:'看状态 · Easy', vibe:'运河、咖啡与spritz，像低压力版Venice。', activities:['运河边散步','吃tiramisu/喝espresso','傍晚aperitivo后回家']},
+    'Bassano del Grappa': {level:'strong', label:'值得去 · Local', vibe:'河景廊桥、grappa与山脚小城，画面和吃喝都有。', activities:['走Ponte Vecchio看Brenta河','Nardini或Poli试一小杯grappa','搭配Asolo做舒服的一日']},
+    'Asolo': {level:'strong', label:'值得去 · 慢走', vibe:'安静山城、石板路与景观露台，适合全家轻松散步。', activities:['老城随走＋喝咖啡','到Rocca或观景点看平原','与Bassano组合，不单独赶一天']},
+    'Prosecco Hills': {level:'strong', label:'值得去 · 酒＋风景', vibe:'层叠葡萄园与起泡酒公路，视觉比酒本身更重要。', activities:['走Conegliano–Valdobbiadene景观路','预约一家精品酒庄','在Osteria senz’Oste简单吃喝看景']},
+    'Venice': {level:'must', label:'必去 · 一整天', vibe:'避开打卡式白天，把重点留给小巷、cicchetti和夜色。', activities:['午后入城，先走Cannaregio/Dorsoduro','bacaro hop吃cicchetti配spritz','日落后看人潮散去再返回']},
+    'Verona': {level:'must', label:'全家友好 · 城市＋酒', vibe:'漂亮但不压迫的老城，最好与Valpolicella Amarone连起来。', activities:['上午Arena与河边散步','午后去Valpolicella酒庄','在Verona吃晚饭或直接住一晚']},
+    'Chioggia': {level:'optional', label:'看状态 · 海鲜', vibe:'真实渔港版Venice，重点是市场和海鲜，不是建筑。', activities:['早上鱼市','运河边散步','吃一顿海鲜午餐后回家']},
+    'Lake Garda': {level:'optional', label:'可选 · 不必硬塞', vibe:'湖边度假漂亮，但这趟与Dolomites相比边际价值较低。', activities:['只选Malcesine或Sirmione一处','坐船＋湖边午餐','若去至少住一晚，不做匆忙往返']},
+    'Mantua': {level:'skip', label:'可跳过', vibe:'安静文艺复兴城市，历史感强于吃喝与自然。', activities:['若下雨可作城市备选','Palazzo Te二选一参观','湖边散步']},
+    'Ferrara': {level:'skip', label:'可跳过', vibe:'平坦骑行古城，舒服但不会成为这趟记忆点。', activities:['租自行车绕城墙','市场或小馆午餐','适合作为顺路停靠']},
+    'Bologna': {level:'strong', label:'值得去 · 吃', vibe:'不是景点日，是从早餐一路吃到晚餐的城市。', activities:['Quadrilatero市场与salumeria','吃tagliatelle al ragù / tortellini','有精力再爬San Luca或双塔附近散步']},
+    'Trieste': {level:'optional', label:'看状态 · 咖啡', vibe:'海边中欧气质和老派咖啡馆，风格独特但方向相反。', activities:['Piazza Unità看海','老咖啡馆坐一小时','Miramare Castle只看外景与海岸']},
+    'Dolomites': {level:'strong', label:'候选 · 建议四晚', vibe:'山景、rifugio、轻徒步与spa；如果全家想把自然放在中心，它的回报很高。', activities:['Alta Badia住4晚不换酒店','缆车上山后走2–3小时轻路线','每天安排一顿rifugio午餐','15:00左右回酒店自由安排']},
+    'Milan': {level:'strong', label:'候选 · 时装周加分', vibe:'设计、咖啡、aperitivo与9/22–28时装周城市能量；对喜欢服装的人有独特价值。', activities:['建议住2晚而不是当天往返','Duomo＋Brera＋设计店','等待公开活动日历并提前订两间房']},
+    'Lake Como': {level:'strong', label:'候选 · 建议三晚', vibe:'湖船、临水晚餐和清晨很漂亮；价值来自住在中央湖区，而不是长途日游。', activities:['Varenna / Menaggio一处住3晚','Bellagio与另一镇分两天坐船','与Milan组合最顺']},
+    'Lugano': {level:'optional', label:'候选 · 顺路跨境', vibe:'意大利语区湖城，最适合接在Como后面；跨境成本低于继续去Lucerne。', activities:['可做Como出发一日或住1晚','湖边＋San Salvatore','先确认租车跨境与vignette']},
+    'Lucerne': {level:'optional', label:'候选 · 至少两晚', vibe:'湖船、木桥与瑞士山景层次更完整；代价是从Torreglia更远。', activities:['至少住2晚','Pilatus / Rigi二选一','加入后减少另一段远程住宿']},
+    'Florence': {level:'strong', label:'候选 · 建议两晚', vibe:'重访与初访可以并存；不重复酒店式体验，也不赶博物馆KPI。', activities:['建议住两晚','Accademia和Uffizi只选一个','Oltrarno＋咖啡＋长午餐＋傍晚散步']},
+    'Chianti': {level:'optional', label:'看状态 · 酒', vibe:'农庄慢生活很舒服，但已有Colli Euganei和Valpolicella，不必重复太多品酒。', activities:['选一家agriturismo住1–2晚','只订一家真正想去的酒庄','烹饪课比连续tasting更适合全家']},
+    'Siena / San Gimignano': {level:'optional', label:'二选一', vibe:'中世纪城市画面强，但两座连跑会变成古城KPI。', activities:['Siena看Campo广场＋午餐','或San Gimignano看塔楼＋gelato','按路线只选一座']},
+    "Val d'Orcia": {level:'must', label:'若去Tuscany就选这里', vibe:'柏树、rolling hills、长午餐和Brunello，是这次家庭旅行最合适的一段。', activities:['Pienza＋San Quirico景观路','Montalcino只约一家Brunello酒庄','住乡间酒店，日落前不赶路']},
+    'Pitigliano / Saturnia': {level:'optional', label:'看状态 · 路远', vibe:'悬崖城＋天然温泉很有反差，但会把Tuscany线路拉得很南。', activities:['有4晚以上Tuscany才考虑','Saturnia清晨避开人群','不与Val d’Orcia同日硬塞']},
+    'Volterra / Cortona': {level:'skip', label:'顺路才停', vibe:'漂亮小城，但不值得专程绕路。', activities:['回程顺路选一座','咖啡＋午餐＋一小时散步','不要额外换酒店']}
+  };
+
+  const placePhotos = {
+    'Arquà Petrarca':[
+      {label:'Arquà Petrarca', src:'assets/place-photos/place-01-arqua-petrarca.webp', source:'https://www.e-borghi.com/en/village/arqua-petrarca/'}
+    ],
+    'Monselice / Este':[
+      {label:'Monselice', src:'assets/place-photos/place-02-monselice.webp', source:'https://www.italianinspagna.org/art/reperti-della-rocca-di-monselice.html'},
+      {label:'Este', src:'assets/place-photos/place-03-este.webp', source:'https://mindtrip.ai/attraction/este-veneto/castello-carrarese/at-WisL7GR0'}
+    ],
+    'Abano / Montegrotto Terme':[
+      {label:'Abano Terme', src:'assets/place-photos/place-04-abano-terme.jpg', source:'https://www.italia.it/fr/venetie/padoue/thermae-abano-montegrotto'},
+      {label:'Montegrotto Terme', src:'assets/place-photos/place-05-montegrotto-terme.webp', source:'https://www.turismo-news.com/montegrotto-terme-nel-cuore-delle-terme-euganee/'}
+    ],
+    'Colli Euganei Wineries':[
+      {label:'Colli Euganei', src:'assets/place-photos/place-06-colli-euganei.jpg', source:'https://www.parcocollieuganei.com/'}
+    ],
+    'Padua':[
+      {label:'Padua · Prato della Valle', src:'assets/place-photos/place-07-padua-prato-della-valle.jpg', source:'https://commons.wikimedia.org/wiki/File:Prato_della_Valle.JPG'}
+    ],
+    'Vicenza':[
+      {label:'Vicenza · Basilica Palladiana', src:'assets/place-photos/place-08-vicenza-basilica-palladiana.jpg', source:'https://bur.regione.veneto.it/BurvServices/pubblica/burvGalleryDettaglio.aspx?id=1167'}
+    ],
+    'Treviso':[
+      {label:'Treviso · Buranelli', src:'assets/place-photos/place-09-treviso-buranelli.webp', source:'https://canale-dei-buranelli.wheree.com/'}
+    ],
+    'Bassano del Grappa':[
+      {label:'Bassano · Ponte degli Alpini', src:'assets/place-photos/place-10-bassano-ponte-degli-alpini.jpg', source:'https://www.italymagazine.com/featured-story/spirit-italy'}
+    ],
+    'Asolo':[
+      {label:'Asolo', src:'assets/place-photos/place-11-asolo.jpg', source:'https://iconiclife.com/best-architecture-italy-asolo-vento/'}
+    ],
+    'Prosecco Hills':[
+      {label:'Prosecco Hills', src:'assets/place-photos/place-12-prosecco-hills.jpg', source:'https://www.vinialthea.com/en/the-landscape-of-conegliano-valdobbiadene-candidate-for-world-heritage/'}
+    ],
+    'Venice':[
+      {label:'Venice · Grand Canal', src:'assets/place-photos/place-13-venice-grand-canal.jpg', source:'https://www.saaih.com/%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7/%D9%81%D9%8A%D9%86%D9%8A%D8%B3%D9%8A%D8%A7/%D8%A7%D9%84%D9%82%D9%86%D8%A7%D8%A9-%D8%A7%D9%84%D9%83%D8%A8%D8%B1%D9%89'}
+    ],
+    'Verona':[
+      {label:'Verona', src:'assets/place-photos/place-14-verona.jpg', source:'https://www.pickpik.com/city-italy-verona-mediterranean-old-town-panorama-65330'}
+    ],
+    'Chioggia':[
+      {label:'Chioggia', src:'assets/place-photos/place-15-chioggia.jpg', source:'https://www.italia.it/it/veneto/cosa-fare/itinerario-lungo-la-ciclovia-delle-isole-di-venezia'}
+    ],
+    'Lake Garda':[
+      {label:'Lake Garda · Malcesine', src:'assets/place-photos/place-16-lake-garda.jpg', source:'https://commons.wikimedia.org/wiki/File:View_malcesine_lake_garda_veneto_italy_panorama.JPG'}
+    ],
+    'Mantua':[
+      {label:'Mantua', src:'assets/place-photos/place-17-mantua.jpg', source:'https://meeters.org/event/mantova-splendore-del-rinascimento'}
+    ],
+    'Ferrara':[
+      {label:'Ferrara · Castello Estense', src:'assets/place-photos/place-18-ferrara-castello-estense.jpg', source:'https://www.expedia.com/Ferrara-Historic-Centre.dx6345161'}
+    ],
+    'Bologna':[
+      {label:'Bologna', src:'assets/place-photos/place-19-bologna.jpg', source:'https://blog.casavo.com/en/articoli/the-5-most-beautiful-neighborhoods-in-bologna-where-you-can-buy-a-house'}
+    ],
+    'Trieste':[
+      {label:'Trieste · Piazza Unità', src:'assets/place-photos/place-20-trieste-piazza-unita.webp', source:'https://www.italien.de/poi/piazza-unita-ditalia'}
+    ],
+    'Dolomites':[
+      {label:'Dolomites · Alta Badia', src:'assets/place-photos/place-21-dolomites-alta-badia.webp', source:'https://hiking-tours.com/tours/alta-badia-hut-to-hut-loop'}
+    ],
+    'Milan':[
+      {label:'Milan · Piazza del Duomo', src:'assets/place-photos/place-31-milan.jpg', source:'https://commons.wikimedia.org/wiki/File:Piazza_del_Duomo,_Milan_panorama.jpg'}
+    ],
+    'Lake Como':[
+      {label:'Lake Como · Bellagio', src:'assets/place-photos/place-32-lake-como.jpg', source:'https://commons.wikimedia.org/wiki/File:Lac_de_C%C3%B4me_-_Bellagio.jpg'}
+    ],
+    'Lugano':[
+      {label:'Lugano · Lake & Monte Brè', src:'assets/place-photos/place-33-lugano.jpg', source:'https://commons.wikimedia.org/wiki/File:CH.TI.Lugano_Lake-Lugano_Monte-Br%C3%A8_2021-04-17_16x9-R_16384x9216.jpg'}
+    ],
+    'Lucerne':[
+      {label:'Lucerne · Chapel Bridge', src:'assets/place-photos/place-34-lucerne.jpg', source:'https://commons.wikimedia.org/wiki/File:Luzern_Kapellbruecke.jpg'}
+    ],
+    'Florence':[
+      {label:'Florence', src:'assets/place-photos/place-22-florence.webp', source:'https://www.expedia.com/Arcetri.dx6142058'}
+    ],
+    'Chianti':[
+      {label:'Chianti', src:'assets/place-photos/place-23-chianti.jpg', source:'https://italy4golf.com/en/chianti-classico-wine/'}
+    ],
+    'Siena / San Gimignano':[
+      {label:'Siena', src:'assets/place-photos/place-24-siena.jpg', source:'https://www.gorealtravel.com/trips/rome-tuscany-florence-itinerary'},
+      {label:'San Gimignano', src:'assets/place-photos/place-25-san-gimignano.jpg', source:'https://traveladdicts.net/san-gimignano/'}
+    ],
+    "Val d'Orcia":[
+      {label:"Val d'Orcia", src:'assets/place-photos/place-26-val-d-orcia.jpg', source:'https://www.brilliantweddingstuscany.com/super-sweet-wedding-proposal-in-val-dorcia-tuscany/'}
+    ],
+    'Pitigliano / Saturnia':[
+      {label:'Pitigliano', src:'assets/place-photos/place-27-pitigliano.jpg', source:'https://magazine.giallozafferano.it/il-fascino-di-pitigliano-uno-dei-borghi-piu-belli-ditalia/'},
+      {label:'Terme di Saturnia', src:'assets/place-photos/place-28-terme-di-saturnia.jpg', source:'https://www.omofon.com/terme-di-saturnia-din-italia-izvoarele-termale-in-care-poti-face-baie-chiar-si-iarna'}
+    ],
+    'Volterra / Cortona':[
+      {label:'Volterra', src:'assets/place-photos/place-29-volterra.jpg', source:'https://blog.quimmo.it/guide/cosa-vedere-volterra-dintorni-guida/'},
+      {label:'Cortona', src:'assets/place-photos/place-30-cortona.webp', source:'https://www.cntraveller.com/article/cortona-italy'}
+    ]
+  };
+
+  Object.entries(window.placeGalleryExtras || {}).forEach(([name, extras]) => {
+    placePhotos[name] = [...(placePhotos[name] || []), ...extras];
+  });
+
+  document.querySelectorAll('.card h3').forEach(title => {
+    const detail = placeDetails[title.textContent.trim()];
+    if (!detail) return;
+    const card = title.closest('.card');
+    card.classList.add('is-' + detail.level);
+    const badge = document.createElement('span');
+    badge.className = 'priority ' + detail.level;
+    badge.textContent = detail.label;
+    card.prepend(badge);
+    const vibe = document.createElement('div');
+    vibe.className = 'vibe';
+    vibe.textContent = 'Vibe · ' + detail.vibe;
+    const anchor = card.querySelector('.place-cn') || title;
+    anchor.insertAdjacentElement('afterend', vibe);
+    const list = document.createElement('ul');
+    list.className = 'activity-list';
+    detail.activities.forEach(activity => {
+      const item = document.createElement('li');
+      item.textContent = activity;
+      list.appendChild(item);
+    });
+    const xhs = card.querySelector('.xhs-btn');
+    if (xhs) card.insertBefore(list, xhs); else card.appendChild(list);
+  });
+
+  const priorityOrder = {must:0, strong:1, optional:2, skip:3};
+  document.querySelectorAll('.grid').forEach(grid => {
+    const cards = Array.from(grid.children).filter(el => el.classList.contains('card'));
+    const ranked = cards.map((card, index) => {
+      const title = card.querySelector('h3');
+      const detail = title && placeDetails[title.textContent.trim()];
+      return {card, index, rank:detail ? priorityOrder[detail.level] : 99};
+    });
+    if (!ranked.some(item => item.rank < 99)) return;
+    ranked.sort((a,b) => a.rank - b.rank || a.index - b.index).forEach(item => grid.appendChild(item.card));
+  });
+
+  document.querySelectorAll('.card h3').forEach(title => {
+    const name = title.textContent.trim();
+    const guide = plannerGuides[name];
+    if (!guide) return;
+    const card = title.closest('.card');
+    const details = document.createElement('details');
+    details.className = 'planner-guide';
+
+    const summary = document.createElement('summary');
+    summary.textContent = detailPages[name] ? '快速看 overview · 适不适合' : '打开具体攻略 · 一天怎么走';
+    details.appendChild(summary);
+
+    const body = document.createElement('div');
+    body.className = 'planner-body';
+
+    const verdict = document.createElement('p');
+    verdict.className = 'planner-verdict';
+    verdict.textContent = guide.verdict;
+    body.appendChild(verdict);
+
+    const update = document.createElement('p');
+    update.className = 'planner-update';
+    const updateLabel = document.createElement('b');
+    updateLabel.textContent = '2026年9月最新 · ';
+    update.append(updateLabel, document.createTextNode(guide.update));
+    body.appendChild(update);
+
+    const scheduleLabel = document.createElement('div');
+    scheduleLabel.className = 'planner-label';
+    scheduleLabel.textContent = '建议时间表';
+    body.appendChild(scheduleLabel);
+
+    const schedule = document.createElement('ol');
+    schedule.className = 'planner-schedule';
+    guide.day.forEach(([time, activity]) => {
+      const item = document.createElement('li');
+      const when = document.createElement('time');
+      when.textContent = time;
+      const text = document.createElement('span');
+      text.textContent = activity;
+      item.append(when, text);
+      schedule.appendChild(item);
+    });
+    body.appendChild(schedule);
+
+    const linksLabel = document.createElement('div');
+    linksLabel.className = 'planner-label';
+    linksLabel.textContent = detailPages[name] ? '直接预约 / 核实信息' : '官方信息与预约';
+    body.appendChild(linksLabel);
+
+    const links = document.createElement('div');
+    links.className = 'official-links';
+    guide.links.forEach(([label, href]) => {
+      const link = document.createElement('a');
+      link.className = 'official-link';
+      link.href = href;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = label;
+      links.appendChild(link);
+    });
+    body.appendChild(links);
+    details.appendChild(body);
+
+    const xhs = card.querySelector('.xhs-btn');
+    if (xhs) card.insertBefore(details, xhs); else card.appendChild(details);
+
+    if (detailPages[name]) {
+      const detailLink = document.createElement('a');
+      detailLink.className = 'detail-page-link';
+      detailLink.href = detailPages[name];
+      detailLink.textContent = '进入完整攻略 · 看时长与取舍';
+      if (xhs) card.insertBefore(detailLink, xhs); else card.appendChild(detailLink);
+    }
+  });
+
+  document.querySelectorAll('.card h3').forEach(title => {
+    const name = title.textContent.trim();
+    const photos = placePhotos[name];
+    if (!photos) return;
+    const card = title.closest('.card');
+    const frame = document.createElement('div');
+    frame.className = 'place-photo-grid count-' + Math.min(photos.length,3);
+    photos.slice(0,3).forEach(photo => {
+      const tile = document.createElement('a');
+      tile.className = 'photo-tile';
+      tile.target = '_blank'; tile.rel = 'noopener';
+      tile.href = photo.source;
+      tile.setAttribute('aria-label', photo.label + ' 照片来源');
+      const skeleton = document.createElement('span'); skeleton.className = 'photo-skeleton';
+      const img = document.createElement('img');
+      img.loading = 'lazy'; img.decoding = 'async'; img.alt = photo.label + ' 实景照片'; img.src = photo.src;
+      img.addEventListener('load', () => tile.classList.add('is-loaded'), {once:true});
+      img.addEventListener('error', () => tile.classList.add('is-error'), {once:true});
+      const label = document.createElement('span'); label.className = 'photo-label'; label.textContent = photo.label;
+      tile.append(skeleton, img, label);
+      frame.appendChild(tile);
+    });
+    card.prepend(frame);
+  });
+
+  document.querySelectorAll('.photo-tile img').forEach(img => {
+    const tile = img.closest('.photo-tile');
+    if (!tile || tile.classList.contains('is-loaded')) return;
+    if (img.complete && img.naturalWidth) tile.classList.add('is-loaded');
+    else if (img.complete) tile.classList.add('is-error');
+    else {
+      img.addEventListener('load', () => tile.classList.add('is-loaded'), {once:true});
+      img.addEventListener('error', () => tile.classList.add('is-error'), {once:true});
+    }
+  });
+
+  const xhsQueries = {
+    '阿尔夸·彼特拉卡 攻略':'Arquà Petrarca',
+    '蒙塞利切 埃斯特 攻略':['Monselice','Este'],
+    '阿巴诺温泉 攻略':'Abano Terme',
+    '欧加内丘陵 酒庄 攻略':'Colli Euganei',
+    '帕多瓦 攻略':'Padova',
+    '维琴察 攻略':'Vicenza',
+    '特雷维索 攻略':'Treviso',
+    '巴萨诺 攻略':'Bassano del Grappa',
+    '阿索洛 攻略':'Asolo',
+    '普罗塞克丘陵 攻略':'Valdobbiadene',
+    '威尼斯 攻略':'Venezia',
+    '维罗纳 攻略':'Verona',
+    '基奥贾 攻略':'Chioggia',
+    '加尔达湖 攻略':'Lake Garda',
+    '曼图亚 攻略':'Mantova',
+    '费拉拉 攻略':'Ferrara',
+    '博洛尼亚 攻略':'Bologna',
+    '的里雅斯特 攻略':'Trieste',
+    '多洛米蒂 攻略':'Dolomiti',
+    '米兰 攻略':'Milano',
+    '科莫湖 攻略':'Lake Como',
+    '卢加诺 攻略':'Lugano',
+    '卢塞恩 攻略':'Luzern',
+    '佛罗伦萨 攻略':'Firenze',
+    '基安蒂 攻略':'Chianti',
+    '锡耶纳 圣吉米尼亚诺 攻略':['Siena','San Gimignano'],
+    '奥尔恰谷 攻略':"Val d'Orcia",
+    '皮蒂利亚诺 萨图尔尼亚温泉 攻略':['Pitigliano','Saturnia'],
+    '沃尔泰拉 科尔托纳 攻略':['Volterra','Cortona'],
+    '阿尔夸 蒙塞利切 攻略':['Arquà Petrarca','Monselice'],
+    '维琴察 巴萨诺 攻略':['Vicenza','Bassano del Grappa']
+  };
+
+  document.querySelectorAll('[data-xhs]').forEach(el => {
+    const raw = el.getAttribute('data-xhs');
+    const mapped = xhsQueries[raw] || raw.replace(/\s*攻略\s*/g, '').trim();
+    const queries = Array.isArray(mapped) ? mapped : [mapped];
+    const makeHref = q => 'https://www.xiaohongshu.com/search_result?keyword=' + encodeURIComponent(q) + '&source=web_search_result_notes&type=51';
+    el.href = makeHref(queries[0]);
+    if (el.classList.contains('xhs-btn')) {
+      el.textContent = '小红书 · ' + queries[0];
+      if (queries.length > 1) {
+        const row = document.createElement('div');
+        row.className = 'xhs-row';
+        el.parentNode.insertBefore(row, el);
+        row.appendChild(el);
+        queries.slice(1).forEach(q => {
+          const extra = el.cloneNode(true);
+          extra.href = makeHref(q);
+          extra.textContent = '小红书 · ' + q;
+          row.appendChild(extra);
+        });
+      }
+    }
+  });
+
+  const routePlannerCalendar = document.getElementById('tripCalendar');
+  if (routePlannerCalendar) {
+    const routePlannerOptions = {
+      dolomites:{name:'Dolomites',days:5,nights:4,color:'#B98B33'},
+      tuscany:{name:'Tuscany',days:6,nights:5,color:'#A63A2E'},
+      'sicily-film':{name:'Cinema Paradiso Sicily',days:6,nights:5,color:'#8F4B36'},
+      'sicily-east':{name:'East Sicily',days:5,nights:4,color:'#C45C3C'},
+      milan:{name:'Milan',days:3,nights:2,color:'#7C5678'},
+      como:{name:'Lake Como',days:4,nights:3,color:'#4F7E89'},
+      switzerland:{name:'Switzerland',days:3,nights:2,color:'#657B69'},
+      garda:{name:'Lake Garda',days:2,nights:1,color:'#4C8C82'},
+      venice:{name:'Venice',days:1,nights:0,color:'#4B6C91'},
+      local:{name:'Torreglia / Veneto',days:1,nights:0,color:'#3F5B3D',repeat:true}
+    };
+    const routePlannerWeekdays = ['周二','周三','周四','周五','周六','周日','周一','周二','周三','周四','周五','周六','周日','周一','周二'];
+    const routePlannerEvents = {5:"Vo’葡萄节",7:'MFW',8:'MFW',9:'MFW',10:'MFW',11:'MFW',12:'MFW',13:'MFW'};
+    const routePlannerStorageKey = 'torreglia-trip-planner-v2';
+    let routePlannerSelected = null;
+    let routePlannerBlocks = [];
+    try {
+      const saved = JSON.parse(localStorage.getItem(routePlannerStorageKey) || '[]');
+      if (Array.isArray(saved)) routePlannerBlocks = saved.filter(block => routePlannerOptions[block.routeId] && Number.isInteger(block.start));
+    } catch (error) {
+      routePlannerBlocks = [];
+    }
+
+    const routePlannerSetMessage = (text, isError = false) => {
+      const message = document.getElementById('routePlannerMessage');
+      message.textContent = text;
+      message.classList.toggle('is-error', isError);
+    };
+    const routePlannerSave = () => {
+      try { localStorage.setItem(routePlannerStorageKey, JSON.stringify(routePlannerBlocks)); } catch (error) {}
+    };
+    const routePlannerUid = routeId => routeId + '-' + Date.now() + '-' + Math.random().toString(36).slice(2,7);
+    const routePlannerOccupied = (blocks = routePlannerBlocks) => {
+      const occupied = new Set();
+      blocks.forEach(block => {
+        const option = routePlannerOptions[block.routeId];
+        for (let index = block.start; index < block.start + option.days; index += 1) occupied.add(index);
+      });
+      return occupied;
+    };
+    const routePlannerRefreshCards = () => {
+      document.querySelectorAll('.route-card').forEach(card => {
+        const selected = card.dataset.routeId === routePlannerSelected;
+        card.classList.toggle('is-selected', selected);
+        card.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      });
+    };
+    const routePlannerRender = () => {
+      routePlannerCalendar.textContent = '';
+      const occupied = routePlannerOccupied();
+      document.getElementById('routeDaysPlanned').textContent = occupied.size + '天';
+      document.getElementById('routeDaysOpen').textContent = Math.max(0,13 - occupied.size) + '天';
+
+      for (let index = 0; index < 15; index += 1) {
+        const date = index + 15;
+        const cell = document.createElement('div');
+        cell.className = 'calendar-day';
+        cell.dataset.dayIndex = String(index);
+        cell.setAttribute('role','gridcell');
+        cell.tabIndex = 0;
+        const locked = index === 0 || index === 14;
+        if (locked) cell.classList.add('is-locked');
+
+        const dateLine = document.createElement('div');
+        dateLine.className = 'calendar-date';
+        const dateNumber = document.createElement('b');
+        dateNumber.textContent = '9/' + date;
+        const weekday = document.createElement('span');
+        weekday.textContent = routePlannerWeekdays[index];
+        dateLine.append(dateNumber,weekday);
+        cell.appendChild(dateLine);
+
+        const block = routePlannerBlocks.find(item => {
+          const option = routePlannerOptions[item.routeId];
+          return index >= item.start && index < item.start + option.days;
+        });
+        if (block) {
+          const option = routePlannerOptions[block.routeId];
+          cell.classList.add('has-booking');
+          const booking = document.createElement('div');
+          booking.className = 'calendar-booking';
+          booking.style.setProperty('--booking-color',option.color);
+          booking.draggable = true;
+          booking.dataset.blockUid = block.uid;
+          const name = document.createElement('b');
+          name.textContent = option.name;
+          const progress = document.createElement('span');
+          progress.textContent = 'Day ' + (index - block.start + 1) + ' / ' + option.days;
+          const remove = document.createElement('button');
+          remove.className = 'booking-remove';
+          remove.type = 'button';
+          remove.setAttribute('aria-label','移除 ' + option.name);
+          remove.textContent = '×';
+          remove.addEventListener('click', event => {
+            event.stopPropagation();
+            routePlannerBlocks = routePlannerBlocks.filter(item => item.uid !== block.uid);
+            routePlannerSave();
+            routePlannerRender();
+            routePlannerSetMessage('已移除 ' + option.name + '，这些天重新变成Torreglia留白日。');
+          });
+          booking.addEventListener('dragstart', event => {
+            event.stopPropagation();
+            event.dataTransfer.setData('text/plain','block:' + block.uid);
+            event.dataTransfer.effectAllowed = 'move';
+          });
+          booking.append(name,progress,remove);
+          cell.appendChild(booking);
+        } else {
+          const empty = document.createElement('span');
+          empty.className = 'calendar-empty';
+          empty.textContent = locked ? (index === 0 ? '抵达 · 安顿' : '中午离开') : 'Torreglia / 留白';
+          cell.appendChild(empty);
+        }
+
+        if (routePlannerEvents[index]) {
+          const event = document.createElement('span');
+          event.className = 'calendar-event';
+          event.textContent = routePlannerEvents[index];
+          cell.appendChild(event);
+        }
+
+        const dropRoute = payload => {
+          if (locked) return routePlannerSetMessage('抵达日和离开日已经锁定，请选择9/16–9/28。',true);
+          if (payload.startsWith('block:')) {
+            const uid = payload.slice(6);
+            const existing = routePlannerBlocks.find(item => item.uid === uid);
+            if (existing) routePlannerPlace(existing.routeId,index,uid);
+          } else if (payload.startsWith('route:')) {
+            routePlannerPlace(payload.slice(6),index);
+          }
+        };
+        cell.addEventListener('dragover', event => { event.preventDefault(); cell.classList.add('is-drop-target'); });
+        cell.addEventListener('dragleave', () => cell.classList.remove('is-drop-target'));
+        cell.addEventListener('drop', event => {
+          event.preventDefault();
+          cell.classList.remove('is-drop-target');
+          dropRoute(event.dataTransfer.getData('text/plain'));
+        });
+        cell.addEventListener('click', event => {
+          if (event.target.closest('.booking-remove')) return;
+          if (routePlannerSelected) dropRoute('route:' + routePlannerSelected);
+          else if (event.target.closest('.calendar-booking')) return;
+          else if (!locked) routePlannerSetMessage('先点上方一张候选卡，再点这个开始日期。');
+        });
+        cell.addEventListener('keydown', event => {
+          if ((event.key === 'Enter' || event.key === ' ') && routePlannerSelected) {
+            event.preventDefault();
+            dropRoute('route:' + routePlannerSelected);
+          }
+        });
+        routePlannerCalendar.appendChild(cell);
+      }
+    };
+
+    function routePlannerPlace(routeId,start,movingUid = null) {
+      const option = routePlannerOptions[routeId];
+      if (!option) return;
+      if (start < 1 || start + option.days > 14) {
+        routePlannerSetMessage(option.name + '需要连续' + option.days + '天，这个开始日期放不下。',true);
+        return;
+      }
+      let nextBlocks = routePlannerBlocks.filter(item => item.uid !== movingUid);
+      if (!option.repeat && !movingUid) nextBlocks = nextBlocks.filter(item => item.routeId !== routeId);
+      const occupied = routePlannerOccupied(nextBlocks);
+      const collision = Array.from({length:option.days},(_,offset) => start + offset).some(day => occupied.has(day));
+      if (collision) {
+        routePlannerSetMessage('这里已有安排。先移走或删除冲突色块，再放入 ' + option.name + '。',true);
+        return;
+      }
+      const block = movingUid && routePlannerBlocks.find(item => item.uid === movingUid);
+      nextBlocks.push({uid:block ? block.uid : routePlannerUid(routeId),routeId,start});
+      routePlannerBlocks = nextBlocks;
+      routePlannerSave();
+      routePlannerRender();
+      routePlannerSelected = null;
+      routePlannerRefreshCards();
+      let note = '已把 ' + option.name + ' 放在9/' + (15 + start) + '开始，共占' + option.days + '天。';
+      if (start <= 5 && start + option.days > 5) note += ' 这段覆盖9/20，Vo’葡萄节可按返程时间再决定。';
+      routePlannerSetMessage(note);
+    }
+
+    document.querySelectorAll('.route-card').forEach(card => {
+      const select = () => {
+        routePlannerSelected = routePlannerSelected === card.dataset.routeId ? null : card.dataset.routeId;
+        routePlannerRefreshCards();
+        routePlannerSetMessage(routePlannerSelected ? '已选择 ' + routePlannerOptions[routePlannerSelected].name + '；现在点一个开始日期。' : '已取消选择。');
+      };
+      card.addEventListener('click', event => { if (!event.target.closest('a')) select(); });
+      card.addEventListener('keydown', event => {
+        if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a')) { event.preventDefault(); select(); }
+      });
+      card.addEventListener('dragstart', event => {
+        event.dataTransfer.setData('text/plain','route:' + card.dataset.routeId);
+        event.dataTransfer.effectAllowed = 'copy';
+      });
+    });
+
+    const routePlannerTemplates = {
+      'mountains-tuscany':[{routeId:'dolomites',start:1},{routeId:'tuscany',start:7}],
+      'mountains-sicily':[{routeId:'dolomites',start:1},{routeId:'sicily-film',start:7}],
+      'mountains-east-sicily':[{routeId:'dolomites',start:1},{routeId:'sicily-east',start:7}],
+      'fashion-lake':[{routeId:'milan',start:7},{routeId:'como',start:10}]
+    };
+    document.querySelectorAll('[data-route-template]').forEach(button => {
+      button.addEventListener('click', () => {
+        const template = button.dataset.routeTemplate;
+        if (template === 'clear') {
+          routePlannerBlocks = [];
+          routePlannerSetMessage('日历已清空；所有中间日期重新回到Torreglia留白。');
+        } else {
+          routePlannerBlocks = routePlannerTemplates[template].map(item => ({...item,uid:routePlannerUid(item.routeId)}));
+          routePlannerSetMessage('已载入“' + button.textContent.trim() + '”示例；每个色块都还能拖动或删除。');
+        }
+        routePlannerSelected = null;
+        routePlannerSave();
+        routePlannerRefreshCards();
+        routePlannerRender();
+      });
+    });
+    routePlannerRefreshCards();
+    routePlannerRender();
+  }
+
+  const tabs = document.querySelectorAll('.tab[data-target]');
+  const panes = document.querySelectorAll('.pane');
+  const activateTab = (target, smooth = true) => {
+    const tab = Array.from(tabs).find(item => item.dataset.target === target);
+    const pane = document.getElementById(target);
+    if (!tab || !pane) return;
+    tabs.forEach(item => item.classList.remove('is-active'));
+    panes.forEach(item => item.classList.remove('is-active'));
+    tab.classList.add('is-active');
+    pane.classList.add('is-active');
+    document.querySelector('.content').scrollTo({top:0, behavior:smooth ? 'smooth' : 'auto'});
+  };
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.target;
+      activateTab(target);
+      history.replaceState(null, '', '#' + target);
+    });
+  });
+  document.querySelectorAll('[data-tab-jump]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const target = link.dataset.tabJump;
+      activateTab(target);
+      history.replaceState(null, '', '#' + target);
+    });
+  });
+  const requestedTab = location.hash.slice(1);
+  if (requestedTab) activateTab(requestedTab, false);
+</script>
+
+</body>
+</html>
