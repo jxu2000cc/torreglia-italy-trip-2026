@@ -1,0 +1,262 @@
+[
+  {
+    "label": "Arquà Petrarca",
+    "src": "https://www.e-borghi.com/wp-content/uploads/2024/09/Uno-sguardo-a-Arqua-Petrarca.jpg",
+    "source": "https://www.e-borghi.com/en/village/arqua-petrarca/",
+    "ok": true,
+    "file": "assets/place-photos/place-01-arqua-petrarca.webp",
+    "bytes": 97832,
+    "type": "image/webp"
+  },
+  {
+    "label": "Monselice",
+    "src": "https://i0.wp.com/www.italianinspagna.org/wp-content/uploads/2023/01/rocca-monselice.jpg?fit=800%2C600&ssl=1",
+    "source": "https://www.italianinspagna.org/art/reperti-della-rocca-di-monselice.html",
+    "ok": true,
+    "file": "assets/place-photos/place-02-monselice.webp",
+    "bytes": 355860,
+    "type": "image/webp"
+  },
+  {
+    "label": "Este",
+    "src": "https://d3fphkxyf5o5bm.cloudfront.net/image-resize/format%3Dwebp%2Cw%3D1200/QwRY54Li1HMwD7oNfpynJtMI1xuuapmWQ7BeuydA6O",
+    "source": "https://mindtrip.ai/attraction/este-veneto/castello-carrarese/at-WisL7GR0",
+    "ok": true,
+    "file": "assets/place-photos/place-03-este.webp",
+    "bytes": 273976,
+    "type": "image/webp"
+  },
+  {
+    "label": "Abano Terme",
+    "src": "https://www.italia.it/content/dam/tdh/fr/destinations/veneto/padova/terme-di-abano-e-montegrotto/media/2480X1000_terme_di_abano_e_montegrotto_destination.jpg",
+    "source": "https://www.italia.it/fr/venetie/padoue/thermae-abano-montegrotto",
+    "ok": true,
+    "file": "assets/place-photos/place-04-abano-terme.jpg",
+    "bytes": 2816752,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Montegrotto Terme",
+    "src": "https://www.turismo-news.com/wp-content/uploads/2020/12/Montegrotto-Terme.jpg",
+    "source": "https://www.turismo-news.com/montegrotto-terme-nel-cuore-delle-terme-euganee/",
+    "ok": true,
+    "file": "assets/place-photos/place-05-montegrotto-terme.webp",
+    "bytes": 137384,
+    "type": "image/webp"
+  },
+  {
+    "label": "Colli Euganei",
+    "src": "https://www.parcocollieuganei.com/fotoGallery/46141_349_PRCLE.jpeg",
+    "source": "https://www.parcocollieuganei.com/",
+    "ok": true,
+    "file": "assets/place-photos/place-06-colli-euganei.jpg",
+    "bytes": 480079,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Padua · Prato della Valle",
+    "src": "https://airial.travel/_next/image?q=70&url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F66%2FPrato_della_Valle.JPG&w=3840",
+    "source": "https://commons.wikimedia.org/wiki/File:Prato_della_Valle.JPG",
+    "ok": false,
+    "error": "HTTP 400"
+  },
+  {
+    "label": "Vicenza · Basilica Palladiana",
+    "src": "https://bur.regione.veneto.it/resourcegallery/photos/1167_Vicenza_vi_Basilica%20Palladiana.jpg",
+    "source": "https://bur.regione.veneto.it/BurvServices/pubblica/burvGalleryDettaglio.aspx?id=1167",
+    "ok": true,
+    "file": "assets/place-photos/place-08-vicenza-basilica-palladiana.jpg",
+    "bytes": 228646,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Treviso · Buranelli",
+    "src": "https://static.where-e.com/Italy/Treviso/Canale-Dei-Buranelli_af6ef8ebe2f4c685196abac4fbe6e69c.jpg",
+    "source": "https://canale-dei-buranelli.wheree.com/",
+    "ok": true,
+    "file": "assets/place-photos/place-09-treviso-buranelli.webp",
+    "bytes": 194994,
+    "type": "image/webp"
+  },
+  {
+    "label": "Bassano · Ponte degli Alpini",
+    "src": "https://www.italymagazine.com/sites/default/files/feature-story/gallery/bigstock-ponte-degli-alpini-bridge-bas-152728409.jpg",
+    "source": "https://www.italymagazine.com/featured-story/spirit-italy",
+    "ok": true,
+    "file": "assets/place-photos/place-10-bassano-ponte-degli-alpini.jpg",
+    "bytes": 770041,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Asolo",
+    "src": "https://iconiclife.com/wp-content/uploads/2019/12/Asolo-Italy-Iconic-Architecture.jpg",
+    "source": "https://iconiclife.com/best-architecture-italy-asolo-vento/",
+    "ok": false,
+    "error": "invalid text/html 239B"
+  },
+  {
+    "label": "Prosecco Hills",
+    "src": "https://www.vinialthea.com/wp/wp-content/uploads/2017/12/unesco.jpg",
+    "source": "https://www.vinialthea.com/en/the-landscape-of-conegliano-valdobbiadene-candidate-for-world-heritage/",
+    "ok": true,
+    "file": "assets/place-photos/place-12-prosecco-hills.jpg",
+    "bytes": 425035,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Venice · Grand Canal",
+    "src": "https://www.saaih.com/files/styles/gallery/public/gallery/-%D9%81%D9%8A%D9%86%D9%8A%D8%B3%D9%8A%D8%A7/grand-canal-venice-2.jpg",
+    "source": "https://www.saaih.com/%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7/%D9%81%D9%8A%D9%86%D9%8A%D8%B3%D9%8A%D8%A7/%D8%A7%D9%84%D9%82%D9%86%D8%A7%D8%A9-%D8%A7%D9%84%D9%83%D8%A8%D8%B1%D9%89",
+    "ok": true,
+    "file": "assets/place-photos/place-13-venice-grand-canal.jpg",
+    "bytes": 91246,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Verona",
+    "src": "https://i1.pickpik.com/photos/874/394/409/city-italy-verona-mediterranean-323cf5a90a9e9f56533bb496d119d732.jpg",
+    "source": "https://www.pickpik.com/city-italy-verona-mediterranean-old-town-panorama-65330",
+    "ok": true,
+    "file": "assets/place-photos/place-14-verona.jpg",
+    "bytes": 8693855,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Chioggia",
+    "src": "https://www.italia.it/content/dam/tdh/it/interests/veneto/ciclovia-delle-isole-di-venezia/media/1600X1000_ciclovia_venezia_1.jpg.transform/w_1600/h_1000/image.jpeg",
+    "source": "https://www.italia.it/it/veneto/cosa-fare/itinerario-lungo-la-ciclovia-delle-isole-di-venezia",
+    "ok": true,
+    "file": "assets/place-photos/place-15-chioggia.jpg",
+    "bytes": 328957,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Lake Garda",
+    "src": "https://www.gardaitaly.com/h-images/lakegarda_pin_03.jpg",
+    "source": "https://www.gardaitaly.com/garda-sports.php",
+    "ok": true,
+    "file": "assets/place-photos/place-16-lake-garda.jpg",
+    "bytes": 173323,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Mantua",
+    "src": "https://image-cdn.meeters.org/?h=800&q=80&url=https%3A%2F%2Fimage-cdn.meeters.org%2F%3Furl%3Dhttps%3A%2F%2Fstatic.meeters.org%2Fp%2Fevents%2F5ee78af78d8e2a0bdd60ff06%2Fa191634b-e98f-4cd6-9f52-62468c15aadc.jpg",
+    "source": "https://meeters.org/event/mantova-splendore-del-rinascimento",
+    "ok": false,
+    "error": "fetch failed"
+  },
+  {
+    "label": "Ferrara · Castello Estense",
+    "src": "https://mediaim.expedia.com/destination/1/2ba6395aab5704a1600b8fe3d75a575a.jpg",
+    "source": "https://www.expedia.com/Ferrara-Historic-Centre.dx6345161",
+    "ok": true,
+    "file": "assets/place-photos/place-18-ferrara-castello-estense.jpg",
+    "bytes": 2944552,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Bologna",
+    "src": "https://cdn.prod.website-files.com/6807ad7e267543bb1728c034/68494a0b4c938254b47842fd_c27d8ac4-670c-4a02-b007-e4200e45ba4a.jpeg",
+    "source": "https://blog.casavo.com/en/articoli/the-5-most-beautiful-neighborhoods-in-bologna-where-you-can-buy-a-house",
+    "ok": true,
+    "file": "assets/place-photos/place-19-bologna.jpg",
+    "bytes": 181817,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Trieste · Piazza Unità",
+    "src": "https://www.italien.de/images/Piazza-Unita-d-Italia_Triest_Italien.jpg",
+    "source": "https://www.italien.de/poi/piazza-unita-ditalia",
+    "ok": true,
+    "file": "assets/place-photos/place-20-trieste-piazza-unita.webp",
+    "bytes": 181706,
+    "type": "image/webp"
+  },
+  {
+    "label": "Dolomites · Alta Badia",
+    "src": "https://hiking-tours.com/_next/image?q=75&url=https%3A%2F%2Fcdn.world-discovery.com%2F65029%2Fwide-panorama-of-alta-badia-region-on-summer-in-northern-italy.webp&w=1920",
+    "source": "https://hiking-tours.com/tours/alta-badia-hut-to-hut-loop",
+    "ok": true,
+    "file": "assets/place-photos/place-21-dolomites-alta-badia.webp",
+    "bytes": 160496,
+    "type": "image/webp"
+  },
+  {
+    "label": "Florence",
+    "src": "https://images.trvl-media.com/place/6141938/84e506b9-4732-4179-80c0-a104e52d59c7.jpg",
+    "source": "https://www.expedia.com/Arcetri.dx6142058",
+    "ok": true,
+    "file": "assets/place-photos/place-22-florence.webp",
+    "bytes": 1172812,
+    "type": "image/webp"
+  },
+  {
+    "label": "Chianti",
+    "src": "https://italy4golf.com/wp-content/themes/yootheme/cache/66/vineyard-chianti-tuscany-6685cf57.jpeg",
+    "source": "https://italy4golf.com/en/chianti-classico-wine/",
+    "ok": false,
+    "error": "HTTP 404"
+  },
+  {
+    "label": "Siena",
+    "src": "https://res-5.cloudinary.com/gorealtravel/image/upload/c_limit%2Cf_auto%2Cq_auto/v1620157366/production/marketing/waypoint/5d1a61ea4b78d200087d7aef/image/campo-palazzo-pubblico-small.webp",
+    "source": "https://www.gorealtravel.com/trips/rome-tuscany-florence-itinerary",
+    "ok": true,
+    "file": "assets/place-photos/place-24-siena.jpg",
+    "bytes": 1002441,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "San Gimignano",
+    "src": "https://traveladdicts.net/wp-content/uploads/2009/04/San-Gimignano-Italy-2.jpg",
+    "source": "https://traveladdicts.net/san-gimignano/",
+    "ok": true,
+    "file": "assets/place-photos/place-25-san-gimignano.jpg",
+    "bytes": 364174,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Val d'Orcia",
+    "src": "https://www.brilliantweddingstuscany.com/wp-content/uploads/2024/12/Luxury_proposal_Tuscany.jpg",
+    "source": "https://www.brilliantweddingstuscany.com/super-sweet-wedding-proposal-in-val-dorcia-tuscany/",
+    "ok": true,
+    "file": "assets/place-photos/place-26-val-d-orcia.jpg",
+    "bytes": 884423,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Pitigliano",
+    "src": "https://magazine.giallozafferano.it/wp-content/uploads/2022/03/AdobeStock_165044512-1-scaled.jpeg",
+    "source": "https://magazine.giallozafferano.it/il-fascino-di-pitigliano-uno-dei-borghi-piu-belli-ditalia/",
+    "ok": true,
+    "file": "assets/place-photos/place-27-pitigliano.jpg",
+    "bytes": 834885,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Terme di Saturnia",
+    "src": "https://www.omofon.com/wp-content/uploads/2017/02/terme-di-saturnia.jpg",
+    "source": "https://www.omofon.com/terme-di-saturnia-din-italia-izvoarele-termale-in-care-poti-face-baie-chiar-si-iarna",
+    "ok": false,
+    "error": "HTTP 521"
+  },
+  {
+    "label": "Volterra",
+    "src": "https://blog.quimmo.it/wp-content/uploads/2022/04/borghi-da-visitare-volterra.jpg",
+    "source": "https://blog.quimmo.it/guide/cosa-vedere-volterra-dintorni-guida/",
+    "ok": true,
+    "file": "assets/place-photos/place-29-volterra.jpg",
+    "bytes": 787614,
+    "type": "image/jpeg"
+  },
+  {
+    "label": "Cortona",
+    "src": "https://media.cntraveller.com/photos/650c079d0b2de08c44441548/master/pass/CORTONA-GettyImages-1254874189.jpeg",
+    "source": "https://www.cntraveller.com/article/cortona-italy",
+    "ok": true,
+    "file": "assets/place-photos/place-30-cortona.webp",
+    "bytes": 1853464,
+    "type": "image/webp"
+  }
+]

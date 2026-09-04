@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Padua · Prato della Valle",
+    "ok": true,
+    "file": "assets/place-photos/place-07-padua-prato-della-valle.jpg",
+    "bytes": 1569701,
+    "type": "image/jpeg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Prato_della_Valle.JPG"
+  },
+  {
+    "label": "Asolo",
+    "ok": true,
+    "file": "assets/place-photos/place-11-asolo.jpg",
+    "bytes": 258484,
+    "type": "image/jpeg",
+    "url": "https://villadeicastagni.com/wp-content/uploads/2023/09/Asolo.jpg"
+  },
+  {
+    "label": "Mantua",
+    "ok": true,
+    "file": "assets/place-photos/place-17-mantua.jpg",
+    "bytes": 157289,
+    "type": "image/jpeg",
+    "url": "https://www.verona.in/imgproxy/AqAdPASSRDD3RjC9SkoDa2vdR4lk4NLyFMOREGQP96E/g%3Ace/rs%3Afill%3A0%3A0%3A0/aHR0cHM6Ly9jZG4uZ2V0eW91cmd1aWRlLmNvbS9pbWcvdG91ci9iYThjZTFlZTMwNTRhZTEzOTFiZTc5OTc5ODRhOTI3MmEwYWM3NzkzNWU0NTBhMjI0OTk4OTRhZjhhMmMzMzdlLmpwZy85MC5qcGc.jpg"
+  },
+  {
+    "label": "Chianti",
+    "ok": true,
+    "file": "assets/place-photos/place-23-chianti.jpg",
+    "bytes": 2467440,
+    "type": "image/jpeg",
+    "url": "https://www.italia.it/content/dam/tdh/de/interests/toscana/pedalitaly-tuscany/media/1600X1000_toscana_pedaitaly_hero.jpg"
+  },
+  {
+    "label": "Terme di Saturnia",
+    "ok": true,
+    "file": "assets/place-photos/place-28-terme-di-saturnia.jpg",
+    "bytes": 408815,
+    "type": "image/jpeg",
+    "url": "https://www.hotelcaladiforno.it/slir/c149x100/images/pagine/22/files/Saturnia_Cascate_del_Mulino.jpg"
+  }
+]
