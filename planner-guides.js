@@ -6,10 +6,11 @@ const plannerGuides = {
       ["09:30", "从上村开始慢走，经过 Petrarca 墓、石巷和观景位"],
       ["11:00", "有兴趣才进 Casa del Petrarca；不想看室内就直接喝咖啡"],
       ["12:30", "在村里吃长午餐，试 brodo di giuggiole 或本地橄榄油"],
-      ["15:30", "预约 Maeli 或 Vigna Roda 品鉴，17:30 前回 Torreglia"]
+      ["15:30", "若精神好且已收到确认，去Quota 101做一场近家的本地酒体验；否则直接回家"]
     ],
     links: [
       ["Arquà 官方游览", "https://www.arquapetrarca.com/en/what-to-see/"],
+      ["Quota 101 询价与预约", "https://quota101.com/visite-in-cantina/"],
       ["Maeli 预约品鉴", "https://maeliwine.com/tastings"],
       ["Vo’ 葡萄节", "https://festadelluvadivo.it/"]
     ]
@@ -43,24 +44,25 @@ const plannerGuides = {
     ]
   },
   "Colli Euganei Wineries": {
-    verdict: "最贴合这次家庭旅行的本地体验。一次只约一家，重点是葡萄园、当季采收和慢慢品，不做酒庄打卡。",
-    update: "9月正值 vendemmia，酒庄会优先忙采收，临时到访不可靠。Quota 101 在 Torreglia，周二至周六开放；Vigna Roda 建议至少提前一天，Maeli 可在线查看体验。",
+    verdict: "最贴合这次家庭旅行的本地体验。完整入门选Ca’ Lustra €30；边吃边懂选Il Pianzio €30；Fior d’Arancio专项才选Maeli €40。一次只约一家。",
+    update: "2026 Vo’ Festa dell’Uva为9月17–20日；9月19日Calici in Carrozza €35并需预约，9月20日15:30与20:30有两场葡萄花车。采收季临时到访酒庄不可靠。",
     day: [
-      ["10:30", "首选 Quota 101：离家近，做有讲解的有机酒庄体验"],
-      ["12:30", "在 agriturismo 吃长午餐"],
-      ["15:30", "若更想看景与 Fior d’Arancio，则改约 Maeli 或 Vigna Roda，不连喝两家"],
-      ["17:30", "丘陵景观路看日落；驾驶者控制饮酒或安排代驾"]
+      ["10:30", "综合首选 Ca’ Lustra：€30/人，六款酒＋葡萄园与酒窖，约2小时"],
+      ["12:50", "La Montanella长午餐，下午不再开整瓶酒"],
+      ["14:45", "Arquà Petrarca慢走；故居只有全家真有兴趣才进"],
+      ["16:30", "Vignalta只进商店比较Gemola，不做第二轮品鉴；自驾须有一位全程零饮酒司机"]
     ],
     links: [
+      ["Ca’ Lustra €30完整体验", "https://calustra.it/it/esperienze/"],
       ["Quota 101 预约", "https://quota101.com/visite-in-cantina/"],
+      ["Il Pianzio 品鉴套餐", "https://www.ilpianzio.it/degustazioni/"],
       ["Maeli 品鉴", "https://maeliwine.com/tastings"],
-      ["Vigna Roda 信息", "https://www.stradadelvinocollieuganei.it/schede/vigna-roda/"],
       ["Colli Euganei 酒庄目录", "https://www.stradadelvinocollieuganei.it/degustare/"]
     ]
   },
   "Padua": {
     verdict: "最方便的城市半日游；有 Scrovegni 票就围绕票走，没有票也能做市场＋咖啡＋散步。",
-    update: "Scrovegni Chapel 仍为强制预约，迟到可能无法入场。建议把它放在上午，再顺路去市场；周一部分文化场馆可能关闭。",
+    update: "Scrovegni日间票€16、强制预约。旅行内9/15、17、22、24另有19:20与20:40的Giotto sotto le stelle，€22；若想要讲解感，优先查9/17、22或24夜场。",
     day: [
       ["09:30", "按预约时段看 Scrovegni Chapel，至少提前20分钟到"],
       ["11:00", "Piazza delle Erbe / Piazza della Frutta 市场"],
@@ -162,19 +164,21 @@ const plannerGuides = {
     ]
   },
   "Verona": {
-    verdict: "适合做城市＋Valpolicella酒庄的一天；这次不要为了歌剧专门留晚。",
-    update: "2026 Arena 户外歌剧季已于9月12日结束，旅行期间没有露天歌剧。Casa di Giulietta 目前从 Teatro Nuovo 方向进入，三、四层因高温措施暂时关闭，出发前再看公告。",
+    verdict: "适合做城市＋一家Valpolicella酒庄的一天。全家完整体验选Masi €60；更清楚、性价比更好或需要中文选Tommasi €45 / €25；只自驾一家。",
+    update: "2026 Arena户外歌剧季9月12日已结束；Juliet’s House自4月起改从Teatro Nuovo入场。VeronaCard 9月1日起为€33含公交/官方app €29，不适合只停半天再去酒庄。",
     day: [
       ["09:30", "Arena 外观、Piazza Bra、河边与老城"],
       ["11:30", "Juliet courtyard 只顺路看，不排长队进馆"],
       ["13:00", "Verona 午餐"],
-      ["15:30", "预约 Tommasi 或 Masi 做一场 Amarone 品鉴"],
+      ["14:30", "预约Masi Appaxximento Journey €60，或Tommasi四款€45 / 中文短场€25"],
       ["18:00", "酒庄附近早晚餐，或回 Verona 吃饭后返程"]
     ],
     links: [
       ["Arena 2026日历", "https://www.arena.it/en/arena-verona-opera-festival/"],
       ["Juliet House 最新公告", "https://casadigiulietta.comune.verona.it/"],
       ["Tommasi 酒庄体验", "https://tommasiwinehospitality.com/en/wine-tours/"],
+      ["Masi Monteleone21", "https://www.masi.it/en/masi-wine-experience/visit-our-sites/monteleone21/"],
+      ["Buglioni 2026采收体验", "https://www.buglioni.it/vendemmia-experience-2026"],
       ["Valpolicella 官方旅游", "https://www.valpolicellaweb.it/"]
     ]
   },
