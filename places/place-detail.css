@@ -70,6 +70,27 @@ a{color:inherit}
   padding:90px clamp(22px,5vw,68px) 58px;
   color:#f7f1e4;
 }
+.giusi-badge{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  margin:0 0 12px;
+  padding:6px 11px;
+  border:1px solid rgba(216,174,91,.72);
+  border-radius:999px;
+  background:rgba(31,42,60,.72);
+  color:#f2d58f;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.hotel-status.giusi-badge{
+  margin:0 0 8px;
+  background:#2f4d35;
+  border-color:#2f4d35;
+  color:#fff7df;
+}
 .eyebrow{
   margin:0 0 14px;
   color:#d8ae5b;

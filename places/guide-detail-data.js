@@ -242,19 +242,26 @@ window.guideDetails = {
       {term:"Bacaro route",text:"每家只吃1–2个cicchetti和一小杯，走两三家；下午品尝比坐下吃一顿游客套餐更灵活。"}
     ],
     venues:[
+      {tag:"GIUSI推荐 · 时尚与生活史",name:"Palazzo Mocenigo",subtitle:"织物、服装、香水＋贵族住宅 · 约90分钟",why:"它不是一间抽象的“纺织博物馆”：18世纪室内、真实服装、面料与可闻的香料原料连成一条线。对喜欢服装、设计和漂亮室内的人，比再看一座宗教建筑更有辨识度。",facts:[["位置","Santa Croce · San Stae站"],["常规开放","10:00–18:00；当天再核对"],["9/25","Lace Fridays现场蕾丝演示的最后一天"],["楼梯","主层需走楼梯，无电梯"]],link:["官方参观与展览","https://mocenigo.visitmuve.it/en/"],map:"Museo di Palazzo Mocenigo Venezia"},
+      {tag:"GIUSI推荐 · 需提前申请",name:"Arzanà · Squero Casal",subtitle:"15世纪船坞＋历史威尼斯船收藏 · 非日常开放",why:"文件里写成“造贡多拉的地方”并不准确。这里曾是Casal家族船坞，正常造船在1920年结束；现在由志愿协会保存传统船只。只有拿到私人导览确认才专程去，没确认就在Cannaregio经过，不把它当开放景点。",facts:[["开放方式","不对公众常规开放"],["预约","官网表单；最多提前两个月确认"],["地址","Cannaregio 1936/D"],["价值","看船体、工具与真实水上生活史"]],link:["申请私人参观","https://arzana.org/request-a-visit/"],map:"Squero Casal Arzana Venezia"},
+      {tag:"GIUSI推荐 · 现代艺术",name:"Peggy Guggenheim Collection",subtitle:"Palazzo Venier dei Leoni · 约90–120分钟",why:"未完成的低矮宫殿、花园和20世纪欧美艺术放在Grand Canal边，是Dorsoduro最完整的室内锚点。想看现代艺术就选它，并用它替换Doge’s Palace，不在同一天叠两个大馆。",facts:[["位置","Dorsoduro · Accademia桥南侧"],["内容","Cubism、Surrealism、Abstract Expressionism"],["节奏","馆＋花园约1.5–2小时"],["策略","下午入馆，出来直接走Zattere"]],link:["官方馆藏与参观","https://www.guggenheim-venice.it/en/the-museum/"],map:"Peggy Guggenheim Collection Venezia"},
       {tag:"首次或多年没进再选",name:"Palazzo Ducale",subtitle:"现场€35；提前30天网购€30",why:"若同行者尚未认真参观，它是唯一值得为San Marco人流付出时间的主景点。当前距出发不足30天，按€35预算；周五/六到9/26开放至23:00。",facts:[["票价","当前现场成人€35"],["夜场","周五/六至23:00，最后入场22:00"],["时长","约1.5–2小时"],["策略","订傍晚，白天先走安静街区"]],link:["官方票价与时间","https://palazzoducale.visitmuve.it/en/visitor-information/"],map:"Palazzo Ducale Venezia"},
       {tag:"最符合本次节奏的吃法",name:"Al Timon → Cannaregio bacari",subtitle:"2–3家 · 约€20–35 / 人估算",why:"从Fondamenta della Misericordia开始，不用为某一家排长队。每人点baccalà、sarde in saor、polpetta各一种，再走到下一家，谁累都能随时停。",facts:[["预算","cicchetti常见约€2–4/个估算"],["酒量","每站一小杯或全家分一瓶水"],["预约","不订；拥挤就换下一家"],["时长","约1.5小时边走边吃"]],link:["地图打开Al Timon","https://www.google.com/maps/search/?api=1&query=Al+Timon+Venezia"],map:"Fondamenta della Misericordia Venezia"},
       {tag:"下午到日落",name:"Dorsoduro＋Zattere",subtitle:"免费主线 · 2–3小时",why:"Accademia桥、安静支路和Zattere水边比中午挤在Rialto更适合全家。想再吃一轮可停Cantine del Vino già Schiavi或Osteria al Squero。",facts:[["主线","Accademia → Squero → Zattere"],["成本","散步免费"],["可选","75分钟船票€9.50"],["日落","Zattere后再向San Marco移动"]],link:["ACTV官方票价","https://www.veneziaunica.it/en/buy-tickets/public-trasport-in-venice"],map:"Zattere Venezia"}
     ],
     choices:[
+      {tag:"GIUSI推荐路线",title:"Mocenigo＋Arzanà（有确认才去）＋Peggy",text:"以服装、船与现代艺术看另一种Venice；Arzanà没约到就删掉，Mocenigo和Peggy仍能构成完整一天。"},
       {tag:"最推荐",title:"Cannaregio午餐线＋Dorsoduro＋夜晚San Marco",text:"城市层次最完整；不把最挤的核心区放在正午。"},
       {tag:"第一次完整版",title:"Doge’s Palace傍晚场",text:"白天走小巷，17:30后再进Palace；只在周五/六夜间开放日这样排。"},
       {tag:"父母轻松版",title:"少走路＋€25 vaporetto日票",text:"从Santa Lucia坐船到Accademia附近，Dorsoduro慢走，再坐船看Grand Canal回程。"}
     ],
     day:[["09:15","从Torreglia出发，到Padova或Mestre停车换火车；不要开进Piazzale Roma找临时车位。"],["10:45","抵达Santa Lucia，先往Cannaregio，不跟人流直冲Rialto。"],["11:15","犹太区与Misericordia水边慢走。"],["12:30–14:00","Al Timon起步做2–3家bacaro，边走边吃，不在一家点满桌。"],["14:30","穿过Rialto外围到Dorsoduro / Accademia；累了坐一段vaporetto。"],["17:30","Zattere日落；若有Doge’s Palace夜场票，此时去San Marco。"],["20:00–21:00","San Marco夜色后回Santa Lucia，火车＋取车回家；次日不排早起。"]],
+    alternateTitle:"GIUSI路线 · 服装、船与现代艺术",
+    alternateIntro:"这条路不是把三个名字硬打卡。Arzanà只有收到协会确认才成立；没有确认，就把午餐和Cannaregio走深。Mocenigo与Peggy二选一也完全成立。",
+    alternateDay:[["09:05","Torreglia出发，经Padova / Mestre换火车。"],["10:35–12:00","Palazzo Mocenigo：先看贵族住宅，再看服装、织物和香水；不把它只当面料仓库。"],["12:10–13:30","San Stae / Cannaregio方向午餐；选一顿坐得下的，不做三家bacaro。"],["14:00–14:45","只有拿到书面确认才进Arzanà；否则沿Cannaregio水道慢走，提早去Dorsoduro。"],["15:30–17:15","Peggy Guggenheim Collection；馆内与花园后直接走Zattere。"],["17:30–20:00","Dorsoduro晚风、aperitivo与晚餐；看状态再去San Marco夜景，不设为任务。"]],
     budget:{text:"基础版按一次船票、bacaro午餐和正常晚餐估算；Palace为可选加项。",lines:[["交通","火车/停车＋船约€80–140/四人估算"],["吃喝","约€180–260"],["Palace可选","€140/四人"]],total:"基础约€260–400；加Palace约€400–540"},
     fallbacks:["San Marco人太多：不穿过核心区，留在Cannaregio＋Dorsoduro。","大雨：选一个室内主馆＋长午餐，删除跨城长走。","只想坐一次船：买€9.50单票，不盲买€25日票。"],
-    links:[["2026入城费已结束","https://cda.veneziaunica.it/en/access-fee"]]
+    links:[["2026入城费已结束","https://cda.veneziaunica.it/en/access-fee"],["Palazzo Mocenigo","https://mocenigo.visitmuve.it/en/"],["Arzanà预约","https://arzana.org/request-a-visit/"],["Peggy Guggenheim","https://www.guggenheim-venice.it/en/the-museum/"]]
   },
 
   "Verona": {
@@ -325,6 +332,45 @@ window.guideDetails = {
     links:[["Chioggia ZTL官方","https://www.comune.chioggia.ve.it/vivere-il-comune/ztl-chioggia/"],["Park Unione地图","https://www.google.com/maps/search/?api=1&query=Park+Unione+Chioggia"]]
   },
 
+  "Collio": {
+    essentialsIntro:"这是一条GIUSI点名的两天一晚酒乡路线。先把它与Colli Euganei、Prosecco Hills分清，再决定是否值得占一个外宿名额。",
+    quick:[
+      {label:"门到门",value:"约2小时15–40分",note:"Torreglia到Cormons / Dolegna；A4路况会放大差异。"},
+      {label:"建议占用",value:"2天 / 1晚",note:"Day 1住La Subida，Day 2只约Venica一家。"},
+      {label:"核心品鉴",value:"€35或€45 / 人",note:"5款当年酒；或7款含两款老年份。"},
+      {label:"预约门槛",value:"高",note:"采收季，住宿、晚餐、酒庄三项分别确认。"}
+    ],
+    stanceLabel:"为什么把它补进来",
+    stance:"它是文件里最有新增价值的一条。Collio是Friuli Venezia Giulia靠斯洛文尼亚边境的白葡萄酒产区，Cormons是入口，Dolegna del Collio是Venica所在的丘陵。它与家门口的Colli Euganei、做起泡酒的Prosecco Hills都不是同一个地方。",
+    primerTitle:"先喝懂这块边境酒乡",
+    primerIntro:"GIUSI写的“Ronco delle Mele wine”容易让人误以为是另一家酒庄。它其实是Venica的一块单一园和一款标志性Sauvignon。",
+    primer:[
+      {term:"Collio",text:"意大利东北角Gorizia一带的DOC丘陵，接近斯洛文尼亚Brda。主角是Friulano、Ribolla Gialla、Malvasia Istriana与Sauvignon等白葡萄酒。"},
+      {term:"Ponca",text:"产区常见的泥灰岩与砂岩土壤。它不是一句玄学营销：坡地排水与日夜温差共同决定这里白酒的咸鲜、香气和结构。"},
+      {term:"Ronco delle Mele",text:"Venica & Venica的Sauvignon DOC Collio与同名葡萄园，朝向Julian Alps；不是名叫Ronco delle Mele的独立酒庄。"},
+      {term:"La Subida",text:"Cormons郊外的Sirk家族乡村度假体系：住宿、Trattoria al Cacciatore、Osteria La Preda、森林、醋窖与骑马分开组成体验。"}
+    ],
+    venuesTitle:"GIUSI点名的三个元素，怎么订",
+    venuesIntro:"顺序按两天一晚的执行逻辑，而不是酒评分数。住宿与晚餐要先于第二家酒庄。",
+    venues:[
+      {tag:"GIUSI推荐 · 住宿与晚餐",name:"La Subida · Cormons",subtitle:"林地里的乡村度假体系 · 官网询实时房价",why:"它的价值不是一间孤立酒店，而是把森林住宿、Friuli与边境风味、正式餐厅、较随意的Osteria和Ribolla Gialla醋窖放在同一处。四位成人适合订两间同级房，再分别锁餐厅。",facts:[["住宿","Case / Dimore多种房型；两间同级询价"],["正式晚餐","Trattoria al Cacciatore"],["轻松晚餐","Osteria La Preda"],["注意","住店不等于自动有晚餐位"]],link:["官网与询价","https://www.lasubida.it/"],map:"La Subida Cormons"},
+      {tag:"GIUSI推荐 · 核心酒庄",name:"Venica & Venica · Dolegna",subtitle:"1.5小时 · 5款€35 / 7款€45",why:"这是最应该锁定的一场。路线包括老年份酒窖、橡木桶区、酿造区、葡萄园与装瓶线，配当地奶酪；既能讲家族史，也能用同场比较理解Collio白酒。",facts:[["开放","周一至周六，10:00起；最晚15:30开场"],["预约","建议提前3天至1周"],["语言","意大利语 / 英语"],["四人","€140或€180，不含买酒"]],link:["官方品鉴券","https://venica.it/en/prodotto/voucher-wine-experience-1/"],map:"Venica & Venica Dolegna del Collio"},
+      {tag:"GIUSI点名的酒",name:"Ronco delle Mele · Sauvignon DOC Collio",subtitle:"Venica标志性单一园Sauvignon",why:"它最适合当这趟的味觉锚点：先喝一款普通Sauvignon，再喝Ronco delle Mele，比较成熟度、香气集中度、酸度和矿物感。若€35酒单不含它，预约邮件里直接问能否加入或在wine shop单独试。",facts:[["葡萄","Sauvignon"],["葡萄园","Cerò丘陵西北向，面向Julian Alps"],["定位","Venica代表性Cru"],["不是","不是另一家酒庄"]],link:["酒款与葡萄园","https://venica.it/en/premi-home-en/ronco-delle-mele-sauvignon-doc-collio-2024/"],map:"Ronco delle Mele vineyard"},
+      {tag:"到达日的低压力入口",name:"Enoteca di Cormons",subtitle:"30家左右当地生产者 · 葡萄酒＋火腿奶酪",why:"如果第一天午后才到，不要赶第二场正式tasting。先在镇中心用几杯不同生产者的Friulano、Ribolla和Sauvignon建立基准，再去La Subida入住。",facts:[["位置","Piazza XXIV Maggio 21"],["内容","Collio与Friuli Isonzo多家酒庄"],["配食","火腿、salumi、奶酪与地方小食"],["作用","先比较，再决定带哪几瓶回家"]],link:["市政府介绍","https://www.comune.cormons.go.it/it/vivere-il-comune-186358/luoghi-186359/enoteca-di-cormons-218634"],map:"Enoteca di Cormons"}
+    ],
+    choices:[
+      {tag:"GIUSI原建议 · 最完整",title:"La Subida住一晚＋Venica第二天",text:"住宿、正式晚餐、酒庄都各自成立；驾驶者在Day 2品鉴全程不喝。"},
+      {tag:"更沉浸酒庄",title:"住Venica Wine Resort",text:"6间房＋2套公寓，库存更少；适合把泳池、葡萄园散步和酒庄本身放在中心。"},
+      {tag:"没房fallback",title:"住Cormons镇上＋La Subida吃饭",text:"保留Enoteca与Venica，把La Subida降为一顿已确认的晚餐，不因酒店满房删掉整条路线。"}
+    ],
+    scheduleTitle:"两天一晚，实际怎么走",
+    scheduleIntro:"按La Subida住宿、Venica 10:00品鉴写。若Venica只剩下午场，把两天内容对调，不再加第二家正式酒庄。",
+    day:[["Day 1 · 09:30","从Torreglia出发；A4预留30分钟缓冲，中途只停一次咖啡。"],["12:15","Cormons午餐；下午先看Enoteca，用半杯小份建立产区概念。"],["14:30","走一段Wine and Cherry Road：Cormons → Dolegna方向，只做合法观景停车。"],["16:00","入住La Subida；森林散步、醋窖或泳池按当天开放与天气选择。"],["19:30","Trattoria al Cacciatore或Osteria La Preda二选一；提前订，餐后不再开车。"],["Day 2 · 09:20","退房后前往Venica，提前到场；指定驾驶者全程零饮酒。"],["10:00–11:30","Venica酒窖＋5款€35或7款€45；确认酒单是否包含Ronco delle Mele。"],["12:15","Dolegna / Cormons附近长午餐；其余人不再开第二瓶。"],["14:30–15:00","返程，预计17:15–18:00到Torreglia。"]],
+    budget:{title:"四位成人 · 两间房 · 一晚",text:"酒店与La Subida晚餐必须询实时价；先把可确认的品鉴和合理餐饮交通列出来。",lines:[["Venica 5款 / 7款","€140 / €180"],["两顿午餐＋一顿晚餐","约€420–720"],["油路与停车","约€80–120估算"],["La Subida两间房","实时询价，另计"]],total:"不含酒店约€640–1,020；住宿确认后再算总价"},
+    fallbacks:["La Subida没两间同级房：住Cormons镇上，保留已订晚餐。","Venica满位：先问候补；再从Collio官方目录选一家，不把Ronco delle Mele误当独立酒庄。","大雨：Enoteca＋Venica酒窖＋La Subida餐饮仍成立，删掉景观路和森林散步。","没有零饮酒驾驶者：提前订司机；不要让品鉴者继续开山路。"],
+    links:[["Venica品鉴","https://venica.it/en/prodotto/voucher-wine-experience-1/"],["La Subida","https://www.lasubida.it/"],["Collio官方酒庄目录","https://www.collio.it/en/wineries/"],["Cormons Enoteca","https://www.enotecadicormons.com/en/enoteca/"]]
+  },
+
   "Lake Garda": {
     quick:[
       {label:"门到门",value:"约1小时30–1小时50分",note:"到Sirmione外缘；周末进半岛会更慢。"},
@@ -340,23 +386,26 @@ window.guideDetails = {
       {term:"No loop",text:"Malcesine、Limone与Riva属于另一趟北湖线路。日游硬开过去会把大部分时间变成车程。"}
     ],
     venues:[
+      {tag:"GIUSI推荐 · 一晚基地",name:"Corte Regia Relais & Spa · Borghetto",subtitle:"Adults Only · Mincio河景 · 实时房价",why:"它不在Garda湖边，而是在Valeggio sul Mincio的Borghetto水磨村。选它的理由是河畔spa、步行晚餐与第二天去Sigurtà很顺；不是为了躺在房间看湖。",facts:[["位置","Borghetto · Via Giotto 2"],["设施","spa、河景桑拿、室外水景"],["年龄","spa仅16岁以上"],["订前问","两间同级房、停车、spa时段与取消"]],link:["官网查房","https://www.corteregiarelais.it/en/"],map:"Corte Regia Relais Borghetto"},
+      {tag:"GIUSI推荐 · 花园半天",name:"Parco Giardino Sigurtà",subtitle:"Valeggio sul Mincio · 2026开至11月15日",why:"大片草坪、湖池、玫瑰大道、迷宫与古树，比Sirmione更平坦、可控。9月21日起进入秋季活动期；想少走路可现场比较观光小火车、shuttle或golf cart。",facts:[["季节","2026年3月7日–11月15日"],["建议时长","2.5–4小时"],["移动","步行 / 小火车 / shuttle / golf cart"],["位置","与Borghetto同一镇区"]],link:["官方时间与票","https://www.sigurta.it/"],map:"Parco Giardino Sigurta"},
       {tag:"首选 · 风景＋内容",name:"Grotte di Catullo",subtitle:"€10 / 人 · 约75–90分钟",why:"并不是洞穴，而是半岛最北端的大型罗马villa遗址和橄榄园。湖景与考古叠在一起，比只逛拥挤商业街更有记忆点。",facts:[["票价","成人€10；18–25岁欧盟票€2"],["开放","周二至六8:30–19:30；周日10:00起"],["周一","8:30–14:00"],["预约","官方称可选但建议预约；无现金购票"]],link:["官方票价与时间","https://cultura.gov.it/index.php/luogo/grotte-di-catullo-e-museo-archeologico-di-sirmione"],map:"Grotte di Catullo Sirmione"},
       {tag:"水上版本",name:"Navigazione Lago di Garda",subtitle:"下湖区日票€27；全湖€39.50",why:"如果当天船班合适，用船连接Sirmione与Peschiera/Desenzano，比继续开车找停车更舒服。只坐一段时先查单程价，不自动买日票。",facts:[["下湖区","€27/成人，普通船"],["全湖","€39.50，含快速服务"],["季节","2026夏季班表至10/4"],["到达","开船前至少20分钟到码头"]],link:["2026官方船价","https://www.navigazionelaghi.it/biglietti-e-orari-lago-di-garda/tariffe-lago-di-garda/"],map:"Sirmione ferry terminal"},
       {tag:"停车后第一站",name:"Sirmione old town",subtitle:"Scaliger城堡外观＋湖边巷道",why:"停车后步行入半岛，不试图开进中心。主街最拥挤时不排商店，直接向北走到Villa遗址；返程再在侧街吃gelato。",facts:[["停车","Piazzale Monte Baldo等半岛外停车"],["预算","停车约€20–28/天估算"],["步行","到Grotte约2km"],["注意","ZTL与人流，不开进古城"]],link:["Sirmione停车服务","https://www.sirmioneservizi.it/en/grifo-parking"],map:"Parcheggio Monte Baldo Sirmione"},
       {tag:"北湖过夜版主角",name:"Malcesine–Monte Baldo cable car",subtitle:"官网预购往返€28 / 人 · 四人€112",why:"北湖真正不同的地方，是从湖岸直接升到Monte Baldo的高山视角。2026运营至11月1日；风大、雷雨或低云会让缆车停运，因此必须把它与湖船安排成可互换的两天。",facts:[["2026运营","4月4日–11月1日"],["成人往返","现场€30；官网预购€28"],["时段","首班上山08:15；末班上山18:00；末班下山18:45"],["天气","当天先查实时状态，不以预购票替代天气判断"]],link:["官方票价与运营时间","https://www.funiviedelbaldo.it/en/timetables-and-rates/"],map:"Funivia Malcesine Monte Baldo"}
     ],
     choices:[
+      {tag:"GIUSI推荐 · 两天一晚",title:"Borghetto＋Sigurtà＋南湖",text:"第一天花园与河畔酒店，第二天Sirmione；Mantua保持为另一张独立日游卡，不在48小时里塞四个区域。"},
       {tag:"最推荐",title:"Sirmione＋短船＋Grotte",text:"一天只围绕半岛，不再开去Bardolino或北湖；景色、历史和午餐都有。"},
       {tag:"少走路",title:"Sirmione＋下湖区船",text:"删掉Grotte的长走，用€27日票坐到Peschiera/Desenzano，再坐回或火车衔接。"},
       {tag:"真正漂亮的北湖",title:"Malcesine住一晚",text:"如果目标是“像山湖度假”，不要从Torreglia当天硬往返；另占2个日历日。"}
     ],
     day:[["07:10","Torreglia出发；周末再提前20分钟，目标08:50前停好车。"],["09:00","从Monte Baldo步行进Sirmione，先穿过城堡门，不在主街停太久。"],["09:40","到Grotte di Catullo，€10，先看遗址和半岛北端湖景。"],["11:30","回码头坐短船；若计划两段以上普通船，再比较€27下湖区日票。"],["13:00","Sirmione午餐，预算€35–55/人估算，避开码头正对面的第一排游客菜单。"],["15:00","船或车到Peschiera，沿城墙与水边走60–90分钟。"],["16:45","返程，争取18:30前到家。"]],
-    alternateTitle:"路线 B · Malcesine 北湖一晚",
-    alternateIntro:"这是独立的2天1晚方案，不接在Sirmione日游后面。先订可退房间；缆车和Limone湖船按两天中更好的天气互换。",
-    alternateDay:[["Day 1 · 07:15","Torreglia出发，约09:30抵达Malcesine；行李先寄存，车停住宿地或外围停车场。"],["10:15–10:45","缆车上Monte Baldo；官网预购往返€28/人，四人€112。"],["11:00–14:15","山顶只走天气和体力允许的观景段，在山屋午餐；不把高山路线写成必须完成。"],["15:00","下山入住，休息45–60分钟。"],["16:30–18:00","Malcesine老城、城堡外观与湖边；晚餐留在镇上，不再开车。"],["Day 2 · 08:30","按官方船班去Limone；若前一天低云，则把上午留给缆车、取消跨湖。"],["09:15–13:15","Limone湖边慢走、柑橘园或长午餐；普通船两段以上再比较北湖区€23.50日票。"],["14:15","回Malcesine取车，15:00左右返程，约17:20–18:00到Torreglia。"]],
+    alternateTitle:"GIUSI路线 · Borghetto 一晚＋Sigurtà＋Sirmione",
+    alternateIntro:"Corte Regia是Mincio河畔酒店，不是假装湖景酒店。第一天以花园和酒店为主，第二天才去Garda；Mantua另留一天，避免两天里完成四个地点。",
+    alternateDay:[["Day 1 · 09:00","Torreglia出发，约10:30到Parco Giardino Sigurtà。"],["10:30–13:30","花园：玫瑰大道、湖池、迷宫；父母想省脚力时现场选shuttle或golf cart。"],["13:45","Valeggio吃tortellini午餐，之后不再开一小时去Garda。"],["16:00","Corte Regia入住；看Borghetto水磨村，预约spa时段。"],["19:30","步行晚餐，车留酒店。"],["Day 2 · 08:30","早餐后退房，约一小时到Sirmione外围停车。"],["10:00–12:00","Grotte di Catullo或短船二选一；父母不想长走就选船。"],["12:30","Sirmione午餐与短走；15:00前后返程。"],["17:00","预计回Torreglia；Mantua保留成平行的另一天。"]],
     budget:{title:"南湖日游与北湖一晚分别花多少",text:"四位成人；住宿为两间房一晚的规划区间，不是实时锁价。短程单船票若低于区票，应按当天班次另算。",lines:[["南湖活动","Grotte €40＋下湖区日票€108"],["南湖餐饮交通","约€210–315"],["北湖活动","缆车官网票€112＋北湖区船票最多€94"],["北湖住宿","两间房一晚约€360–700估算"],["北湖餐饮交通","约€350–600估算"]],total:"南湖日游约€358–463；北湖一晚约€916–1,506"},
     fallbacks:["船班不顺：只做Sirmione，不为了用完日票浪费等船时间。","周末停车拥堵：改Peschiera停车后坐船入Sirmione。","Malcesine低云或缆车停运：第一天湖船、第二天再看缆车；两天都不行就把它当湖边过夜，不冒险上山。","北湖住宿太贵或只剩不可退房：保留Sirmione日游，不为了‘更漂亮’勉强住。","低云雨大：Garda视觉回报下降，换Mantua/Vicenza室内日。"],
-    links:[["Malcesine缆车实时与购票","https://www.funiviedelbaldo.it/en/"],["Garda官方分区船价","https://www.navigazionelaghi.it/biglietti-e-orari-lago-di-garda/tariffe-lago-di-garda/"]]
+    links:[["Corte Regia查房","https://www.corteregiarelais.it/en/"],["Sigurtà时间与票","https://www.sigurta.it/"],["Malcesine缆车实时与购票","https://www.funiviedelbaldo.it/en/"],["Garda官方分区船价","https://www.navigazionelaghi.it/biglietti-e-orari-lago-di-garda/tariffe-lago-di-garda/"]]
   },
 
   "Mantua": {

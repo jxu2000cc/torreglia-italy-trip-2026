@@ -21,6 +21,12 @@
   document.getElementById('placeCn').textContent = meta.cn;
   document.getElementById('heroImage').src = meta.photo;
   document.getElementById('heroImage').alt = name + ' 实景照片';
+  if (meta.giusi) {
+    const badge = document.createElement('span');
+    badge.className = 'giusi-badge';
+    badge.textContent = meta.giusi;
+    document.querySelector('.hero-copy').prepend(badge);
+  }
   document.getElementById('verdict').textContent = guide.verdict;
   document.getElementById('update').textContent = guide.update;
 

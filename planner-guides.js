@@ -211,6 +211,23 @@ const plannerGuides = {
       ["Lake Garda 官方旅游", "https://www.visitgarda.com/en/"]
     ]
   },
+  "Collio": {
+    verdict: "GIUSI这条建议值得认真保留：它不是另一个Prosecco日游，而是以Cormons为中心、靠近斯洛文尼亚的白葡萄酒边境文化。两天一晚刚好能把La Subida的餐桌与Venica酒庄拆开，不让驾驶和品酒互相冲突。",
+    update: "9月正逢采收季。Venica的酒庄参观周一至周六需预约，5款€35、7款含两款老年份€45，约1.5小时；建议提前3天至1周确认。La Subida住宿、Trattoria和Osteria分别询位，不把住店自动当作已订晚餐。",
+    day: [
+      ["Day 1 · 09:30", "从Torreglia出发，约2小时15分至2小时40分；先到Cormons午餐与Enoteca，下午走Wine and Cherry Road"],
+      ["Day 1 · 16:00", "入住La Subida，散步看林地、醋窖与葡萄园；晚餐在Trattoria al Cacciatore或Osteria La Preda二选一"],
+      ["Day 2 · 10:00", "前往Dolegna del Collio的Venica & Venica，做1.5小时酒窖＋5款或7款品鉴"],
+      ["Day 2 · 11:30", "重点试Ronco delle Mele Sauvignon，再比较Friulano、Ribolla Gialla与Collio Bianco"],
+      ["Day 2 · 13:00", "酒庄附近午餐；驾驶者全程不喝，15:00前后返程，傍晚回Torreglia"]
+    ],
+    links: [
+      ["Venica €35 / €45品鉴", "https://venica.it/en/prodotto/voucher-wine-experience-1/"],
+      ["Ronco delle Mele", "https://venica.it/en/premi-home-en/ronco-delle-mele-sauvignon-doc-collio-2024/"],
+      ["La Subida住宿与餐厅", "https://www.lasubida.it/"],
+      ["Collio官方酒庄目录", "https://www.collio.it/en/wineries/"]
+    ]
+  },
   "Mantua": {
     verdict: "安静、室内内容多，适合作为下雨城市备选；不需要和 Lake Garda 硬拼同一天。",
     update: "Palazzo Te 目前周一09:00–19:00、周二13:00–19:00、其余09:00–19:00。9月26日起有新的大型展览，可能增加周末客流。",

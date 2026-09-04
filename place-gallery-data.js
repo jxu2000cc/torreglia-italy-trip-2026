@@ -202,6 +202,22 @@ window.placeGalleryExtras = {
       "title": "Malcesine 与 Lake Garda 湖山全景"
     }
   ],
+  "Collio": [
+    {
+      "label": "Venica 酒庄品鉴",
+      "src": "assets/detail-photos/collio-venica-tasting.jpg",
+      "source": "https://venica.it/en/experience/",
+      "credit": "Venica & Venica",
+      "title": "Venica & Venica wine tasting"
+    },
+    {
+      "label": "Venica 历史酒窖",
+      "src": "assets/detail-photos/collio-venica-cellar.jpg",
+      "source": "https://venica.it/en/experience/",
+      "credit": "Venica & Venica",
+      "title": "Venica & Venica historical cellar"
+    }
+  ],
   "Mantua": [
     {
       "label": "Palazzo Te",

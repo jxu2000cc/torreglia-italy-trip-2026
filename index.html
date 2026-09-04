@@ -449,6 +449,27 @@
     gap:12px;
     margin:18px 0 24px;
   }
+  .giusi-panel{
+    margin:0 0 34px;
+    padding:22px;
+    border:1px solid rgba(185,139,51,.58);
+    background:linear-gradient(135deg,rgba(255,255,255,.46),rgba(185,139,51,.09));
+    box-shadow:0 14px 36px rgba(31,42,60,.08);
+  }
+  .giusi-panel-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:15px;}
+  .giusi-panel-head h3{font-size:25px;margin:0;}
+  .giusi-panel-head p{margin:0;max-width:44ch;color:var(--ink-soft);font-size:12px;line-height:1.5;text-align:right;}
+  .giusi-badge{
+    display:inline-flex;align-items:center;width:max-content;margin:0 0 8px;padding:4px 9px;
+    border:1px solid rgba(185,139,51,.62);border-radius:999px;background:#2f4d35;color:#fff7df;
+    font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  }
+  .giusi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .giusi-item{display:block;min-height:126px;padding:14px;border:1px solid var(--line);background:var(--card);text-decoration:none;transition:transform .16s ease,border-color .16s ease;}
+  .giusi-item:hover{transform:translateY(-2px);border-color:var(--green);}
+  .giusi-item span{display:block;color:var(--red);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;}
+  .giusi-item b{display:block;margin:5px 0 5px;color:var(--ink);font-family:'Fraunces',serif;font-size:17px;line-height:1.2;}
+  .giusi-item small{display:block;color:var(--ink-soft);font-size:10.5px;line-height:1.45;}
   .brief-card{
     min-height:128px;
     padding:16px 16px 14px;
@@ -853,6 +874,9 @@
     .planning-board{grid-template-columns:1fr;}
     .planning-foot{align-items:flex-start; flex-direction:column;}
     .family-brief{grid-template-columns:1fr 1fr;}
+    .giusi-panel-head{align-items:flex-start;flex-direction:column;gap:4px;}
+    .giusi-panel-head p{text-align:left;}
+    .giusi-grid{grid-template-columns:1fr 1fr;}
     .family-rhythm{grid-template-columns:1fr;}
     .group-note{grid-template-columns:1fr; gap:6px;}
     .orbit-head{align-items:flex-start; flex-direction:column; gap:6px;}
@@ -874,6 +898,7 @@
     .place-photo-grid.count-3{grid-template-columns:1.28fr .72fr;grid-template-rows:1fr 1fr;height:210px;}
     .place-photo-grid.count-3 .photo-tile:first-child{grid-row:1 / 3;}
     .family-brief{grid-template-columns:1fr;}
+    .giusi-grid{grid-template-columns:1fr;}
     .route-stats{grid-template-columns:1fr 1fr;}
     .route-options{grid-template-columns:1fr;}
     .calendar-toolbar{align-items:flex-start; flex-direction:column; gap:5px;}
@@ -1056,6 +1081,9 @@
               <a class="orbit-node orbit-flex" href="places/guide.html?place=Lake%20Garda" aria-label="Lake Garda，约一点五小时">
                 <circle cx="460" cy="410" r="33"/><text text-anchor="middle" x="460" y="406" class="orbit-name">Garda</text><text text-anchor="middle" x="460" y="419" class="orbit-note">约1.5小时</text>
               </a>
+              <a class="orbit-node orbit-open" href="places/guide.html?place=Collio" aria-label="Collio，约两小时十五分，建议两天一晚">
+                <circle cx="815" cy="245" r="38"/><text text-anchor="middle" x="815" y="237" class="orbit-state">GIUSI</text><text text-anchor="middle" x="815" y="253" class="orbit-name">Collio</text><text text-anchor="middle" x="815" y="266" class="orbit-note">约2.25小时 · 1晚</text>
+              </a>
 
               <a class="orbit-node orbit-lean" href="places/dolomites.html" aria-label="Dolomites，约三小时，住四晚">
                 <circle cx="625" cy="70" r="45"/><text text-anchor="middle" x="625" y="56" class="orbit-state">OVERNIGHT</text><text text-anchor="middle" x="625" y="77" class="orbit-name serif">Dolomites</text><text text-anchor="middle" x="625" y="93" class="orbit-note">约3小时 · 4晚</text>
@@ -1168,6 +1196,9 @@
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="como" style="--route-color:#4F7E89">
               <div class="route-card-top"><span class="route-type">Lake · ferry · slow</span><span class="route-duration">4天 / 3晚</span></div><h4>Lake Como</h4><p>Varenna无车版或Menaggio开车版二选一；用船连中央湖区，保留清晨和晚餐。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/lake-como.html">完整攻略与酒店 →</a></div>
             </article>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="collio" style="--route-color:#6F7D43">
+              <div class="route-card-top"><span class="route-type">GIUSI · White wine · borderland</span><span class="route-duration">2天 / 1晚</span></div><h4>Collio</h4><p>La Subida住一晚＋Venica品鉴；Cormons为入口，喝懂Ronco delle Mele与Friuli白葡萄酒。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Collio">完整攻略 →</a></div>
+            </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="garda" style="--route-color:#4C8C82">
               <div class="route-card-top"><span class="route-type">Lake · day trip</span><span class="route-duration">1天</span></div><h4>Lake Garda</h4><p>Sirmione＋湖船＋罗马遗址；一天只做南湖，不把北湖过夜版混进来。</p><div class="route-card-foot"><span>拖到任意留白日</span><a href="places/guide.html?place=Lake%20Garda">完整攻略 →</a></div>
             </article>
@@ -1190,6 +1221,21 @@
       </div>
 
       <div class="pane-inner overview-intro">
+        <section class="giusi-panel" aria-labelledby="giusi-title">
+          <div class="giusi-panel-head">
+            <div><span class="giusi-badge">GIUSI 推荐 · 已全部纳入</span><h3 id="giusi-title">她点名的 6 组想法</h3></div>
+            <p>这里保留“谁推荐的”，同时由我们把地点归属、时间成本和真正的预约方式说明白。点击任意一项进入详细页。</p>
+          </div>
+          <div class="giusi-grid">
+            <a class="giusi-item" href="places/vo-festa-uva.html"><span>家门口 · 9/17–20</span><b>Vo’ 葡萄节</b><small>9/20花车＋19家酒庄；也可另订€35小火车串5家酒庄。</small></a>
+            <a class="giusi-item" href="places/guide.html?place=Collio"><span>Friuli · 2天1晚</span><b>Collio＋La Subida＋Venica</b><small>边境白葡萄酒乡；Ronco delle Mele是Venica的Sauvignon，不是另一家酒庄。</small></a>
+            <a class="giusi-item" href="places/guide.html?place=Lake%20Garda"><span>南湖 / Mincio · 2天1晚</span><b>Corte Regia＋Sigurtà＋Garda</b><small>酒店在Borghetto河边，不在湖边；Mantua作为另一张独立日游卡。</small></a>
+            <a class="giusi-item" href="places/lake-como.html#hotels"><span>Lake Como · 酒店</span><b>Villa Cipressi</b><small>Varenna历史villa与植物园；浪漫，但要先问婚礼、楼栋、楼梯和两间同级房。</small></a>
+            <a class="giusi-item" href="places/guide.html?place=Venice"><span>熟客版 Venice · 1天</span><b>Mocenigo＋Arzanà＋Peggy</b><small>服装、传统船与现代艺术；Arzanà不是开放工坊，必须先申请私人参观。</small></a>
+            <a class="giusi-item" href="places/dolomites.html#giusi-val-gardena"><span>Dolomites · 4晚平行基地</span><b>Val Gardena / Ortisei</b><small>步行街、咖啡、木雕、Seceda与Alpe di Siusi；和Alta Badia二选一，不来回横跳。</small></a>
+          </div>
+        </section>
+
         <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Family trip brief <span class="en">先让四个人对这趟旅行有同一张图</span></h2>
         <p class="section-lede">这是一趟熟悉意大利的一家人共同出游，不需要证明“来过多少地方”。Torreglia是固定大本营，其余都是可以拖进同一张15天日历的平行选择：山、城市、湖区、Tuscany或Sicily，各自用天数和体验差异说话。瑞士已从本次候选中移除。</p>
 
@@ -1452,6 +1498,14 @@
             <div class="place-cn">的里雅斯特</div>
             <p>哈布斯堡遗风的海滨城市，气质偏中欧，咖啡文化浓厚，还能顺路看Miramare城堡。</p>
             <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="的里雅斯特 攻略">小红书搜攻略</a>
+          </div>
+          <div class="card is-strong">
+            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/guide.html?place=Collio"><span class="photo-skeleton"></span><img src="assets/detail-photos/collio-cormons.jpg" alt="Cormons镇中心"><span class="photo-label">Cormons · 酒乡入口</span></a><a class="photo-tile" href="places/guide.html?place=Collio"><span class="photo-skeleton"></span><img src="assets/detail-photos/collio-venica-tasting.jpg" alt="Venica品鉴"><span class="photo-label">Venica · 品鉴</span></a><a class="photo-tile" href="places/guide.html?place=Collio"><span class="photo-skeleton"></span><img src="assets/detail-photos/collio-venica-cellar.jpg" alt="Venica历史酒窖"><span class="photo-label">Venica · 酒窖</span></a></div>
+            <span class="giusi-badge">GIUSI 推荐 · 2天1晚</span>
+            <h3>Collio</h3>
+            <div class="place-cn">科利奥葡萄酒乡 · Friuli边境</div>
+            <p>La Subida住宿与晚餐＋Venica酒庄；Ronco delle Mele是Venica的Sauvignon Cru，不是另一家酒庄。</p>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Collio">小红书搜这个地方</a>
           </div>
           <div class="card">
             <svg class="card-icon"><use href="#icon-mountain"/></svg>
@@ -1900,8 +1954,8 @@
   </main>
 </div>
 
-<script src="planner-guides.js?v=20260904-2"></script>
-<script src="place-gallery-data.js?v=20260904-2"></script>
+<script src="planner-guides.js?v=20260904-4"></script>
+<script src="place-gallery-data.js?v=20260904-4"></script>
 <script>
   const detailPages = {
     'Arquà Petrarca':'places/arqua-petrarca.html',
@@ -2246,6 +2300,7 @@
       'sicily-east':{name:'East Sicily',days:5,nights:4,color:'#C45C3C'},
       milan:{name:'Milan',days:2,nights:1,color:'#7C5678'},
       como:{name:'Lake Como',days:4,nights:3,color:'#4F7E89'},
+      collio:{name:'Collio',days:2,nights:1,color:'#6F7D43'},
       garda:{name:'Lake Garda',days:1,nights:0,color:'#4C8C82'},
       venice:{name:'Venice',days:1,nights:0,color:'#4B6C91'},
       local:{name:'Torreglia / Veneto',days:1,nights:0,color:'#3F5B3D',repeat:true}

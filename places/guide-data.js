@@ -5,10 +5,11 @@ const guideCatalog = {
   "Bassano del Grappa": {cn:"巴萨诺·德尔·格拉帕", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-10-bassano-ponte-degli-alpini.jpg"},
   "Asolo": {cn:"阿索洛", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-11-asolo.jpg"},
   "Prosecco Hills": {cn:"普罗塞克丘陵", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-12-prosecco-hills.jpg"},
-  "Venice": {cn:"威尼斯", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-13-venice-grand-canal.jpg"},
+  "Venice": {cn:"威尼斯", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-13-venice-grand-canal.jpg", giusi:"GIUSI 推荐 · 另一种威尼斯"},
   "Verona": {cn:"维罗纳", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-14-verona.jpg"},
   "Chioggia": {cn:"基奥贾", group:"Veneto 日游", returnHash:"veneto", photo:"../assets/place-photos/place-15-chioggia.jpg"},
-  "Lake Garda": {cn:"加尔达湖", group:"山与延伸", returnHash:"beyond", photo:"../assets/place-photos/place-16-lake-garda.jpg"},
+  "Lake Garda": {cn:"加尔达湖", group:"山与延伸", returnHash:"beyond", photo:"../assets/place-photos/place-16-lake-garda.jpg", giusi:"GIUSI 推荐 · 南湖＋Mincio"},
+  "Collio": {cn:"科利奥葡萄酒乡", group:"两天延伸 · Friuli 边境酒乡", returnHash:"beyond", photo:"../assets/detail-photos/collio-cormons.jpg", giusi:"GIUSI 推荐 · 两天一晚"},
   "Mantua": {cn:"曼图亚", group:"山与延伸", returnHash:"beyond", photo:"../assets/place-photos/place-17-mantua.jpg"},
   "Ferrara": {cn:"费拉拉", group:"山与延伸", returnHash:"beyond", photo:"../assets/place-photos/place-18-ferrara-castello-estense.jpg"},
   "Bologna": {cn:"博洛尼亚", group:"山与延伸", returnHash:"beyond", photo:"../assets/place-photos/place-19-bologna.jpg"},
@@ -49,6 +50,11 @@ const guideChoices = {
     {tag:"一日版本", title:"Sirmione 半日＋午餐", text:"只做老城、短船和午餐；不环湖，不同时追 Bardolino 与 Malcesine。"},
     {tag:"一晚版本", title:"Malcesine 住一晚", text:"北湖山景明显更好，用2个日历日换清晨、晚饭与缆车选择。"},
     {tag:"比较方式", title:"和Dolomites / Como看差异", text:"Garda最容易插入；Dolomites山感更强，Como的完整湖区度假感更强。"}
+  ],
+  "Collio": [
+    {tag:"GIUSI 原建议", title:"La Subida 一晚＋Venica 品鉴", text:"把住宿、正式晚餐和第二天的酒庄体验拆开；这不是Torreglia附近的Colli Euganei，而是意大利东北角靠斯洛文尼亚的白葡萄酒乡。"},
+    {tag:"更专注酒", title:"住 Venica Wine Resort", text:"只有6间房与2套公寓，醒来就在酒庄；最适合想把Ronco delle Mele和Collio白葡萄酒喝明白的人。"},
+    {tag:"最短版本", title:"Cormons 一晚＋一家酒庄", text:"第一天下午Enoteca与小镇，第二天只约Venica一家，午餐后返程；不在采收季临时敲第二家酒庄的门。"}
   ],
   "Milan": [
     {tag:"时装周版本", title:"9/22–24住两晚", text:"以Brera、Quadrilatero、公开品牌活动、设计店与aperitivo为主；正式秀场是否能进不是行程成立的前提。"},
