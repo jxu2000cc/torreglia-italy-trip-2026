@@ -37,12 +37,37 @@
       <p id="update"></p>
     </div>
 
+    <section class="section detail-only" id="essentialsSection" hidden>
+      <div class="section-head">
+        <h2>一眼看懂这一天</h2>
+        <p class="section-intro" id="essentialsIntro">先把车程、时间成本、花费和预约门槛说清，再决定要不要占用一个日历日。</p>
+      </div>
+      <div class="quick-facts" id="quickFacts"></div>
+      <div class="planner-stance" id="plannerStance" hidden></div>
+    </section>
+
     <section class="section guide-gallery-section" aria-labelledby="galleryTitle">
       <div class="section-head">
         <h2 id="galleryTitle">先看这里是什么样子</h2>
         <p class="section-intro">不先读一长串景点。先用城市全景、代表性地点和真实街景判断，全家是否真的对这里有感觉。</p>
       </div>
       <div class="route-photo-band" id="placeGallery"></div>
+    </section>
+
+    <section class="section detail-only" id="primerSection" hidden>
+      <div class="section-head">
+        <h2 id="primerTitle">先理解这里的重点</h2>
+        <p class="section-intro" id="primerIntro"></p>
+      </div>
+      <div class="primer-grid" id="primerGrid"></div>
+    </section>
+
+    <section class="section detail-only" id="venuesSection" hidden>
+      <div class="section-head">
+        <h2 id="venuesTitle">我替你们筛过的具体选择</h2>
+        <p class="section-intro" id="venuesIntro">不是罗列所有可能，而是把最适合这次四位成人家庭旅行的选择摆出来，并说明取舍。</p>
+      </div>
+      <div class="venue-list" id="venueList"></div>
     </section>
 
     <section class="section" id="choices">
@@ -56,9 +81,25 @@
     <section class="section">
       <div class="section-head">
         <h2>完整版本时间表</h2>
-        <p class="section-intro">这是方向，不是必须准点完成的清单。午餐、咖啡和临时停留都可以把后半段往后推。</p>
+        <p class="section-intro" id="scheduleIntro">这是方向，不是必须准点完成的清单。午餐、咖啡和临时停留都可以把后半段往后推。</p>
       </div>
       <div class="timeline guide-timeline" id="schedule"></div>
+    </section>
+
+    <section class="section detail-only" id="budgetSection" hidden>
+      <div class="budget-box">
+        <div class="budget-copy">
+          <span>四位成人 · 规划估算</span>
+          <h2 id="budgetTitle">这一天大概花多少</h2>
+          <p id="budgetText"></p>
+        </div>
+        <div class="budget-lines" id="budgetLines"></div>
+        <div class="budget-total" id="budgetTotal"></div>
+      </div>
+      <div class="fallback-box" id="fallbackBox" hidden>
+        <strong>订不到 / 天气不对</strong>
+        <ul id="fallbackList"></ul>
+      </div>
     </section>
 
     <section class="decision">
@@ -75,13 +116,14 @@
 
     <nav class="footer-nav">
       <a id="bottomBack" href="../index.html#overview">← 回到主攻略</a>
-      <a href="../index.html#overview">回到拖拽日历 →</a>
+      <a href="../index.html#route-studio">回到拖拽日历 →</a>
     </nav>
   </main>
 
   <script src="../planner-guides.js"></script>
   <script src="../place-gallery-data.js"></script>
   <script src="guide-data.js"></script>
+  <script src="guide-detail-data.js"></script>
   <script src="guide-page.js"></script>
 </body>
 </html>
