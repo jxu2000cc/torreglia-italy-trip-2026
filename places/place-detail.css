@@ -221,6 +221,11 @@ h1{font-size:clamp(42px,7vw,78px);margin:0 0 14px;max-width:13ch}
 .why-card{padding:19px;background:rgba(248,242,231,.72);border-top:3px solid var(--green)}
 .why-card b{display:block;margin-bottom:7px;font-family:'Fraunces',serif;font-size:20px}
 .why-card p{margin:0;color:var(--soft);font-size:12.5px}
+.swap-grid .why-card{display:flex;flex-direction:column;gap:9px;border-top-color:var(--red)}
+.swap-grid .why-card p{margin:0}
+.swap-grid .why-card strong{color:var(--ink)}
+.swap-grid .why-card > a{margin-top:auto;padding-top:8px;color:var(--green);font-size:11px;font-weight:750;text-decoration:none}
+.swap-label{color:var(--red);font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
 .truth-box{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:start;margin:18px 0 4px;padding:20px;color:#f3ecde;background:var(--navy)}
 .truth-box strong{color:#d8ae5b;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .truth-box p{margin:0;font-size:14px}
