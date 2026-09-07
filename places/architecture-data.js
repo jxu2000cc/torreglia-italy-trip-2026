@@ -284,7 +284,7 @@ window.architectureLensData = {
   "Sicily · page": {
     score:"很高 · 东西两套语言",
     scoreNote:"Palermo看诺曼—拜占庭—阿拉伯叠层；东线看Noto的Baroque城市舞台。不要把两套塞进同一短行程。",
-    intro:"西西里的建筑不是装饰性加分，而是理解岛屿历史最直接的入口。电影西线与海边东线各有一处强锚点，按所选路线进入。",
+    intro:"西西里的建筑不是装饰性加分，而是理解岛屿历史最直接的入口。Palermo西线与海边东线各有一处强锚点，按所选路线进入。",
     anchor:"main > .verdict",
     items:[
       {
@@ -294,7 +294,7 @@ window.architectureLensData = {
         why:"金色马赛克、伊斯兰muqarnas木顶、诺曼权力空间和拜占庭图像在一间礼拜堂里同时成立；这是Palermo比普通欧洲宫殿更有意思的原因。",
         look:["木顶的蜂巢状muqarnas","马赛克在金底上的光线变化","礼拜堂、王宫与城市权力轴线"],
         facts:[["完整票","当前€19/人"],["停留","90–120分钟"],["周日风险","09:30–11:30礼拜堂常暂停旅游参观"],["建议","工作日上午并预购"]],
-        fit:"电影西线Day 2上午的共同重点，之后步行去Ballarò午餐；不要再写成两处景点。",
+        fit:"Palermo西线文化日的共同重点，之后步行去Ballarò午餐；不要再写成两处景点。",
         image:"../assets/detail-photos/sicily-palermo-quattro.jpg",
         imageAlt:"Palermo历史建筑与Arab-Norman城市语境",
         credit:"Palermo城市语境 · 室内见官网",
@@ -317,14 +317,14 @@ window.architectureLensData = {
         map:"Palazzo Nicolaci Noto"
       },
       {
-        status:"电影线顺路加",
+        status:"西线顺路加",
         statusTone:"route",
         name:"Villa Cattolica / Villa Palagonia",
         subtitle:"Bagheria转场只选一座",
-        why:"Cattolica用Guttuso与电影海报串起西西里视觉文化；Palagonia则靠怪诞雕塑和弯曲立面取胜。前者内容与开放更稳定，后者更怪、更建筑，但必须电话确认。",
-        look:["Cattolica的villa轴线与Guttuso收藏","Palagonia外墙怪物雕塑","Bagheria别墅与Tornatore电影世界的关系"],
+        why:"Cattolica用Guttuso收藏串起西西里现代视觉文化；Palagonia则靠怪诞雕塑和弯曲立面取胜。前者内容与开放更稳定，后者更怪、更建筑，但必须电话确认。",
+        look:["Cattolica的villa轴线与Guttuso收藏","Palagonia外墙怪物雕塑","Bagheria贵族别墅与现代艺术的关系"],
         facts:[["Cattolica","周二–日09:00–18:00 · €6"],["Palagonia","约45–60分钟 · 先电话确认"],["位置","Palermo→Cefalù转场顺路"],["原则","只停一座"]],
-        fit:"电影西线Day 4转场停60–90分钟；更看重电影/艺术选Cattolica，更爱怪诞空间且确认开放才换Palagonia。",
+        fit:"Palermo西线转场停60–90分钟；更看重艺术选Cattolica，更爱怪诞空间且确认开放才换Palagonia。",
         image:"../assets/detail-photos/sicily-bagheria-palagonia.jpg",
         imageAlt:"Bagheria Villa Palagonia怪诞建筑与雕塑",
         credit:"Villa Palagonia",

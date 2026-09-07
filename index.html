@@ -94,7 +94,7 @@
     letter-spacing:.04em;
   }
 
-  .tabs{list-style:none; margin:0; padding:0; flex:1;}
+  .tabs{list-style:none; margin:0; padding:0; flex:1; overflow-y:auto;}
   .tab{
     display:block;
     width:100%;
@@ -188,6 +188,31 @@
     font-family:'Fraunces', serif;
     font-weight:500;
   }
+  .proposal-gateway{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:30px;
+  }
+  .proposal-link{
+    position:relative;
+    display:grid;
+    grid-template-columns:112px 1fr;
+    min-height:116px;
+    color:var(--cream-on-navy);
+    background:rgba(242,236,221,.055);
+    border:1px solid rgba(242,236,221,.19);
+    text-decoration:none;
+    overflow:hidden;
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .proposal-link:hover{transform:translateY(-2px);border-color:var(--gold-on-navy);background:rgba(242,236,221,.09);}
+  .proposal-link img{width:100%;height:100%;object-fit:cover;}
+  .proposal-link-copy{display:flex;flex-direction:column;padding:14px 15px;}
+  .proposal-link-copy span{color:var(--gold-on-navy);font-size:8.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
+  .proposal-link-copy b{margin:5px 0 3px;font-family:'Fraunces',serif;font-size:17px;font-weight:500;line-height:1.2;}
+  .proposal-link-copy small{color:rgba(242,236,221,.62);font-size:9.8px;line-height:1.4;}
+  .proposal-link-copy em{margin-top:auto;color:#fff;font-size:9.5px;font-style:normal;font-weight:750;}
   .decision-orbit{
     margin-top:34px;
     border:1px solid rgba(242,236,221,.16);
@@ -871,6 +896,7 @@
     .content{height:auto; padding:34px 22px 70px 22px;}
     .hero{margin:-34px -22px 32px -22px; padding:38px 22px 34px 22px;}
     .hero h1{font-size:32px; max-width:none;}
+    .proposal-gateway{grid-template-columns:1fr;}
     .planning-board{grid-template-columns:1fr;}
     .planning-foot{align-items:flex-start; flex-direction:column;}
     .family-brief{grid-template-columns:1fr 1fr;}
@@ -895,6 +921,7 @@
     .route-template-btn.is-clear{margin-left:0;}
   }
   @media (max-width:560px){
+    .proposal-link{grid-template-columns:92px 1fr;}
     .place-photo-grid.count-3{grid-template-columns:1.28fr .72fr;grid-template-rows:1fr 1fr;height:210px;}
     .place-photo-grid.count-3 .photo-tile:first-child{grid-row:1 / 3;}
     .family-brief{grid-template-columns:1fr;}
@@ -999,16 +1026,17 @@
       </div>
     </div>
     <ul class="tabs">
-      <li><button class="tab is-active" data-target="overview">总览<span class="sub">距离 · 建筑 · 拖拽日历</span></button></li>
+      <li><button class="tab is-active" data-target="overview">总览<span class="sub">4套方案 · 距离 · 日历</span></button></li>
+      <li><a class="tab nav-link" href="plans/with-milan.html">必须去米兰 · 2方案<span class="sub">9/24固定 · 逐日展开</span></a></li>
+      <li><a class="tab nav-link" href="plans/without-milan.html">不必去米兰 · 2方案<span class="sub">Florence / Dolomites</span></a></li>
       <li><button class="tab" data-target="homebase">大本营<span class="sub">Colli Euganei</span></button></li>
       <li><a class="tab nav-link" href="places/torreglia-colli-euganei.html">认识家附近<span class="sub">Torreglia · 30分钟</span></a></li>
       <li><a class="tab nav-link" href="places/torreglia-local.html">家附近<span class="sub">买菜 · 咖啡 · 吃饭</span></a></li>
       <li><button class="tab" data-target="veneto">威尼托日游<span class="sub">40分钟–1.5小时</span></button></li>
       <li><button class="tab" data-target="beyond">山与延伸<span class="sub">山地与湖区候选</span></button></li>
       <li><button class="tab" data-target="northwest">米兰与科莫<span class="sub">时装周 · 城市 · 湖区</span></button></li>
-      <li><button class="tab" data-target="sicily">西西里<span class="sub">天堂电影院 / 白莲花</span></button></li>
+      <li><button class="tab" data-target="sicily">西西里<span class="sub">Palermo海岸 / 东岸巴洛克</span></button></li>
       <li><button class="tab" data-target="tuscany">托斯卡纳<span class="sub">陆路候选 · 建议5晚</span></button></li>
-      <li><button class="tab" data-target="itinerary">参考行程<span class="sub">一个版本 · 非最终答案</span></button></li>
       <li><button class="tab" data-target="notes">实用笔记<span class="sub">预订 · 路程 · 打包</span></button></li>
     </ul>
     <div class="spine-foot">Italy Family Journey<br>2026年9月</div>
@@ -1020,13 +1048,18 @@
     <section id="overview" class="pane is-active">
       <div class="hero">
         <h1>从Torreglia出发：一家四人的意大利旅行工作台</h1>
-        <div class="tagline">先把所有想法放在同一张图里，再用真实天数决定怎么组合</div>
+        <div class="tagline">四套完整路线已经排好：先选旅行性格，再锁航班与酒店</div>
         <div class="meta-row">
           <div class="meta-item"><b>9月15日 – 9月29日中午</b>15天 · 14晚</div>
           <div class="meta-item"><b>Torreglia, Colli Euganei</b>大本营</div>
           <div class="meta-item"><b>4位成人 · 2间房</b>家庭出游</div>
           <div class="meta-item"><b>1辆满尺寸车</b>按四人行李容量选车</div>
-          <div class="meta-item"><b>所有目的地平行比较</b>拖进日历才知道是否放得下</div>
+          <div class="meta-item"><b>4套可执行方案</b>米兰必去2套 · 不必去2套</div>
+        </div>
+
+        <div class="proposal-gateway" aria-label="四套完整行程方案入口">
+          <a class="proposal-link" href="plans/with-milan.html"><img src="assets/place-galleries/milan-2.jpg" alt="米兰城市空间"><span class="proposal-link-copy"><span>2 complete routes</span><b>9月24日必须在米兰</b><small>舒适平衡版 / Grand Tour完整度版</small><em>比较并展开每天安排 →</em></span></a>
+          <a class="proposal-link" href="plans/without-milan.html"><img src="assets/place-photos/place-22-florence.webp" alt="Florence城市景观"><span class="proposal-link-copy"><span>2 complete routes</span><b>米兰不是必须</b><small>西西里＋Florence / 西西里＋Dolomites</small><em>比较并展开每天安排 →</em></span></a>
         </div>
 
         <div class="decision-orbit">
@@ -1099,7 +1132,7 @@
               </a>
 
               <path class="distance-leader" d="M790 408 Q825 420 844 438"/>
-              <a class="orbit-node orbit-sicily" href="places/sicily.html" aria-label="Sicily，需要从 Venice 飞往 Palermo 或 Catania，电影西线或白莲花东线，均为五晚">
+              <a class="orbit-node orbit-sicily" href="places/sicily.html" aria-label="Sicily，需要从 Venice 飞往 Palermo 或 Catania，Palermo加Cefalù西线或Taormina加Ortigia东线，均为五晚">
                 <circle cx="840" cy="450" r="51"/>
                 <text text-anchor="middle" x="840" y="434" class="orbit-state">NEW OPTION · 飞行</text>
                 <text text-anchor="middle" x="840" y="456" class="orbit-name serif">Sicily</text>
@@ -1177,8 +1210,8 @@
           <div class="route-template-row" aria-label="快速载入组合">
             <span>先试一个组合：</span>
             <button class="route-template-btn" type="button" data-route-template="mountains-tuscany">山＋Tuscany</button>
-            <button class="route-template-btn" type="button" data-route-template="mountains-sicily">山＋电影西线</button>
-            <button class="route-template-btn" type="button" data-route-template="mountains-east-sicily">山＋白莲花东线</button>
+            <button class="route-template-btn" type="button" data-route-template="mountains-sicily">山＋Palermo海岸</button>
+            <button class="route-template-btn" type="button" data-route-template="mountains-east-sicily">山＋东岸Sicily</button>
             <button class="route-template-btn" type="button" data-route-template="fashion-lake">Milan时装周＋Como</button>
             <button class="route-template-btn is-clear" type="button" data-route-template="clear">全部清空</button>
           </div>
@@ -1190,11 +1223,11 @@
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="tuscany" style="--route-color:#A63A2E">
               <div class="route-card-top"><span class="route-type">City · countryside</span><span class="route-duration">6天 / 5晚</span></div><h4>Florence＋Val d’Orcia</h4><p>两晚城市、三晚乡间；熟悉、陆路顺、艺术与resort都保留。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/tuscany.html">完整攻略 →</a></div>
             </article>
-            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="sicily-film" style="--route-color:#8F4B36">
-              <div class="route-card-top"><span class="route-type">Film · town · sea</span><span class="route-duration">6天 / 5晚</span></div><h4>Cinema Paradiso Sicily</h4><p>Palermo 3晚＋Cefalù 2晚；专程去Palazzo Adriano，走进真正的Giancaldo广场。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#film-route">电影西线攻略 →</a></div>
+            <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="sicily-west" style="--route-color:#8F4B36">
+              <div class="route-card-top"><span class="route-type">Arab-Norman · city · sea</span><span class="route-duration">6天 / 5晚</span></div><h4>Palermo + Cefalù</h4><p>Palermo 3晚＋Cefalù 2晚；Arab-Norman建筑、市场与沙滩组成完整西岸线。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#west-route">西岸攻略 →</a></div>
             </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="sicily-east" style="--route-color:#C45C3C">
-              <div class="route-card-top"><span class="route-type">White Lotus · volcano · baroque</span><span class="route-duration">6天 / 5晚</span></div><h4>White Lotus East Sicily</h4><p>Taormina 2晚＋Ortigia 3晚；古剧场、Etna、Noto和真正可下水的东南海岸。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#east-route">白莲花东线攻略 →</a></div>
+              <div class="route-card-top"><span class="route-type">Coast · baroque · slow city</span><span class="route-duration">6天 / 5晚</span></div><h4>Taormina + Ortigia</h4><p>Taormina 2晚＋Ortigia 3晚；古剧场、Noto、东南海岸，Etna只作条件合适时的替换。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/sicily.html#east-route">东岸攻略 →</a></div>
             </article>
             <article class="route-card" draggable="true" tabindex="0" aria-pressed="false" data-route-id="milan" style="--route-color:#7C5678">
               <div class="route-card-top"><span class="route-type">Fashion · design · city</span><span class="route-duration">2天 / 1晚</span></div><h4>Milan</h4><p>9/24–25可同时看设计、Armani与新开的Dalí时装展；不把拿到秀票当成立前提。</p><div class="route-card-foot"><span>拖到开始日期</span><a href="places/guide.html?place=Milan">完整攻略 →</a></div>
@@ -1263,7 +1296,7 @@
           <div class="interest-item"><b>山地选项 · Dolomites</b><span>四晚只住Alta Badia，减少搬家；同一天提供不同体力版本，晚上回同一家酒店吃饭。</span></div>
           <div class="interest-item"><b>家庭底色 · Torreglia</b><span>Villa 当家，温泉、agriturismo、Vo’葡萄节、酒庄与附近小镇按状态组合，不需要天天集体出动。</span></div>
           <div class="interest-item"><b>陆路选项 · Florence＋Val d’Orcia</b><span>五晚陆路最顺，熟悉、舒服；城市两晚＋完整resort三晚。</span></div>
-          <div class="interest-item"><b>飞行选项 · 两种Sicily</b><span>喜欢《天堂电影院》就选Palazzo Adriano＋Cefalù西线；想要《白莲花》、古剧场、火山与巴洛克就选Taormina＋Ortigia东线。</span></div>
+          <div class="interest-item"><b>飞行选项 · 两种Sicily</b><span>Palermo＋Cefalù西线看Arab-Norman建筑、市场与沙滩；Taormina＋Ortigia东线看古剧场、巴洛克与东南海岸。</span></div>
         </div>
 
         <div class="callout green">
@@ -1273,7 +1306,7 @@
 
         <div class="callout gold">
           <h4>9月1日最新核查 · 每个选项各有一个现实条件</h4>
-          <p><b>Dolomites：</b>核心缆车大多运营到10月4日；<b>Vo’：</b>9月20日花车游行为15:30与20:30；<b>Milan：</b>女装时装周为9月22–28日，对喜欢服装和设计的人是加分项，但酒店与餐厅会更紧张；<b>Tuscany：</b>小型Brunello酒庄需要提前预约；<b>Sicily：</b>Palazzo Adriano电影节已在8月结束，但电影博物馆当前公布为每日开放；Venice航线网络同时包含Palermo与Catania。</p>
+          <p><b>Dolomites：</b>核心缆车大多运营到10月4日；<b>Vo’：</b>9月20日花车游行为15:30与20:30；<b>Milan：</b>女装时装周为9月22–28日，对喜欢服装和设计的人是加分项，但酒店与餐厅会更紧张；<b>Tuscany：</b>小型Brunello酒庄需要提前预约；<b>Sicily：</b>五晚只选一个海岸，Venice航线网络同时包含Palermo与Catania，Etna不作为必须完成的节点。</p>
         </div>
 
         <div class="grid">
@@ -1298,10 +1331,10 @@
             <p>Milan最短一晚、从容版两晚，再给Como中央湖区三晚；到此为止，不再跨境增加转场。</p>
           </div>
           <div class="card is-strong">
-            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palazzo-square.jpg" alt="Palazzo Adriano 天堂电影院广场"><span class="photo-label">Palazzo Adriano · 电影西线</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-taormina-theatre.jpg" alt="Taormina古剧场与Etna"><span class="photo-label">Taormina · 白莲花东线</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/place-photos/place-35-sicily-ortigia.jpg" alt="Syracuse Ortigia 海港与老城"><span class="photo-label">Ortigia · 东线</span></a></div>
+            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#west-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palermo-quattro.jpg" alt="Palermo Quattro Canti"><span class="photo-label">Palermo · Arab-Norman西线</span></a><a class="photo-tile" href="places/sicily.html#west-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-cefalu-port.jpg" alt="Cefalù老港"><span class="photo-label">Cefalù · 海岸慢日</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/place-photos/place-35-sicily-ortigia.jpg" alt="Syracuse Ortigia 海港与老城"><span class="photo-label">Ortigia · 东岸基地</span></a></div>
             <span class="time">飞行候选 · 两张独立卡片</span>
-            <h3>Sicily：天堂电影院 / 白莲花</h3>
-            <p><b>两条只能二选一。</b> 两条都是6天5晚，并按上午工作来排：西线只给Palazzo Adriano一个完整日；东线只给Etna转场一个完整日。</p>
+            <h3>Sicily：西岸文明 / 东岸巴洛克</h3>
+            <p><b>两条只能二选一。</b> 西线是Palermo 3晚＋Cefalù 2晚，重点是Arab-Norman建筑、市场与沙滩；东线是Taormina 2晚＋Ortigia 3晚，重点是古剧场、Noto与东南海岸。</p>
             <p><a class="detail-page-link" href="places/sicily.html">看两条Sicily完整比较 →</a></p>
           </div>
         </div>
@@ -1573,49 +1606,49 @@
       <div class="pane-inner">
         <div class="kicker">飞行候选 · 两条独立路线</div>
         <h2 class="section-title" style="border-top:none; margin-top:0; padding-top:0;">Sicily <span class="en">两条线都是5晚</span></h2>
-        <p class="section-lede">一条是《天堂电影院》西线：Palermo、Palazzo Adriano与Cefalù；一条是《白莲花》东线：Taormina、Etna、Ortigia与Noto。两条路线分别从VCE飞Palermo或Catania，不能在五晚里横穿全岛硬拼。</p>
+        <p class="section-lede">一条是Palermo＋Cefalù西线：Arab-Norman城市文明、市场与沙滩；一条是Taormina＋Ortigia东线：古剧场、Noto巴洛克与东南海岸。两条分别从VCE飞Palermo或Catania，不能在五晚里横穿全岛硬拼。</p>
 
         <div class="callout green">
           <h4>两条只能二选一，也都要给上午工作留空间</h4>
-          <p><b>电影西线：</b>Palermo 3晚＋Cefalù 2晚，唯一全天是Palazzo Adriano包车日；其余下午看城与海。<br><b>白莲花东线：</b>Taormina 2晚＋Ortigia 3晚，唯一全天是Etna＋转场；其余下午看古剧场、Ortigia与Noto。</p>
-          <p style="margin-top:12px"><a class="detail-page-link" href="places/sicily.html">进入Sicily完整攻略 · 真实取景地、多图与两条每天安排</a></p>
+          <p><b>西岸：</b>Palermo 3晚＋Cefalù 2晚，把完整周末给Monreale与Arab-Norman核心，其余下午看城市与海。<br><b>东岸：</b>Taormina 2晚＋Ortigia 3晚，完整周末给古剧场、Noto与海岸；Etna只在安全和天气都合适时替换一天。</p>
+          <p style="margin-top:12px"><a class="detail-page-link" href="places/sicily.html">进入Sicily完整攻略 · 多图、两条路线与酒店</a></p>
         </div>
 
         <div class="grid">
           <div class="card is-strong">
-            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palazzo-square.jpg" alt="Palazzo Adriano Piazza Umberto I"><span class="photo-label">Palazzo Adriano · Giancaldo广场</span></a><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-cefalu-port.jpg" alt="Cefalù老港"><span class="photo-label">Cefalù · 海边放映画面</span></a><a class="photo-tile" href="places/sicily.html#film-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palermo-market.jpg" alt="Palermo市集"><span class="photo-label">Palermo · 市集</span></a></div>
+            <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#west-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palermo-quattro.jpg" alt="Palermo Quattro Canti"><span class="photo-label">Palermo · 城市核心</span></a><a class="photo-tile" href="places/sicily.html#west-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-cefalu-port.jpg" alt="Cefalù老港"><span class="photo-label">Cefalù · 老港与沙滩</span></a><a class="photo-tile" href="places/sicily.html#west-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-palermo-market.jpg" alt="Palermo市集"><span class="photo-label">Palermo · 市集</span></a></div>
             <span class="time">VCE → PMO · 6天 / 5晚</span>
-            <h3>电影西线</h3>
+            <h3>Palermo＋Cefalù西线</h3>
             <div class="place-cn">Palermo 3晚＋Cefalù 2晚</div>
-            <div class="vibe">Vibe · 进入《天堂电影院》的山城广场、老港与Tornatore的Sicily。</div>
-            <ul class="activity-list"><li>Palazzo Adriano广场＋电影博物馆</li><li>Cefalù Porta Pescara＋老港日落</li><li>Palermo市场；Bagheria按兴趣加入</li></ul>
-            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Palazzo Adriano">小红书 · Palazzo Adriano</a>
+            <div class="vibe">Vibe · 一座层次很重的南方城市，加两晚真正能慢下来的地中海海岸。</div>
+            <ul class="activity-list"><li>Monreale＋Palatine Chapel的Arab-Norman核心</li><li>Palermo市场与街头生活</li><li>Cefalù Duomo、沙滩与日落</li></ul>
+            <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Palermo">小红书 · Palermo</a>
           </div>
           <div class="card is-strong">
             <div class="place-photo-grid count-3"><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-taormina-theatre.jpg" alt="Taormina古剧场与Etna"><span class="photo-label">Taormina · 古剧场</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/detail-photos/sicily-taormina-isola-bella.jpg" alt="Taormina Isola Bella海湾"><span class="photo-label">Isola Bella · 海湾</span></a><a class="photo-tile" href="places/sicily.html#east-route"><span class="photo-skeleton"></span><img src="assets/place-photos/place-35-sicily-ortigia.jpg" alt="Ortigia海港与老城"><span class="photo-label">Ortigia · 三晚基地</span></a></div>
             <span class="time">VCE → CTA · 6天 / 5晚</span>
-            <h3>白莲花东线</h3>
+            <h3>Taormina＋Ortigia东线</h3>
             <div class="place-cn">Taormina 2晚＋Ortigia 3晚</div>
-            <div class="vibe">Vibe · 戏剧性的山海、火山酒、金色巴洛克与可生活的海边石城。</div>
-            <ul class="activity-list"><li>Taormina古剧场＋San Domenico黄昏</li><li>Etna 2500m或Benanti酒庄二选一</li><li>Ortigia慢日＋Noto / Vendicari一日</li></ul>
+            <div class="vibe">Vibe · 戏剧性的山海、金色巴洛克与可以真正住下来的海边石城。</div>
+            <ul class="activity-list"><li>Taormina古剧场＋Isola Bella</li><li>Ortigia慢日与绕岛小船</li><li>Noto＋Vendicari；Etna只作条件式替换</li></ul>
             <a class="xhs-btn" target="_blank" rel="noopener" data-xhs="Taormina">小红书 · Taormina</a>
           </div>
           <div class="card">
-            <span class="time">电影事实 · 避免错误期待</span>
-            <h3>影院是搭景，不是遗址</h3>
-            <p>Piazza Umberto I是电影最核心的广场，但Cinema Paradiso外立面拍完后已拆除。现在值得专程看的是仍在生活的广场、双教堂与收藏剧照和道具的新电影博物馆。</p>
+            <span class="time">这次的决定标准</span>
+            <h3>完整度，不靠取景地成立</h3>
+            <p>西岸选城市文明＋沙滩，东岸选古剧场＋巴洛克＋海。两条都只保留两处住宿，电影相关地点从本次方案中完全移除。</p>
           </div>
         </div>
 
         <div class="choice-board">
-          <div class="choice-option is-pick"><span class="choice-label">情感优先</span><h4>电影西线 · 5晚</h4><p>Palermo 3＋Cefalù 2；Palazzo Adriano完整一天，Bagheria是可删的作者背景。</p></div>
-          <div class="choice-option"><span class="choice-label">场景变化优先</span><h4>白莲花东线 · 5晚</h4><p>Taormina 2＋Ortigia 3；Etna做两地之间的转场日，全程只换一次酒店。</p></div>
-          <div class="choice-option"><span class="choice-label">只有4晚又想看电影</span><h4>西线压缩版 · 2＋2</h4><p>Palermo 2＋Cefalù 2；保留Palazzo Adriano，删Bagheria和Palermo第二个城市重点。</p></div>
+          <div class="choice-option is-pick"><span class="choice-label">文化与沙滩</span><h4>Palermo＋Cefalù · 5晚</h4><p>Palermo 3＋Cefalù 2；Arab-Norman、市场与海岸的结构最清楚。</p></div>
+          <div class="choice-option"><span class="choice-label">场景变化</span><h4>Taormina＋Ortigia · 5晚</h4><p>Taormina 2＋Ortigia 3；古剧场、Noto与海，全程只换一次酒店。</p></div>
+          <div class="choice-option"><span class="choice-label">更怕热</span><h4>东岸慢速版 · 2＋3</h4><p>工作上午不动，下午只设一个地点；Etna降为天气合适才替换的选项。</p></div>
         </div>
 
         <div class="callout gold">
           <h4>两条路线都先看航班，不先看酒店</h4>
-          <p>Venice机场2026航线网络包含Palermo与Catania。电影西线先查VCE–PMO，东线先查VCE–CTA；门到门都按大半天计算。Palazzo Adriano博物馆当前公布每日09:00–13:00、15:00–19:00，临行前一周电话确认。</p>
+          <p>Venice机场2026航线网络包含Palermo与Catania。西线先查VCE–PMO，东线先查VCE–CTA；门到门都按大半天计算。若方案需要9/24在Milan，直飞LIN的时刻与价格要和回Torreglia的舒适版一起比较。</p>
         </div>
       </div>
     </section>
@@ -1710,7 +1743,7 @@
 
         <div class="choice-board">
           <div class="choice-option"><span class="choice-label">陆路组合</span><h4>Tuscany 5晚</h4><p>熟悉、顺路、酒店风险低；Florence两晚＋乡间三晚，只换一次酒店。</p></div>
-          <div class="choice-option"><span class="choice-label">飞行组合</span><h4>Sicily 5晚</h4><p>电影西线看Palazzo Adriano与Cefalù；白莲花东线看Taormina、Etna、Ortigia与Noto。两张卡独立试排。</p></div>
+          <div class="choice-option"><span class="choice-label">飞行组合</span><h4>Sicily 5晚</h4><p>西线看Palermo的Arab-Norman建筑、市场与Cefalù；东线看Taormina、Ortigia、Noto与海岸。两张卡独立试排。</p></div>
           <div class="choice-option"><span class="choice-label">时装＋湖区组合</span><h4>Milan 1–2晚＋Como 3晚</h4><p>时装周正好落在旅行后半段；城市能量更强，再用中央湖区把节奏慢下来。</p></div>
         </div>
 
@@ -1915,7 +1948,7 @@
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="米兰 攻略">Milan</a><span class="place-cn-sm">米兰</span></td><td>约2.5小时</td><td><span class="chip north">候选2晚</span></td></tr>
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="Lake Como">Lake Como</a><span class="place-cn-sm">科莫湖</span></td><td>约3小时</td><td><span class="chip north">候选3晚</span></td></tr>
           <tr><td><a class="xhs-link" target="_blank" rel="noopener" data-xhs="奥尔恰谷 攻略">Val d'Orcia</a><span class="place-cn-sm">奥尔恰谷</span></td><td>约3.5小时</td><td><span class="chip tuscany">候选3晚</span></td></tr>
-          <tr><td><a href="places/sicily.html">Sicily · 两条路线</a><span class="place-cn-sm">天堂电影院 / 白莲花</span></td><td>VCE–PMO或CTA · 门到门大半天</td><td><span class="chip free">候选5晚</span></td></tr>
+          <tr><td><a href="places/sicily.html">Sicily · 两条路线</a><span class="place-cn-sm">Palermo海岸 / Taormina＋Ortigia</span></td><td>VCE–PMO或CTA · 门到门大半天</td><td><span class="chip free">候选5晚</span></td></tr>
         </table>
 
         <div class="callout gold">
@@ -1934,8 +1967,8 @@
           <li><div><b>日历保留 Dolomites 后 · 4晚</b><span>锁定Alta Badia同一家酒店两间房、连续四晚，优先含早餐、spa与晚餐；备注相邻或同楼层。</span></div></li>
           <li><div><b>日历保留 Tuscany 后 · Florence 2晚</b><span>以两间房的总价、取消条款与停车方案比较Grand Hotel Minerva和25hours；Four Seasons只在全家愿意留半天享受酒店时选。</span></div></li>
           <li><div><b>日历保留 Tuscany 后 · Val d’Orcia 3晚</b><span>比较ADLER Thermae、Precise Tale与Castello di Velona；Il Rigo可以是晚餐，也可以是设施更少但更乡村的住宿版本。</span></div></li>
-          <li><div><b>日历保留电影西线后 · 5晚</b><span>先查VCE–PMO直飞与Palazzo Adriano包车；住宿按Palermo 3晚＋Cefalù 2晚找两间同级房。</span></div></li>
-          <li><div><b>日历保留白莲花东线后 · 5晚</b><span>先用VCE–CTA往返直飞确定日期，再询Villa Belvedere两晚＋Ortea Palace三晚；San Domenico只做高预算对照。</span></div></li>
+          <li><div><b>日历保留西岸Sicily后 · 5晚</b><span>先查VCE–PMO直飞；住宿按Palermo 3晚＋Cefalù 2晚找两间同级房，Monreale安排半日司机。</span></div></li>
+          <li><div><b>日历保留东岸Sicily后 · 5晚</b><span>先用VCE–CTA往返直飞确定日期，再询Villa Belvedere两晚＋Ortea Palace三晚；San Domenico只做高预算对照。</span></div></li>
           <li><div><b>日历保留 Milan 后 · 时装周2晚</b><span>9月22–28日需求更高，先比较两间可退房率；等官方公开活动日历更完整后，再决定以秀场周边、品牌活动还是购物为重点。</span></div></li>
           <li><div><b>日历保留 Como 后 · 中央湖区3晚</b><span>先比较Varenna与Menaggio的两间房和步行便利性；住宿定下来后再以轮渡班次排列Bellagio等日游。</span></div></li>
           <li><div><b>Montalcino · San Polino</b><span>小型家族酒庄不保证临时有人接待，提前邮件预约9月26日下午的约90分钟品鉴。</span></div></li>
@@ -2302,7 +2335,7 @@
     const routePlannerOptions = {
       dolomites:{name:'Dolomites',days:5,nights:4,color:'#B98B33'},
       tuscany:{name:'Tuscany',days:6,nights:5,color:'#A63A2E'},
-      'sicily-film':{name:'Cinema Paradiso Sicily',days:6,nights:5,color:'#8F4B36'},
+      'sicily-west':{name:'Palermo + Cefalù',days:6,nights:5,color:'#8F4B36'},
       'sicily-east':{name:'White Lotus East Sicily',days:6,nights:5,color:'#C45C3C'},
       milan:{name:'Milan',days:2,nights:1,color:'#7C5678'},
       como:{name:'Lake Como',days:4,nights:3,color:'#4F7E89'},
@@ -2499,7 +2532,7 @@
 
     const routePlannerTemplates = {
       'mountains-tuscany':[{routeId:'dolomites',start:1},{routeId:'tuscany',start:7}],
-      'mountains-sicily':[{routeId:'dolomites',start:1},{routeId:'sicily-film',start:7}],
+      'mountains-sicily':[{routeId:'dolomites',start:1},{routeId:'sicily-west',start:7}],
       'mountains-east-sicily':[{routeId:'dolomites',start:1},{routeId:'sicily-east',start:7}],
       'fashion-lake':[{routeId:'milan',start:7},{routeId:'como',start:10}]
     };
