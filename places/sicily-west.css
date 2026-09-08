@@ -1,4 +1,5 @@
 .hero-west img{object-position:center 52%}
+.hero-east img{object-position:center 46%}
 
 .route-lock{
   display:grid;
@@ -121,4 +122,8 @@
   .swap-rule,.stay-compact{grid-template-columns:1fr}
   .booking-item{grid-template-columns:42px 1fr}
   .booking-item a{grid-column:2;justify-self:start}
+}
+
+@media(max-width:390px){
+  .route-lock{grid-template-columns:1fr}
 }
