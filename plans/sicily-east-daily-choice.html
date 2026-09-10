@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>2026 西西里 · 每日选择版行程</title>
+  <meta name="description" content="2026年9月17日至23日，Ortigia两晚、Taormina四晚的家庭旅行每日选择版。">
+  <style>
+    :root {
+      --ink: #19333b;
+      --muted: #65737a;
+      --paper: #fbf8f1;
+      --white: #fffefb;
+      --sea: #176b76;
+      --sea-dark: #0e4f58;
+      --sea-pale: #e3f0ef;
+      --sun: #d58a2b;
+      --sun-pale: #faecd2;
+      --coral: #b85e45;
+      --coral-pale: #f4e5df;
+      --line: #d9ded9;
+      --shadow: 0 18px 45px rgba(25, 51, 59, .10);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(213, 138, 43, .12), transparent 28rem),
+        linear-gradient(180deg, #f5eee1 0, var(--paper) 34rem);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
+    button, input { font: inherit; }
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+    .hero {
+      position: relative;
+      min-height: 600px;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: white;
+      background: #16383e;
+    }
+    .hero > img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      opacity: .78;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 28, 34, .05) 0%, rgba(10, 28, 34, .22) 40%, rgba(10, 28, 34, .94) 100%);
+    }
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      padding: 110px 0 48px;
+    }
+    .kicker {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .35);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      max-width: 850px;
+      margin: 18px 0 10px;
+      font-family: ui-serif, Georgia, "Songti SC", "STSong", serif;
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: 1.03;
+      letter-spacing: -.045em;
+    }
+    .hero-lede { max-width: 780px; margin: 0; font-size: clamp(17px, 2vw, 23px); color: rgba(255, 255, 255, .88); }
+    .hero-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .hero-facts span {
+      padding: 9px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .22);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .date-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 248, 241, .93);
+      border-bottom: 1px solid rgba(25, 51, 59, .12);
+      backdrop-filter: blur(18px);
+    }
+    .date-nav-inner {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .date-nav-inner::-webkit-scrollbar { display: none; }
+    .date-nav a, .date-nav button {
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 12px;
+      padding: 9px 12px;
+      text-decoration: none;
+      color: var(--ink);
+      background: transparent;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .date-nav a:hover, .date-nav a:focus-visible { background: var(--sea-pale); color: var(--sea-dark); }
+    .date-nav .print { margin-left: auto; background: var(--ink); color: white; }
+
+    main { padding: 34px 0 80px; }
+    .section { scroll-margin-top: 84px; margin-top: 48px; }
+    .section-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 18px; }
+    .section-head h2 { margin: 0; font-family: ui-serif, Georgia, "Songti SC", serif; font-size: clamp(30px, 4vw, 46px); line-height: 1.1; letter-spacing: -.025em; }
+    .section-head p { max-width: 540px; margin: 0; color: var(--muted); }
+
+    .confirmed-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .confirmed-card {
+      position: relative;
+      min-height: 170px;
+      padding: 18px;
+      overflow: hidden;
+      border-radius: 20px;
+      color: white;
+      background: var(--sea-dark);
+      box-shadow: var(--shadow);
+    }
+    .confirmed-card:nth-child(2) { background: #7b4a34; }
+    .confirmed-card:nth-child(3) { background: #475b3d; }
+    .confirmed-card:nth-child(4) { background: #273d5b; }
+    .confirmed-card .label { display: inline-block; margin-bottom: 18px; font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.76); }
+    .confirmed-card b { display: block; font-family: ui-serif, Georgia, "Songti SC", serif; font-size: 22px; line-height: 1.15; }
+    .confirmed-card p { margin: 10px 0 0; font-size: 14px; color: rgba(255,255,255,.8); }
+
+    .howto {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: stretch;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .howto h2 { margin: 0 0 8px; font-size: 24px; }
+    .howto p { margin: 0; color: var(--muted); }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; align-content: center; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 999px; font-size: 12px; font-weight: 850; background: #eef1ef; }
+    .pill.pick { color: var(--sea-dark); background: var(--sea-pale); }
+    .pill.giusi { color: #814c0d; background: var(--sun-pale); }
+    .pill.booked { color: #8b3b29; background: var(--coral-pale); }
+    .pill.hotel { color: #243d62; background: #e3eaf4; }
+
+    .hotel-grid { display: grid; gap: 12px; }
+    .hotel-panel {
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hotel-panel.four-seasons { background: #f7f1eb; }
+    .hotel-panel summary {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 19px 22px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .hotel-panel summary::-webkit-details-marker { display: none; }
+    .hotel-panel summary::after { content: "+"; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: var(--sea-dark); background: var(--sea-pale); font-size: 23px; line-height: 1; }
+    .hotel-panel[open] summary::after { content: "−"; }
+    .hotel-panel summary span { color: var(--sea-dark); font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .hotel-panel summary h3 { margin: 4px 0 0; font-family: ui-serif, Georgia, "Songti SC", serif; font-size: 25px; line-height: 1.15; }
+    .hotel-panel summary p { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
+    .hotel-content { padding: 0 22px 22px; border-top: 1px solid var(--line); }
+    .hotel-intro { margin: 16px 0; color: var(--muted); }
+    .activity-list { display: grid; gap: 9px; }
+    .activity-item { padding: 12px 0; border-top: 1px solid var(--line); }
+    .activity-item:first-child { border-top: 0; }
+    .activity-item-head { display: flex; justify-content: space-between; gap: 10px; align-items: start; }
+    .activity-item h4 { margin: 0; font-size: 16px; }
+    .activity-item p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .activity-item a { display: inline-block; margin-top: 7px; color: var(--sea-dark); font-size: 12px; font-weight: 850; text-underline-offset: 3px; }
+    .fit { flex: 0 0 auto; padding: 4px 7px; border-radius: 7px; background: var(--sea-pale); color: var(--sea-dark); font-size: 10px; font-weight: 900; }
+    .fit.maybe { background: var(--sun-pale); color: #7b490a; }
+    .fit.skip { background: #ecebea; color: #69645d; }
+    .hotel-verdict { margin-top: 16px; padding: 13px 14px; border-radius: 14px; background: var(--ink); color: white; font-size: 13px; }
+    .hotel-verdict b { color: #f4ca83; }
+
+    .food-guide {
+      border: 1px solid #d8d2c7;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #fffaf0, #f7f2e7);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .food-guide > summary { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 22px 25px; cursor: pointer; list-style: none; }
+    .food-guide > summary::-webkit-details-marker { display: none; }
+    .food-guide > summary::after { content: "+"; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #eadfca; color: #65491f; font-size: 24px; }
+    .food-guide[open] > summary::after { content: "−"; }
+    .food-guide h2 { margin: 0 0 4px; font-family: ui-serif, Georgia, "Songti SC", serif; font-size: clamp(27px, 4vw, 40px); }
+    .food-guide summary p { margin: 0; color: var(--muted); }
+    .food-guide-content { padding: 0 25px 25px; border-top: 1px solid rgba(91,73,44,.14); }
+    .food-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+    .food-rule { padding: 15px; border-radius: 16px; background: rgba(255,255,255,.72); border: 1px solid rgba(91,73,44,.14); }
+    .food-rule b { display: block; margin-bottom: 5px; }
+    .food-rule p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .dish-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .dish-tags span { padding: 5px 8px; border-radius: 8px; background: #f2eee5; color: #5e4b2e; font-size: 11px; font-weight: 800; }
+    .restaurant-directory { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 13px; }
+    .restaurant-group { padding: 16px; border-radius: 16px; background: rgba(255,255,255,.78); border: 1px solid rgba(91,73,44,.14); }
+    .restaurant-group h3 { margin: 0 0 9px; font-size: 18px; }
+    .restaurant-group ul { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .restaurant-group li { padding-top: 9px; border-top: 1px solid rgba(91,73,44,.13); color: var(--muted); font-size: 12px; line-height: 1.45; }
+    .restaurant-group li:first-child { padding-top: 0; border-top: 0; }
+    .restaurant-group b { color: var(--ink); }
+    .restaurant-group a { color: var(--sea-dark); font-weight: 850; text-underline-offset: 3px; }
+
+    .day {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .day-hero { position: relative; min-height: 290px; display: grid; align-items: end; overflow: hidden; color: white; }
+    .day-hero img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+    .day-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,29,34,.04), rgba(12,29,34,.88)); }
+    .day-heading { position: relative; z-index: 1; display: grid; grid-template-columns: 110px 1fr auto; gap: 18px; align-items: end; padding: 28px; }
+    .date-box { display: grid; place-items: center; align-content: center; width: 94px; height: 94px; border-radius: 20px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(12px); }
+    .date-box b { font-size: 30px; line-height: 1; }
+    .date-box span { margin-top: 5px; font-size: 12px; font-weight: 700; opacity: .8; }
+    .day-heading h2 { margin: 0; font-family: ui-serif, Georgia, "Songti SC", serif; font-size: clamp(28px, 4vw, 45px); line-height: 1.08; }
+    .day-heading p { margin: 7px 0 0; color: rgba(255,255,255,.82); }
+    .stay { text-align: right; font-size: 13px; color: rgba(255,255,255,.75); }
+    .stay b { display: block; font-size: 16px; color: white; }
+
+    .day-content { padding: 28px; }
+    .fixed {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    .fixed-item { padding: 14px; border-radius: 16px; background: #f1f4f2; }
+    .fixed-item time { display: block; margin-bottom: 5px; color: var(--sea-dark); font-weight: 900; font-size: 13px; }
+    .fixed-item p { margin: 0; font-size: 14px; line-height: 1.45; }
+
+    .choice-title { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin: 26px 0 12px; }
+    .choice-title h3 { margin: 0; font-size: 20px; }
+    .choice-title span { color: var(--muted); font-size: 13px; }
+    .choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .choice { position: relative; cursor: pointer; }
+    .choice input {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+      appearance: none;
+    }
+    .choice-body {
+      height: 100%;
+      padding: 17px;
+      border: 1.5px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .choice:hover .choice-body { transform: translateY(-2px); border-color: #9ab4b3; }
+    .choice input:focus-visible + .choice-body { outline: 3px solid rgba(23, 107, 118, .22); outline-offset: 3px; }
+    .choice input:checked + .choice-body { border-color: var(--sea); background: linear-gradient(180deg, #f4fbfa, white); box-shadow: 0 0 0 3px rgba(23,107,118,.11); }
+    .choice-top { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; }
+    .choice-letter { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 10px; color: white; background: var(--ink); font-size: 13px; font-weight: 900; }
+    .choice input:checked + .choice-body .choice-letter { background: var(--sea); }
+    .choice h4 { margin: 12px 0 5px; font-size: 18px; line-height: 1.25; }
+    .vibe { margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+    .mini-timeline { display: grid; gap: 8px; margin-top: 12px; }
+    .mini-timeline div { display: grid; grid-template-columns: 82px 1fr; gap: 8px; border-top: 1px solid #e8ebe8; padding-top: 8px; }
+    .mini-timeline time { color: var(--sea-dark); font-size: 12px; font-weight: 900; }
+    .mini-timeline p { margin: 0; font-size: 13px; line-height: 1.45; }
+    .choice-note { margin: 12px 0 0; color: #8a5414; font-size: 12px; }
+    .choice-body > a { display: inline-block; position: relative; z-index: 3; margin-top: 11px; color: var(--sea-dark); font-size: 12px; font-weight: 850; text-underline-offset: 3px; }
+
+    .restaurants { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .restaurant {
+      display: block;
+      position: relative;
+      cursor: pointer;
+    }
+    .restaurant input {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+      appearance: none;
+    }
+    .restaurant-card {
+      height: 100%;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fffdfa;
+      transition: border-color .18s ease, background .18s ease;
+    }
+    .restaurant input:focus-visible + .restaurant-card { outline: 3px solid rgba(213, 138, 43, .22); outline-offset: 3px; }
+    .restaurant input:checked + .restaurant-card { border-color: var(--sun); background: #fff9eb; box-shadow: 0 0 0 3px rgba(213,138,43,.10); }
+    .restaurant-card b { display: block; margin-bottom: 4px; font-size: 15px; }
+    .restaurant-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .restaurant-card a { display: inline-block; position: relative; z-index: 3; margin-top: 8px; color: var(--sea-dark); font-size: 12px; font-weight: 850; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    .booked-event {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #743f31, #9b5b44);
+      color: white;
+    }
+    .booked-event time { font-family: ui-serif, Georgia, serif; font-size: 28px; font-weight: 700; }
+    .booked-event h3 { margin: 0 0 5px; font-size: 20px; }
+    .booked-event p { margin: 0; color: rgba(255,255,255,.82); font-size: 14px; }
+    .booked-event a { color: white; font-weight: 850; text-underline-offset: 3px; }
+
+    .footer-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .action {
+      border: 0;
+      border-radius: 12px;
+      padding: 11px 14px;
+      color: white;
+      background: var(--sea);
+      font-weight: 850;
+      cursor: pointer;
+    }
+    .action.secondary { color: var(--ink); background: #e8ece9; }
+    .save-note { align-self: center; color: var(--muted); font-size: 13px; }
+
+    .summary-panel {
+      padding: 24px;
+      border-radius: var(--radius);
+      color: white;
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+    .summary-panel h2 { margin: 0 0 6px; font-family: ui-serif, Georgia, "Songti SC", serif; font-size: 32px; }
+    .summary-panel > p { margin: 0 0 20px; color: rgba(255,255,255,.72); }
+    .selected-list { display: grid; gap: 8px; }
+    .selected-row { display: grid; grid-template-columns: 95px 1fr 1fr; gap: 12px; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.14); font-size: 14px; }
+    .selected-row b { color: #f4ca83; }
+    .selected-row span:empty::before { content: "尚未选择"; color: rgba(255,255,255,.42); }
+
+    .smallprint { margin-top: 36px; color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 920px) {
+      .confirmed-grid { grid-template-columns: repeat(2, 1fr); }
+      .food-grid, .restaurant-directory { grid-template-columns: 1fr; }
+      .fixed { grid-template-columns: repeat(2, 1fr); }
+      .choices, .restaurants { grid-template-columns: 1fr; }
+      .day-heading { grid-template-columns: 88px 1fr; }
+      .stay { grid-column: 2; text-align: left; }
+      .selected-row { grid-template-columns: 78px 1fr; }
+      .selected-row span:last-child { grid-column: 2; }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 20px, 1180px); }
+      .hero { min-height: 520px; }
+      .hero-copy { padding-bottom: 30px; }
+      .hero-facts span { width: calc(50% - 5px); }
+      .section-head { display: block; }
+      .section-head p { margin-top: 8px; }
+      .confirmed-grid, .fixed { grid-template-columns: 1fr; }
+      .howto { grid-template-columns: 1fr; padding: 18px; }
+      .legend { justify-content: flex-start; }
+      .day-hero { min-height: 340px; }
+      .day-heading { grid-template-columns: 76px 1fr; padding: 20px; gap: 12px; }
+      .date-box { width: 70px; height: 76px; border-radius: 16px; }
+      .date-box b { font-size: 23px; }
+      .day-content { padding: 18px; }
+      .booked-event { grid-template-columns: 1fr; gap: 3px; }
+      .date-nav .print { display: none; }
+    }
+
+    @media print {
+      :root { --shadow: none; }
+      body { background: white; color: black; font-size: 10pt; }
+      .date-nav, .footer-actions { display: none !important; }
+      .hero { min-height: 250px; break-after: page; }
+      .hero-copy { padding: 40px 0 25px; }
+      .hero h1 { font-size: 38pt; }
+      main { padding: 0; }
+      .section { margin-top: 20px; }
+      .confirmed-grid { grid-template-columns: repeat(4, 1fr); }
+      .day { break-before: page; box-shadow: none; }
+      .day-hero { min-height: 150px; }
+      .day-content { padding: 18px; }
+      .choice-body, .restaurant-card, .fixed-item { break-inside: avoid; }
+      .choice input:not(:checked) + .choice-body { opacity: .45; }
+      .restaurant input:not(:checked) + .restaurant-card { opacity: .45; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="../assets/detail-photos/sicily-taormina-isola-bella.jpg" alt="Taormina与Isola Bella海湾">
+    <div class="hero-copy shell">
+      <span class="kicker">Family trip · 每天选一条</span>
+      <h1>西西里东岸<br>每日选择版</h1>
+      <p class="hero-lede">固定航班与住宿，其他每天只选一个主方案。Ortigia两晚，Taormina四晚；有文化、有海，也留出真正休息的空间。</p>
+      <div class="hero-facts">
+        <span>2026.09.17–23</span>
+        <span>4位成人</span>
+        <span>6晚 · 换1次酒店</span>
+        <span>Ortigia 2晚 · Taormina 4晚</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="date-nav" aria-label="日期导航">
+    <div class="date-nav-inner shell">
+      <a href="../places/sicily-east.html">← 东岸总攻略</a>
+      <a href="#overview">总览</a>
+      <a href="#eat-local">怎么吃</a>
+      <a href="#hotel-ideas">酒店活动</a>
+      <a href="#d17">9/17</a><a href="#d18">9/18</a><a href="#d19">9/19</a>
+      <a href="#d20">9/20</a><a href="#d21">9/21</a><a href="#d22">9/22</a><a href="#d23">9/23</a>
+      <a href="#my-plan">我的选择</a>
+      <button class="print" type="button" onclick="window.print()">打印 / 存PDF</button>
+    </div>
+  </nav>
+
+  <main class="shell">
+    <section class="section howto" id="overview">
+      <div>
+        <h2>每天只做两个选择</h2>
+        <p>每一天点击一个活动方案，再点一个餐厅。选择会保存在这台设备上；不是要把所有选项塞进同一天。私人船可在9/20–22之间根据海况换日。</p>
+      </div>
+      <div class="legend">
+        <span class="pill pick">✓ 我的首选</span>
+        <span class="pill giusi">G Giusi推荐</span>
+        <span class="pill booked">● 已确认</span>
+      </div>
+    </section>
+
+    <details class="section food-guide" id="eat-local">
+      <summary><div><h2>本地餐厅与点菜指南</h2><p>Ortigia、Noto、Taormina的真实西西里风味；需要时再展开</p></div></summary>
+      <div class="food-guide-content">
+        <div class="food-grid">
+          <div class="food-rule"><b>海鲜要问当天有什么</b><p>优先小青鱼、沙丁鱼、剑鱼、章鱼、淡菜和当日整鱼；点之前问清整鱼是按份还是按100克计价。</p><div class="dish-tags"><span>pasta con le sarde</span><span>pesce spada</span><span>fritto di paranza</span><span>cozze</span></div></div>
+          <div class="food-rule"><b>蔬菜不是配角</b><p>西西里最有地方感的往往是茄子、番茄、鹰嘴豆、蚕豆、橙子和洋葱。每天至少点一道，不需要餐餐海鲜。</p><div class="dish-tags"><span>caponata</span><span>pasta alla Norma</span><span>macco di fave</span><span>insalata d’arance</span></div></div>
+          <div class="food-rule"><b>吃法比名气重要</b><p>午餐尽量市场或trattoria，晚餐再坐下来。看见冗长品鉴菜单可以跳过，直接问“今天本地人会点什么”。</p><div class="dish-tags"><span>trattoria</span><span>osteria</span><span>mercato</span><span>pescato del giorno</span></div></div>
+        </div>
+        <div class="restaurant-directory">
+          <div class="restaurant-group"><h3>Ortigia · 9/17–19</h3><ul>
+            <li><b>A Putia delle Cose Buone</b> · 家庭小馆，土地菜、蔬菜、豆类与家常意面；不订位，早点到。 <a href="https://www.aputiadellecosebuone.it/" target="_blank" rel="noopener">官网</a></li>
+            <li><b>Apollonion / Osteria da Carlo</b> · 让厨房按当天渔获配前菜、意面和鱼。 <a href="https://www.osteriadacarlo.com/englishmenu/" target="_blank" rel="noopener">菜单</a></li>
+            <li><b>Sicilia in Tavola</b> · 手工意面、沙丁鱼与朴素海鲜；适合坐下来吃。 <a href="https://www.siciliaintavola.eu/menu/" target="_blank" rel="noopener">官网</a></li>
+            <li><b>Fratelli Burgio / Caseificio Borderi</b> · 市场午餐，吃caponata、奶酪、腌蔬菜或现做panino。 <a href="https://fratelliburgio.com/it-it/pages/il-menu-della-salumeria" target="_blank" rel="noopener">Burgio菜单</a></li>
+          </ul></div>
+          <div class="restaurant-group"><h3>Noto · 9/19午餐</h3><ul>
+            <li><b>Fontana d’Ercole</b> · 默认选择；传统拼盘、沙丁鱼、paranza、busiate con le sarde、Norma和橙子洋葱沙拉。 <a href="https://www.trattoriafontanadercole.it/trattoria-fontana-d-ercole" target="_blank" rel="noopener">菜单</a></li>
+            <li><b>Al Buco dal 1957</b> · 中央位置的老牌家庭馆，鱼肉都有；Fontana订不到时用。 <a href="https://www.trattoriaalbuco.it/" target="_blank" rel="noopener">官网</a></li>
+          </ul></div>
+          <div class="restaurant-group"><h3>Taormina · 9/19–23</h3><ul>
+            <li><b>Rosmarino</b> · 离酒店近，鱼和蔬菜兼顾；macco di fave、沙丁鱼、淡菜、Norma和剑鱼busiate。 <a href="https://www.rosmarinotaormina.com/english/our-menu/" target="_blank" rel="noopener">菜单</a></li>
+            <li><b>Tischi Toschi</b> · 桌少、按季节和市场做，最后一晚首选；提前订。 <a href="https://www.tischitoschitaormina.com/il-menu/" target="_blank" rel="noopener">官网</a></li>
+            <li><b>Malvasia</b> · 1972年至今的家庭菜，周一最稳；panelle、章鱼、淡菜和烤鱼。 <a href="https://ristorantemalvasiataormina.it/menu/" target="_blank" rel="noopener">菜单</a></li>
+            <li><b>Trattoria da Nino / Il Barcaiolo</b> · 前者城内可靠，后者在Mazzarò海边，配合海滩或船日。 <a href="https://trattoriadaninotaormina.com/it/menu" target="_blank" rel="noopener">Da Nino</a> · <a href="https://www.barcaiolo.altervista.org/" target="_blank" rel="noopener">Barcaiolo</a></li>
+          </ul></div>
+        </div>
+      </div>
+    </details>
+
+    <section class="section" id="hotel-ideas">
+      <div class="section-head">
+        <h2>酒店能帮我们安排什么</h2>
+        <p>默认全部收起，需要时再展开。Maniace和Villa Schuler是执行入口；四季只作为服务标准参考。</p>
+      </div>
+      <div class="hotel-grid">
+        <details class="hotel-panel">
+          <summary><div><span>9/17–19 · 入住酒店</span><h3>Maniace Boutique Hotel · Ortigia</h3><p>海边、酒窖、私人定制；点开看最值得问礼宾的四件事</p></div></summary>
+          <div class="hotel-content">
+            <p class="hotel-intro">官网没有公开班次和价目表，主打礼宾按客人需求定制。下面不是“已包含”，而是入住前应让酒店具体报价的项目。</p>
+            <div class="activity-list">
+              <div class="activity-item"><div class="activity-item-head"><h4>Ortigia绕岛＋海洞＋游泳</h4><span class="fit">最值得问</span></div><p>请礼宾安排9/18傍晚约2–2.5小时私人船，从Ortigia附近上船，包含绕岛、海洞、一次游泳和日落。确认四人总价、接送点、遮阳、毛巾及海况取消政策。</p><a href="https://maniaceboutiquehotel.com/boutique-hotel-sicily/" target="_blank" rel="noopener">Maniace礼宾服务 →</a></div>
+              <div class="activity-item"><div class="activity-item-head"><h4>历史庭院里的西西里酒</h4><span class="fit">短而特别</span></div><p>官网明确提到可在历史庭院品尝酒店酒窖的葡萄酒。问能否在9/17傍晚做45分钟、四人参加的本地酒小品鉴，且不要与晚餐冲突。</p><a href="https://maniaceboutiquehotel.com/experience-sicily/" target="_blank" rel="noopener">酒店体验页 →</a></div>
+              <div class="activity-item"><div class="activity-item-head"><h4>Siracusa考古公园＋Ortigia私人导览</h4><span class="fit maybe">内容型</span></div><p>请酒店推荐持证英文向导，把9/18上午Neapolis约2.5小时与下午Ortigia约2小时拆开；不要做一整天跟团。</p><a href="https://maniaceboutiquehotel.com/contacts/" target="_blank" rel="noopener">联系礼宾 →</a></div>
+              <div class="activity-item"><div class="activity-item-head"><h4>清晨Ortigia自走</h4><span class="fit">不必预订</span></div><p>酒店官网自己建议的顺序：Cala Rossa海风 → Castello Maniace → 游客到来前的Piazza Duomo。约45–60分钟，最适合9/18早餐前。</p><a href="https://maniaceboutiquehotel.com/experience-sicily/sleeping-on-ortygia/" target="_blank" rel="noopener">酒店的Ortigia灵感页 →</a></div>
+            </div>
+            <div class="hotel-verdict"><b>最实际：</b>入住前先让礼宾报9/18傍晚私人船；到店后再决定庭院品酒。酒店“可协助定制”不等于项目已经包含。</div>
+          </div>
+        </details>
+
+        <details class="hotel-panel">
+          <summary><div><span>9/19–23 · 入住酒店</span><h3>Villa Schuler · Taormina</h3><p>船、海滩接驳、Etna与半日包车；点开看执行细节</p></div></summary>
+          <div class="hotel-content">
+            <p class="hotel-intro">官网项目更接地气，价格和接送逻辑也更适合四位成人。抵达后可让前台把同一天的海况、车型和最终四人价一次问清。</p>
+            <div class="activity-list">
+            <div class="activity-item"><div class="activity-item-head"><h4>合作lido＋酒店接驳</h4><span class="fit">很适合</span></div><p>5–10月运行；上午约9:15–12:45多班送往海滩，下午约15:00–17:30返回。接驳＋伞椅通常€15–35/人/日，是最省心的躺平方案。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">Villa Schuler活动页 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>Carmelo的Mazzarò海岸小船</h4><span class="fit">很适合</span></div><p>酒店合作多年的船长，从Mazzarò出发，走Isola Bella、Capo Taormina、Naxos湾与Blue Grotto。价格未公开，先把它作为9/22私人船第一询价对象。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看酒店船游说明 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>Etna＋酒庄 / Godfather半日线</h4><span class="fit">很适合</span></div><p>酒店通过Sicily Life安排。Etna半日约4小时、1–3人€260起；Etna＋酒庄约7小时、1–3人€350起且餐酒另计；Savoca＋Forza d’Agrò半日约4小时、1–3人€260。四人须问Mercedes minivan最终价。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看车型、路线与参考价 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>Taormina Cult Ape / 复古Fiat 500</h4><span class="fit maybe">看兴趣</span></div><p>Ape文化路线1或2小时，可到Casa Cuseni；Fiat 500的Etna Wine Roads约4.5小时，夏季可能15:30出发，品3款酒＋小食另€30/人。四位成人通常需两台车。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看文化与Fiat路线 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>21:15意大利歌剧音乐会</h4><span class="fit maybe">下雨备选</span></div><p>Nazarena Theatre，距酒店约8分钟步行；标准票€30、VIP €50。节目以Puccini、Verdi等咏叹调和二重唱为主，先让前台确认9/20–22哪晚演出。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看酒店票务说明 →</a></div>
+            </div>
+            <div class="hotel-verdict"><b>最值得利用：</b>9/22小船或lido接驳、9/21 Etna / Savoca包车、雨天歌剧。它们和住宿接送直接连起来，执行最稳。</div>
+          </div>
+        </details>
+
+        <details class="hotel-panel four-seasons">
+          <summary><div><span>不住店 · 仅作参考</span><h3>San Domenico Palace · Four Seasons</h3><p>高端活动的服务清单；点开后拿去向Villa Schuler询价</p></div></summary>
+          <div class="hotel-content">
+            <p class="hotel-intro">官网活动大多由四季礼宾安排、从酒店出发。你们不住店，不能假设可以预订；更适合把内容规格拿给Villa Schuler或本地供应商。</p>
+            <div class="activity-list">
+            <div class="activity-item"><div class="activity-item-head"><h4>半日Taormina海岸船</h4><span class="fit">路线值得抄</span></div><p>Giardini Naxos港出发，约距酒店20分钟车程；覆盖Isola Bella、Blue Cave、Mazzarò与Mermaid Bay，含饮品、水果、毛巾、浮潜、SUP、船长和hostess。用它作为Villa Schuler / 本地船家的服务清单。</p><a href="https://www.fourseasons.com/taormina/experiences/aquatic-escapades/half-day-taormina-boat-tour/" target="_blank" rel="noopener">四季半日船官网 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>4x4 Etna轻徒步＋精品酒庄</h4><span class="fit">路线值得抄</span></div><p>自然向导带领走古熔岩地貌，结束后在Etna酒庄吃三道式午餐、品4款酒。若四季不接外客，让Villa Schuler按这个规格报价；需72小时前取消。</p><a href="https://www.fourseasons.com/taormina/experiences/local-experiences/4x4-mount-etna-hike-with-lunch-at-winery/" target="_blank" rel="noopener">四季Etna＋酒庄官网 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>Fiat 500 Spiaggina＋Castelmola</h4><span class="fit maybe">漂亮轻松</span></div><p>带司机约2.5小时，以Castelmola景观aperitivo和杏仁酒收尾，含往返车。很适合不想徒步又想有一场“意式电影感”下午；酒店版可用Ape / Fiat替代。</p><a href="https://www.fourseasons.com/taormina/experiences/local-experiences/fiat-500-spiaggina-tour-with-aperitivo/" target="_blank" rel="noopener">四季Fiat体验官网 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>San Domenico艺术导览</h4><span class="fit maybe">最对你们审美</span></div><p>修道院历史、艺术品与花园本来非常适合你们。但官网详情页出现明显内容错位，写进了Castelmola车辆与杏仁酒；必须直接确认“纯酒店Art Concierge tour”、时长、价格及外客资格。</p><a href="https://www.fourseasons.com/taormina/experiences/local-experiences/art-concierge-an-intimate-tour-of-the-san-domenico-palace/" target="_blank" rel="noopener">四季艺术导览官网 →</a></div>
+            <div class="activity-item"><div class="activity-item-head"><h4>Noto幕后 / Etna观星</h4><span class="fit skip">这次不排</span></div><p>Noto体验有艺术家工作室和私人午餐，但从Taormina单程约2小时，你们9/19转场已经顺路经过；观星含两小时往返、四道式晚餐且临近取消很严格。都漂亮，但会让本次节奏变差。</p><a href="https://www.fourseasons.com/taormina/experiences/" target="_blank" rel="noopener">四季全部体验 →</a></div>
+            </div>
+            <div class="hotel-verdict"><b>最值得问：</b>9/19晚餐前能否做一段纯酒店艺术导览；其他活动优先让Villa Schuler按同等内容找本地合作方。</div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section day" id="d17" data-day="9月17日">
+      <div class="day-hero">
+        <img src="../assets/place-photos/place-35-sicily-ortigia.jpg" alt="Ortigia海边老城">
+        <div class="day-heading">
+          <div class="date-box"><b>9/17</b><span>周四</span></div>
+          <div><h2>抵达Ortigia</h2><p>落地、入住、第一次走进海边石城</p></div>
+          <div class="stay">今晚住<b>Maniace Boutique Hotel</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>11:15</time><p>W46513从Venice Marco Polo起飞。</p></div>
+          <div class="fixed-item"><time>12:55</time><p>抵达Catania；取行李后与预约司机会合。</p></div>
+          <div class="fixed-item"><time>约14:30</time><p>从CTA前往Ortigia，正常车程约1小时。</p></div>
+          <div class="fixed-item"><time>约15:30</time><p>入住Maniace；当天不安排必须完成的门票景点。</p></div>
+        </div>
+
+        <div class="choice-title"><h3>下午与傍晚 · 选一个</h3><span>默认选A</span></div>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="activity-17" value="A · 海边落地" checked><div class="choice-body"><span class="choice-top"><span class="choice-letter">A</span><span class="pill pick">我的首选</span></span><h4>海边落地</h4><p class="vibe">最松弛 · 飞行日友好</p><div class="mini-timeline"><div><time>16:30–18:00</time><p>Cala Rossa海边休息，沿海走到Castello Maniace。</p></div><div><time>18:00–19:15</time><p>回酒店洗澡、换衣、缓冲。</p></div><div><time>19:45</time><p>步行去Piazza Duomo附近晚餐。</p></div></div></div></div>
+          <div class="choice"><input type="radio" name="activity-17" value="B · Ortigia第一眼"><div class="choice-body"><span class="choice-top"><span class="choice-letter">B</span><span class="pill giusi">Giusi推荐</span></span><h4>Ortigia第一眼</h4><p class="vibe">老城与建筑 · 精神好再选</p><div class="mini-timeline"><div><time>16:30–18:30</time><p>Fonte Aretusa → Piazza Duomo → 犹太区小巷。</p></div><div><time>18:30–19:30</time><p>海边aperitivo，不把第一晚排满。</p></div><div><time>20:00</time><p>安静吃一顿正式西西里菜。</p></div></div></div></div>
+          <div class="choice"><input type="radio" name="activity-17" value="C · 酒店彻底休息"><div class="choice-body"><span class="choice-top"><span class="choice-letter">C</span></span><h4>酒店彻底休息</h4><p class="vibe">晚点到 / 天气热 / 体力不足</p><div class="mini-timeline"><div><time>16:00–19:00</time><p>入住后不再出门，睡一觉或在附近喝咖啡。</p></div><div><time>19:30</time><p>只在酒店步行10分钟内解决晚餐。</p></div><div><time>21:00</time><p>早点回房，为第二天留体力。</p></div></div></div></div>
+        </div>
+
+        <div class="choice-title"><h3>晚餐 · 选一个</h3><span>简单、家常；默认A</span></div>
+        <div class="restaurants">
+          <div class="restaurant"><input type="radio" name="restaurant-17" value="A Putia delle Cose Buone · 家常菜" checked><div class="restaurant-card"><span class="pill pick">我的首选</span><b>A Putia delle Cose Buone</b><p>家庭小馆、不接受预订，也不走精致路线。点caponata、时蔬、豆类或一份家常意面；海鲜只是其中一部分。早点去排队。</p><a href="https://www.aputiadellecosebuone.it/" target="_blank" rel="noopener">官网 / 营业信息</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-17" value="Sicilia in Tavola · 手工意面与海鲜"><div class="restaurant-card"><b>Sicilia in Tavola</b><p>Ortigia老派选择：手工意面、当天海鲜和朴素西西里味。先问pasta con le sarde或当天最好的鱼，再补一道蔬菜。</p><a href="https://www.siciliaintavola.eu/menu/" target="_blank" rel="noopener">官网 / 菜单</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-17" value="Ranieri · 鱼与蔬菜"><div class="restaurant-card"><b>Ranieri</b><p>想坐得舒服一点但仍吃当地菜：炸鳀鱼、淡菜、墨鱼汁意面、剑鱼、Siracusa式caponata和橙子洋葱沙拉。</p><a href="https://www.ranierirestaurantortigia.com/menu/menu-italiano/" target="_blank" rel="noopener">看实际菜单</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day" id="d18" data-day="9月18日">
+      <div class="day-hero">
+        <img src="../assets/place-photos/place-35-sicily-ortigia.jpg" alt="Siracusa Ortigia海岸">
+        <div class="day-heading">
+          <div class="date-box"><b>9/18</b><span>周五</span></div>
+          <div><h2>Siracusa与Ortigia</h2><p>这是文化日，也可以直接把它变成海上度假日</p></div>
+          <div class="stay">今晚住<b>Maniace Boutique Hotel</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>09:00–10:00</time><p>慢早餐，确认当天温度与海况。</p></div>
+          <div class="fixed-item"><time>12:45–15:00</time><p>Ortigia市场午餐：Fratelli Burgio吃caponata、奶酪和腌渍蔬菜，或Borderi吃现做大panino；之后回酒店午休。</p></div>
+          <div class="fixed-item"><time>19:00前后</time><p>都回到Ortigia，洗澡换衣。</p></div>
+          <div class="fixed-item"><time>20:00–20:30</time><p>根据当天路线安排晚餐。</p></div>
+        </div>
+
+        <div class="choice-title"><h3>白天 · 选一个</h3><span>A最完整，B最度假</span></div>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="activity-18" value="A · 希腊文明与Ortigia" checked><div class="choice-body"><span class="choice-top"><span class="choice-letter">A</span><span><span class="pill pick">我的首选</span> <span class="pill giusi">Giusi推荐</span></span></span><h4>希腊文明与Ortigia</h4><p class="vibe">内容最完整 · 建议请导游</p><div class="mini-timeline"><div><time>10:00–12:30</time><p>Neapolis考古公园：Greek Theatre、Ear of Dionysius等核心。</p></div><div><time>15:30–18:30</time><p>Ortigia主教座堂、Piazza Duomo、Fonte Aretusa与海边。</p></div><div><time>20:00</time><p>在Ortigia吃正式晚餐。</p></div></div></div></div>
+          <div class="choice"><input type="radio" name="activity-18" value="B · Ortigia与日落出海"><div class="choice-body"><span class="choice-top"><span class="choice-letter">B</span></span><h4>Ortigia与日落出海</h4><p class="vibe">海边度假 · 天气好时优先</p><div class="mini-timeline"><div><time>10:00–12:30</time><p>市场、主教座堂、犹太区和海边慢走。</p></div><div><time>15:00–17:00</time><p>酒店休息，不在正午继续暴走。</p></div><div><time>17:30–20:00</time><p>从Ortigia出发绕岛、看海洞、停船游泳与日落。</p></div></div></div></div>
+          <div class="choice"><input type="radio" name="activity-18" value="C · 完全慢下来"><div class="choice-body"><span class="choice-top"><span class="choice-letter">C</span></span><h4>完全慢下来</h4><p class="vibe">恢复体力 · 轻松家庭日</p><div class="mini-timeline"><div><time>10:00–12:00</time><p>睡到自然醒，Ortigia市场和咖啡。</p></div><div><time>15:30–17:30</time><p>Cala Rossa短时游泳或酒店休息。</p></div><div><time>18:00以后</time><p>Piazza Duomo、海边日落，再慢慢晚餐。</p></div></div></div></div>
+        </div>
+
+        <div class="choice-title"><h3>晚餐 · 选一个</h3><span>今晚把重点放在海鲜；默认A</span></div>
+        <div class="restaurants">
+          <div class="restaurant"><input type="radio" name="restaurant-18" value="Apollonion / Osteria da Carlo · 海鲜" checked><div class="restaurant-card"><span class="pill pick">我的首选</span><b>Apollonion / Osteria da Carlo</b><p>小型海鲜馆。让厨房按当天渔获安排前菜＋意面＋鱼，不必追求长套餐；订位时说明四人想吃local seafood。</p><a href="https://www.osteriadacarlo.com/englishmenu/" target="_blank" rel="noopener">官网 / 菜单</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-18" value="Sicilia in Tavola · 手工意面与海鲜"><div class="restaurant-card"><b>Sicilia in Tavola</b><p>若17日没去，今晚补上。点一款手工海鲜意面、当天整鱼，再共同分caponata或烤蔬菜。</p><a href="https://www.siciliaintavola.eu/menu/" target="_blank" rel="noopener">官网 / 菜单</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-18" value="A Putia · 土地菜"><div class="restaurant-card"><b>A Putia delle Cose Buone</b><p>如果中午海鲜吃多，晚上回到土地：茄子、豆类、当地奶酪、肉丸和家常意面。没有订位，早到。</p><a href="https://www.aputiadellecosebuone.it/" target="_blank" rel="noopener">官网 / 营业信息</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day" id="d19" data-day="9月19日">
+      <div class="day-hero">
+        <img src="../assets/detail-photos/sicily-noto.jpg" alt="Noto巴洛克建筑">
+        <div class="day-heading">
+          <div class="date-box"><b>9/19</b><span>周六</span></div>
+          <div><h2>带行李转场Taormina</h2><p>只选一个途中停靠点，晚上留给已订的四季</p></div>
+          <div class="stay">今晚住<b>Villa Schuler</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>09:00</time><p>早餐、退房；行李交给全天包车。</p></div>
+          <div class="fixed-item"><time>09:30</time><p>从Ortigia出发，默认前往Noto。</p></div>
+          <div class="fixed-item"><time>约17:00</time><p>抵达Villa Schuler，入住并在花园休息。</p></div>
+          <div class="fixed-item"><time>19:45 / 20:30</time><p>若四季确认外客艺术导览，19:45抵达；否则20:30从酒店出发。</p></div>
+        </div>
+
+        <div class="choice-title"><h3>转场路线 · 选一个</h3><span>因为21:00有预约，强烈建议A</span></div>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="activity-19" value="A · Noto建筑线" checked><div class="choice-body"><span class="choice-top"><span class="choice-letter">A</span><span><span class="pill pick">我的首选</span> <span class="pill giusi">Giusi推荐</span></span></span><h4>Noto建筑线</h4><p class="vibe">最顺路 · 最优雅 · 不折腾</p><div class="mini-timeline"><div><time>10:30–12:30</time><p>主教座堂、主街、Palazzo Nicolaci和金色巴洛克街景。</p></div><div><time>12:45–14:30</time><p><b>Trattoria Fontana d’Ercole</b>：传统拼盘、sarde / paranza、busiate con le sarde或alla Norma、橙子洋葱沙拉；订不到用Al Buco dal 1957。</p></div><div><time>14:30–17:00</time><p>直接前往Taormina，中途只做一次短休息。</p></div></div><a href="https://www.trattoriafontanadercole.it/trattoria-fontana-d-ercole" target="_blank" rel="noopener">看Fontana d’Ercole本地菜单 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-19" value="B · Marzamemi海边线"><div class="choice-body"><span class="choice-top"><span class="choice-letter">B</span><span class="pill giusi">Giusi推荐</span></span><h4>Marzamemi海边线</h4><p class="vibe">彩色渔村 · 更长车程</p><div class="mini-timeline"><div><time>10:45–12:15</time><p>港口、主广场和旧tonnara外部。</p></div><div><time>12:15–13:45</time><p>不要做长套餐：找港边简单鱼馆，点金枪鱼产品、烤鱼或海鲜意面＋番茄洋葱沙拉；看当天渔获再决定。</p></div><div><time>13:45–18:15</time><p>前往Taormina；入住后的休息时间会明显缩短。</p></div></div><p class="choice-note">Giusi提醒这里过度旅游明显。只能早到，不要再加Noto。</p></div></div>
+          <div class="choice"><input type="radio" name="activity-19" value="C · Ragusa Ibla美食线"><div class="choice-body"><span class="choice-top"><span class="choice-letter">C</span><span class="pill giusi">Giusi推荐</span></span><h4>Ragusa Ibla美食线</h4><p class="vibe">最深入 · 这次不建议</p><div class="mini-timeline"><div><time>10:45–13:00</time><p>山城老街与Duomo di San Giorgio。</p></div><div><time>13:00–14:30</time><p>长午餐后直接上路。</p></div><div><time>18:30后</time><p>入住Taormina，几乎没有晚餐前缓冲。</p></div></div><p class="choice-note">21:00已有四季预约，这条线强度过高，保留为未来备选。</p></div></div>
+        </div>
+
+        <div class="choice-title"><h3>今晚 · 已确认</h3><span>不是普通餐厅选择</span></div>
+        <div class="booked-event">
+          <time>21:00</time>
+          <div><h3>Four Seasons San Domenico Palace · Bar &amp; Chiostro</h3><p>已订。主打修道院回廊、鸡尾酒和tapas / 小食，更像氛围型轻晚餐。因此中午必须好好吃；建议20:30从Villa Schuler出发。可提前联系礼宾，询问外客能否在19:45左右做30–45分钟的纯酒店艺术导览；官网详情页资料有错位，未书面确认就不要把它当成固定项目。 <a href="https://www.fourseasons.com/taormina/dining/lounges/bar-and-chiostro/" target="_blank" rel="noopener">Bar &amp; Chiostro官网</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day" id="d20" data-day="9月20日">
+      <div class="day-hero">
+        <img src="../assets/detail-photos/sicily-taormina-theatre.jpg" alt="Taormina古剧场与海岸">
+        <div class="day-heading">
+          <div class="date-box"><b>9/20</b><span>周日</span></div>
+          <div><h2>Taormina第一整天</h2><p>先看懂山城，再决定今天要不要下海</p></div>
+          <div class="stay">今晚住<b>Villa Schuler</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>09:00–10:00</time><p>Villa Schuler早餐与花园。</p></div>
+          <div class="fixed-item"><time>12:45–14:00</time><p>午餐＋短休；如果选船，14:15准时离开酒店。</p></div>
+          <div class="fixed-item"><time>19:00前后</time><p>回酒店洗澡换衣。</p></div>
+          <div class="fixed-item"><time>20:30</time><p>回到Taormina城内吃饭。</p></div>
+        </div>
+
+        <div class="choice-title"><h3>白天 · 选一个</h3><span>第一次来默认A</span></div>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="activity-20" value="A · 古剧场与Isola Bella" checked><div class="choice-body"><span class="choice-top"><span class="choice-letter">A</span><span><span class="pill pick">我的首选</span> <span class="pill giusi">Giusi推荐</span></span></span><h4>古剧场与Isola Bella</h4><p class="vibe">Taormina经典线 · 第一次来最完整</p><div class="mini-timeline"><div><time>10:00–12:45</time><p>Ancient Theatre → Corso Umberto → Piazza IX Aprile；想听历史就让Villa Schuler帮找英文向导。</p></div><div><time>15:45–18:15</time><p>缆车下到Mazzarò / Isola Bella，游泳或海边喝一杯。</p></div><div><time>18:15–19:00</time><p>缆车回城，留出洗澡时间。</p></div></div><a href="https://www.fourseasons.com/taormina/experiences/local-experiences/taormina-walking-tour/" target="_blank" rel="noopener">参考四季的古剧场导览内容 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-20" value="B · Villa Schuler半日小船"><div class="choice-body"><span class="choice-top"><span class="choice-letter">B</span><span><span class="pill hotel">Villa Schuler官网</span> <span class="pill giusi">Giusi推荐</span></span></span><h4>Villa Schuler半日小船</h4><p class="vibe">度假感最强 · 与9/22按海况互换</p><div class="mini-timeline"><div><time>10:00–12:00</time><p>老城慢逛或酒店花园休息。</p></div><div><time>14:15</time><p>让酒店安排车或缆车去Mazzarò Bay，与合作船长Carmelo会合。</p></div><div><time>15:00–18:00</time><p>Isola Bella、Blue Grotto、Capo Taormina与Naxos Bay；停湾游泳。</p></div></div><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">向酒店询价Carmelo船游 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-20" value="C · 复古小车与Castelmola"><div class="choice-body"><span class="choice-top"><span class="choice-letter">C</span><span><span class="pill hotel">两家酒店都有</span></span></span><h4>复古小车与Castelmola</h4><p class="vibe">最轻松的意式电影感</p><div class="mini-timeline"><div><time>10:00–12:30</time><p>Villa Comunale、Corso Umberto与Taormina小店。</p></div><div><time>15:30–18:00</time><p>选择Villa Schuler的Ape / Fiat，或询问四季带司机Spiaggina；上Castelmola喝aperitivo。</p></div><div><time>18:00–18:30</time><p>回Villa Schuler休息，四位成人需要确认两台车。</p></div></div><a href="https://www.fourseasons.com/taormina/experiences/local-experiences/fiat-500-spiaggina-tour-with-aperitivo/" target="_blank" rel="noopener">看四季2.5小时版本 →</a></div></div>
+        </div>
+
+        <div class="choice-title"><h3>晚餐 · 选一个</h3><span>鱼、蔬菜和家常意面；默认A</span></div>
+        <div class="restaurants">
+          <div class="restaurant"><input type="radio" name="restaurant-20" value="Rosmarino · 本地鱼与蔬菜" checked><div class="restaurant-card"><span class="pill pick">我的首选</span><b>Rosmarino</b><p>家庭经营，靠近Villa Comunale，也离Villa Schuler很近。点macco di fave、sarde allinguate、淡菜、Norma或剑鱼茄子busiate。</p><a href="https://www.rosmarinotaormina.com/english/our-menu/" target="_blank" rel="noopener">看菜单与价格</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-20" value="Il Barcaiolo · 海边鱼馆"><div class="restaurant-card"><b>Il Barcaiolo · Mazzarò</b><p>就在海边的老鱼馆，适合Isola Bella / 船日顺路吃：沙丁鱼bruschetta、海鲜意面、鱼汤、Messina式剑鱼和当天鱼。需缆车或约车。</p><a href="https://www.barcaiolo.altervista.org/" target="_blank" rel="noopener">官网 / 联系</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-20" value="Tischi Toschi · Slow Food西西里菜"><div class="restaurant-card"><b>Tischi Toschi</b><p>桌数少、无固定菜单，按市场与季节做传统菜。问当天蓝背鱼、剑鱼、野菜、Ragusa奶酪和fennel meatballs；提前订。</p><a href="https://www.tischitoschitaormina.com/il-menu/" target="_blank" rel="noopener">餐厅理念 / 订位</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day" id="d21" data-day="9月21日">
+      <div class="day-hero">
+        <img src="../assets/detail-photos/sicily-etna.jpg" alt="Etna火山">
+        <div class="day-heading">
+          <div class="date-box"><b>9/21</b><span>周一</span></div>
+          <div><h2>天气决定的一天</h2><p>火山不是必须；放松也是一个完整方案</p></div>
+          <div class="stay">今晚住<b>Villa Schuler</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>08:30</time><p>先查Etna开放、风、火山状态与道路。</p></div>
+          <div class="fixed-item"><time>09:00</time><p>若不满足条件，立即切换B或C。</p></div>
+          <div class="fixed-item"><time>18:00前</time><p>无论选哪条线，都回到Villa Schuler休息。</p></div>
+          <div class="fixed-item"><time>20:00–20:30</time><p>晚餐；Etna回来后不再安排长夜游。</p></div>
+        </div>
+
+        <div class="choice-title"><h3>白天 · 选一个</h3><span>A与C同为推荐</span></div>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="activity-21" value="A · 自然向导Etna与精品酒庄"><div class="choice-body"><span class="choice-top"><span class="choice-letter">A</span><span><span class="pill pick">条件合适时首选</span> <span class="pill giusi">Giusi推荐</span></span></span><h4>自然向导Etna与精品酒庄</h4><p class="vibe">火山地貌＋完整葡萄酒体验</p><div class="mini-timeline"><div><time>09:00–12:00</time><p>酒店接车；自然向导带轻量走古熔岩地貌，不追高海拔。</p></div><div><time>12:30–15:00</time><p>Etna酒庄三道式午餐＋4款酒；让Villa Schuler按四季规格向Sicily Life报价。</p></div><div><time>15:00–17:00</time><p>返回Taormina，晚上只安排轻松晚餐。</p></div></div><p class="choice-note">Villa Schuler官网7小时路线1–3人€350起，餐酒另计；四人minivan询价。四季版72小时前取消，否则全额收费。</p><a href="https://www.fourseasons.com/taormina/experiences/local-experiences/4x4-mount-etna-hike-with-lunch-at-winery/" target="_blank" rel="noopener">看四季Etna＋酒庄服务标准 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-21" value="B · 酒店包车Savoca与Forza d’Agrò"><div class="choice-body"><span class="choice-top"><span class="choice-letter">B</span><span class="pill hotel">Villa Schuler官网</span></span><h4>酒店包车Savoca与Forza d’Agrò</h4><p class="vibe">电影感山城 · 半日轻松</p><div class="mini-timeline"><div><time>09:30–13:30</time><p>Sicily Life半日Godfather线：Savoca、Bar Vitelli与Forza d’Agrò，英文向导 / 司机。</p></div><div><time>13:45–15:15</time><p>回Taormina吃午餐。</p></div><div><time>15:30以后</time><p>Villa Schuler花园、午睡或自由逛街。</p></div></div><p class="choice-note">官网参考价1–3人€260；四位成人问minivan最终价。想自己开复古车时可换成两台Fiat 500。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看Villa Schuler半日线 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-21" value="C · Villa Schuler合作lido" checked><div class="choice-body"><span class="choice-top"><span class="choice-letter">C</span><span><span class="pill pick">累了就首选</span> <span class="pill hotel">Villa Schuler官网</span></span></span><h4>Villa Schuler合作lido躺平日</h4><p class="vibe">伞椅、海边午餐、酒店接驳</p><div class="mini-timeline"><div><time>09:45前后</time><p>搭酒店班车到合作海滩俱乐部；前台提前一天订伞椅。</p></div><div><time>10:00–16:30</time><p>游泳、躺平、在lido吃午餐；不再加入古剧场或山城。</p></div><div><time>16:30–17:30</time><p>搭酒店返程班车；晚上看体力决定是否听歌剧。</p></div></div><p class="choice-note">官网写接驳＋伞椅通常€15–35/人/日，回程约15:00–17:30。具体合作lido和班次到店确认。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看酒店海滩接驳说明 →</a></div></div>
+        </div>
+
+        <div class="choice-title"><h3>晚餐 · 选一个</h3><span>Etna或海滩回来要可靠、轻松；默认A</span></div>
+        <div class="restaurants">
+          <div class="restaurant"><input type="radio" name="restaurant-21" value="Malvasia · 家庭西西里菜" checked><div class="restaurant-card"><span class="pill pick">周一首选</span><b>Malvasia</b><p>家庭餐厅自1972年经营，周一也公布午晚餐营业。点panelle、章鱼沙拉、淡菜、烤虾或当天鱼；不要强行点满三道。</p><a href="https://ristorantemalvasiataormina.it/menu/" target="_blank" rel="noopener">官网 / 菜单</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-21" value="Trattoria da Nino · 可靠海鲜"><div class="restaurant-card"><b>Trattoria da Nino</b><p>1963年至今的家庭馆，靠近缆车，官网显示每天营业。海鲜linguine、淡菜、金枪鱼或烤鱼，适合累了不想研究。</p><a href="https://trattoriadaninotaormina.com/it/menu" target="_blank" rel="noopener">官网 / 菜单</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-21" value="Rosmarino · 若前一晚没吃"><div class="restaurant-card"><b>Rosmarino</b><p>如果20日没吃，这是最自然的补位。鱼与蔬菜都强、离酒店近；预约时再确认9/21周一营业。</p><a href="https://www.rosmarinotaormina.com/english/our-menu/" target="_blank" rel="noopener">看菜单 / 联系</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day" id="d22" data-day="9月22日">
+      <div class="day-hero">
+        <img src="../assets/detail-photos/sicily-taormina-isola-bella.jpg" alt="Isola Bella海湾">
+        <div class="day-heading">
+          <div class="date-box"><b>9/22</b><span>周二</span></div>
+          <div><h2>最后一个完整旅行日</h2><p>默认把最有度假感的一天留到最后</p></div>
+          <div class="stay">今晚住<b>Villa Schuler</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>08:30</time><p>早餐时确认最终海况。</p></div>
+          <div class="fixed-item"><time>12:30–13:30</time><p>船日吃轻午餐；若选烹饪课，这一段由课堂午餐替代。</p></div>
+          <div class="fixed-item"><time>20:00前后</time><p>回酒店洗澡、收拾次日行李。</p></div>
+          <div class="fixed-item"><time>21:00</time><p>默认吃告别晚餐；若选歌剧，则改成18:45早晚餐或演后轻食。</p></div>
+        </div>
+
+        <div class="choice-title"><h3>白天 · 选一个</h3><span>默认A；海况差就C</span></div>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="activity-22" value="A · Villa Schuler私人船与告别晚餐" checked><div class="choice-body"><span class="choice-top"><span class="choice-letter">A</span><span><span class="pill pick">我的首选</span> <span class="pill hotel">Villa Schuler官网</span> <span class="pill giusi">Giusi推荐</span></span></span><h4>Villa Schuler私人船</h4><p class="vibe">最完整的度假收尾</p><div class="mini-timeline"><div><time>14:00</time><p>酒店安排接送去Mazzarò；优先问合作船长Carmelo，或升级半日帆船 / yacht。</p></div><div><time>15:00–19:00</time><p>Isola Bella、Blue Grotto、Naxos与海湾停靠；游泳、浮潜和船上aperitivo。</p></div><div><time>19:00–20:00</time><p>回Villa Schuler洗澡换衣，21:00告别晚餐。</p></div></div><p class="choice-note">询价时确认四人总价、准确船型、遮阳、WC、泳梯、码头接送，以及船家因海况取消的退款规则。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看酒店船游与yacht说明 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-22" value="B · 西西里烹饪课与花园"><div class="choice-body"><span class="choice-top"><span class="choice-letter">B</span><span class="pill hotel">Villa Schuler官网</span></span><h4>西西里烹饪课与花园</h4><p class="vibe">家庭一起做 · 海况差也成立</p><div class="mini-timeline"><div><time>建议10:30–13:30</time><p>请前台找可为四人安排的实操型Sicilian cooking class；官网未给固定班次，先确认时间。</p></div><div><time>13:30–15:00</time><p>把课堂成品当午餐，不再另订长午餐。</p></div><div><time>15:30–18:00</time><p>Villa Schuler花园、午睡和最后购物。</p></div></div><p class="choice-note">询价时问清是否含市场、菜单、葡萄酒、英文老师和接送；如果只能早出晚归，就不要选。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看酒店烹饪课说明 →</a></div></div>
+          <div class="choice"><input type="radio" name="activity-22" value="C · 补漏与21:15意大利歌剧"><div class="choice-body"><span class="choice-top"><span class="choice-letter">C</span><span class="pill hotel">Villa Schuler官网</span></span><h4>补漏＋21:15意大利歌剧</h4><p class="vibe">轻松文化收尾 · 下雨也好用</p><div class="mini-timeline"><div><time>10:00–12:30</time><p>补Ancient Theatre、Isola Bella或之前因天气跳过的项目。</p></div><div><time>14:30–18:00</time><p>酒店花园、购物、午睡和收拾行李。</p></div><div><time>20:30 / 21:15</time><p>VIP 20:30入场或标准票21:15开演；Nazarena Theatre距酒店约8分钟步行。</p></div></div><p class="choice-note">标准票€30、VIP €50；先让前台确认9/22是否有演出。若订21:00告别晚餐，则歌剧与晚餐二选一。</p><a href="https://www.hotelvillaschuler.com/activities" target="_blank" rel="noopener">看酒店歌剧票务说明 →</a></div></div>
+        </div>
+
+        <div class="choice-title"><h3>告别晚餐 · 选一个</h3><span>不需要用fine dining证明这是最后一晚；默认A</span></div>
+        <div class="restaurants">
+          <div class="restaurant"><input type="radio" name="restaurant-22" value="Tischi Toschi · 真西西里告别餐" checked><div class="restaurant-card"><span class="pill pick">我的首选</span><b>Tischi Toschi</b><p>把最后一餐留给真正的季节西西里菜，而不是形式感。告诉店家你们想吃鱼、蔬菜与传统菜的平衡，由当天市场决定；桌少，优先预约。</p><a href="https://www.tischitoschitaormina.com/" target="_blank" rel="noopener">官网 / 订位</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-22" value="Rosmarino · 鱼蔬告别餐"><div class="restaurant-card"><b>Rosmarino</b><p>如果前两晚没吃，最后晚非常合适。四人分一份豆泥、一道沙丁鱼或章鱼、两份意面、当天鱼和蔬菜，既完整也不撑。</p><a href="https://www.rosmarinotaormina.com/english/our-menu/" target="_blank" rel="noopener">看菜单 / 订位</a></div></div>
+          <div class="restaurant"><input type="radio" name="restaurant-22" value="Trattoria da Nino · 稳妥轻松"><div class="restaurant-card"><b>Trattoria da Nino</b><p>最后一天出海后如果只想稳妥吃鱼，就选这里；位置方便、营业可靠，不必再为“仪式感”坐车去海边。</p><a href="https://trattoriadaninotaormina.com/it/menu" target="_blank" rel="noopener">官网 / 菜单</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day" id="d23" data-day="9月23日">
+      <div class="day-hero">
+        <img src="../assets/detail-photos/sicily-taormina-theatre.jpg" alt="Taormina山海风景">
+        <div class="day-heading">
+          <div class="date-box"><b>9/23</b><span>周三</span></div>
+          <div><h2>分两组离开西西里</h2><p>两次独立送机；当天不再安排景点</p></div>
+          <div class="stay">当晚<b>爸爸住Milan · 其余回家</b></div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="fixed">
+          <div class="fixed-item"><time>06:45</time><p>爸爸从Villa Schuler出发前往CTA；前一晚完成退房手续并备早餐盒。</p></div>
+          <div class="fixed-item"><time>09:55–11:50</time><p>爸爸搭乘AZ1747：Catania → Milan Linate。</p></div>
+          <div class="fixed-item"><time>10:15</time><p>其余三位从Villa Schuler出发前往CTA。</p></div>
+          <div class="fixed-item"><time>13:40–15:30</time><p>其余三位搭乘W46514：Catania → Venice Marco Polo。</p></div>
+        </div>
+        <div class="booked-event">
+          <time>提醒</time>
+          <div><h3>一定要订两辆独立送机车</h3><p>第一辆按爸爸06:45出发；第二辆按其余三位10:15出发。确认车型能放下各自行李，并让Villa Schuler前一晚协助核对司机。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section summary-panel" id="my-plan">
+      <h2>我们现在选了什么</h2>
+      <p>这是这台设备上的选择摘要。点击上面的任意方案或餐厅，这里会自动更新。</p>
+      <div class="selected-list" id="selected-list" aria-live="polite"></div>
+      <div class="footer-actions">
+        <button class="action" type="button" onclick="window.print()">打印 / 存成PDF</button>
+        <button class="action secondary" type="button" id="reset-plan">恢复默认选择</button>
+        <span class="save-note">选择会自动保存在当前浏览器中。</span>
+      </div>
+    </section>
+
+    <p class="smallprint">时间以已出票和已确认预订为准；未预订活动的时间为旅行规划建议。实际出发前请再次确认餐厅营业、海况、Etna开放和交通时间。Giusi推荐标记仅表示她明确提到过该地点或活动。</p>
+  </main>
+
+  <script>
+    (() => {
+      const key = "sicily-family-plan-2026-v1";
+      const defaults = {};
+      const controls = [...document.querySelectorAll('input[type="radio"]')];
+
+      controls.forEach((input) => {
+        input.setAttribute("aria-label", input.value);
+        if (input.checked) defaults[input.name] = input.value;
+      });
+
+      function currentState() {
+        const state = {};
+        controls.forEach((input) => {
+          if (input.checked) state[input.name] = input.value;
+        });
+        return state;
+      }
+
+      function save() {
+        try { localStorage.setItem(key, JSON.stringify(currentState())); } catch (_) {}
+        renderSummary();
+      }
+
+      function restore() {
+        let saved = {};
+        try { saved = JSON.parse(localStorage.getItem(key) || "{}"); } catch (_) {}
+        Object.entries(saved).forEach(([name, value]) => {
+          const match = controls.find((input) => input.name === name && input.value === value);
+          if (match) match.checked = true;
+        });
+      }
+
+      function labelFor(name) {
+        const date = name.slice(-2).replace(/^0/, "");
+        return `9月${date}日`;
+      }
+
+      function renderSummary() {
+        const state = currentState();
+        const list = document.getElementById("selected-list");
+        const days = ["17", "18", "19", "20", "21", "22"];
+        list.innerHTML = days.map((day) => {
+          const activity = state[`activity-${day}`] || "";
+          const restaurant = day === "19" ? "21:00 · Bar & Chiostro（已订）" : (state[`restaurant-${day}`] || "");
+          return `<div class="selected-row"><b>${labelFor(`xx-${day}`)}</b><span>${activity}</span><span>${restaurant}</span></div>`;
+        }).join("") + `<div class="selected-row"><b>9月23日</b><span>爸爸 09:55 AZ1747 → Milan</span><span>其余三人 13:40 W46514 → Venice</span></div>`;
+      }
+
+      controls.forEach((input) => input.addEventListener("change", save));
+      document.getElementById("reset-plan").addEventListener("click", () => {
+        controls.forEach((input) => { input.checked = defaults[input.name] === input.value; });
+        try { localStorage.removeItem(key); } catch (_) {}
+        renderSummary();
+      });
+
+      restore();
+      renderSummary();
+    })();
+  </script>
+</body>
+</html>
